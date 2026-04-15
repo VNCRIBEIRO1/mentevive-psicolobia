@@ -8,6 +8,7 @@ import { Contact } from "@/app/components/landing/Contact";
 import { Footer } from "@/app/components/landing/Footer";
 import { WhatsAppFloat } from "@/app/components/landing/WhatsAppFloat";
 import { SectionDivider } from "@/app/components/landing/SectionDivider";
+import { tenantConfig } from "@/lib/tenant.config";
 import dynamic from "next/dynamic";
 
 const Scheduling = dynamic(
@@ -18,83 +19,60 @@ const Chatbot = dynamic(
   () => import("@/app/components/landing/Chatbot").then((m) => m.Chatbot)
 );
 
+const { name, description, professional, urls, social, location, branding } = tenantConfig;
+const siteUrl = urls.siteUrl;
+const namePath = `${siteUrl}/#organization`;
+const personPath = `${siteUrl}/#${professional.nickname.toLowerCase()}`;
+// Extract phone from whatsapp URL (wa.me/5511988840525 → +5511988840525)
+const phone = urls.whatsapp.replace("https://wa.me/", "+");
+
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://mentevive-psicolobia.vercel.app/#organization",
-    name: "Psicolobia",
-    alternateName: "Psicolobia — Beatriz Ribeiro",
-    description:
-      "Psicóloga Clínica Online — Beatriz Ribeiro (CRP 06/173961). Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia com ACT, ansiedade, depressão e traumas.",
-    url: "https://mentevive-psicolobia.vercel.app",
-    telephone: "+5511988840525",
+    "@id": namePath,
+    name,
+    alternateName: `${name} — ${professional.name}`,
+    description,
+    url: siteUrl,
+    telephone: phone,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "São Paulo",
-      addressRegion: "SP",
-      addressCountry: "BR",
+      addressLocality: location.city,
+      addressRegion: location.state,
+      addressCountry: location.country,
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -23.5505,
-      longitude: -46.6333,
+      latitude: location.latitude,
+      longitude: location.longitude,
     },
-    priceRange: "$$",
-    image: "https://mentevive-psicolobia.vercel.app/bia.png",
-    logo: "https://mentevive-psicolobia.vercel.app/icon.svg",
+    priceRange: branding.priceRange,
+    image: `${siteUrl}${professional.photo}`,
+    logo: `${siteUrl}/icon.svg`,
     sameAs: [
-      "https://www.instagram.com/psicolobiaa",
-      "https://www.tiktok.com/@psicolobiaa",
-      "https://linktr.ee/psicolobiaa",
+      social.instagram,
+      social.tiktok,
+      ...(social.linktree ? [social.linktree] : []),
     ],
     founder: {
       "@type": "Person",
-      "@id": "https://mentevive-psicolobia.vercel.app/#beatriz",
-      name: "Beatriz Ribeiro",
-      givenName: "Beatriz",
-      familyName: "Ribeiro",
-      jobTitle: "Psicóloga Clínica",
-      description:
-        "CRP 06/173961 — UNOESTE. Especialista em Terapia de Aceitação e Compromisso (ACT) e Terapia para Tratamento de Traumas.",
-      image: "https://mentevive-psicolobia.vercel.app/bia.png",
-      url: "https://mentevive-psicolobia.vercel.app",
-      sameAs: [
-        "https://www.instagram.com/psicolobiaa",
-        "https://www.tiktok.com/@psicolobiaa",
-      ],
+      "@id": personPath,
+      name: professional.name,
+      givenName: professional.name.split(" ")[0],
+      familyName: professional.name.split(" ").slice(1).join(" "),
+      jobTitle: professional.title,
+      description: `${professional.crp} — ${professional.formation}. ${professional.specialties.join(" e ")}.`,
+      image: `${siteUrl}${professional.photo}`,
+      url: siteUrl,
+      sameAs: [social.instagram, social.tiktok],
     },
-    areaServed: { "@type": "Country", name: "BR" },
+    areaServed: { "@type": "Country", name: location.country },
     serviceType: [
       "Terapia Individual Online",
       "Ansiedade e Depressão",
       "Tratamento de Traumas",
-      "Terapia para Criadores de Conteúdo",
-      "Terapia de Casal Online",
-      "Autoconhecimento",
     ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Serviços de Psicologia Online",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Terapia Individual Online",
-            description: "Sessões individuais de psicoterapia online com abordagem ACT.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Terapia de Casal Online",
-            description: "Terapia de casal online para fortalecer relacionamentos.",
-          },
-        },
-      ],
-    },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -110,7 +88,7 @@ const jsonLd = [
         "@type": "ListItem",
         position: 1,
         name: "Início",
-        item: "https://mentevive-psicolobia.vercel.app",
+        item: siteUrl,
       },
     ],
   },
@@ -131,7 +109,7 @@ const jsonLd = [
         name: "Qual a abordagem terapêutica utilizada?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A principal abordagem é a Terapia de Aceitação e Compromisso (ACT), que ajuda a desenvolver flexibilidade psicológica e a viver de acordo com seus valores.",
+          text: `A principal abordagem é ${professional.specialties[0]}, que ajuda a desenvolver flexibilidade psicológica e a viver de acordo com seus valores.`,
         },
       },
       {
@@ -140,14 +118,6 @@ const jsonLd = [
         acceptedAnswer: {
           "@type": "Answer",
           text: "As sessões individuais têm duração de 50 minutos. Sessões de casal podem ter duração diferenciada conforme a necessidade.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Atende criadores de conteúdo?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Sim! Beatriz é especialista no emocional de quem vive da internet — criadores de conteúdo, influenciadores e profissionais digitais que enfrentam ansiedade, burnout e pressão online.",
         },
       },
     ],

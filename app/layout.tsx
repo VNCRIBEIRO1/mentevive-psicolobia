@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import { tenantConfig } from "@/lib/tenant.config";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -16,34 +17,21 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const { professional, urls, social, seo, name, longDescription, description } = tenantConfig;
+const siteUrl = urls.siteUrl;
+const defaultTitle = `${name} — ${professional.name} | ${professional.title} Online em ${tenantConfig.location.city}`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mentevive-psicolobia.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Psicolobia — Beatriz Ribeiro | Psicóloga Clínica Online em São Paulo",
-    template: "%s | Psicolobia",
+    default: defaultTitle,
+    template: seo.titleTemplate,
   },
-  description:
-    "Beatriz Ribeiro (Bea) — Psicóloga Clínica CRP 06/173961. Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com ACT, tratamento de ansiedade, depressão e traumas. Agende sua sessão.",
-  keywords: [
-    "psicóloga online",
-    "terapia online",
-    "psicóloga São Paulo",
-    "psicóloga clínica",
-    "terapia ACT",
-    "ansiedade",
-    "depressão",
-    "tratamento de traumas",
-    "criadores de conteúdo",
-    "burnout digital",
-    "autoconhecimento",
-    "terapia de casal online",
-    "Beatriz Ribeiro psicóloga",
-    "Psicolobia",
-    "CRP 06/173961",
-  ],
-  authors: [{ name: "Beatriz Ribeiro", url: "https://mentevive-psicolobia.vercel.app" }],
-  creator: "Beatriz Ribeiro — Psicóloga Clínica",
-  publisher: "Psicolobia",
+  description: longDescription,
+  keywords: [...seo.keywords],
+  authors: [{ name: professional.name, url: siteUrl }],
+  creator: `${professional.name} — ${professional.title}`,
+  publisher: name,
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: "/icon.svg",
@@ -51,27 +39,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://mentevive-psicolobia.vercel.app",
-    siteName: "Psicolobia",
-    title: "Psicolobia — Beatriz Ribeiro | Psicóloga Clínica Online",
-    description:
-      "Psicóloga Clínica especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online acolhedora com ACT. Agende sua sessão.",
+    url: siteUrl,
+    siteName: name,
+    title: `${name} — ${professional.name} | ${professional.title} Online`,
+    description,
     images: [
       {
-        url: "/bia.png",
+        url: professional.photo,
         width: 1200,
         height: 630,
-        alt: "Beatriz Ribeiro — Psicóloga Clínica Psicolobia",
+        alt: `${professional.name} — ${professional.title} ${name}`,
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicolobia — Beatriz Ribeiro | Psicóloga Clínica Online",
-    description:
-      "Psicóloga Clínica especialista no emocional de quem vive da internet. +3500 atendimentos. Agende sua sessão online.",
-    images: ["/bia.png"],
+    title: `${name} — ${professional.name} | ${professional.title} Online`,
+    description,
+    images: [professional.photo],
+    ...(seo.twitterHandle ? { creator: seo.twitterHandle } : {}),
   },
   robots: {
     index: true,
@@ -85,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://mentevive-psicolobia.vercel.app",
+    canonical: siteUrl,
   },
   category: "health",
 };
@@ -101,3 +88,4 @@ export default function RootLayout({
     </html>
   );
 }
+

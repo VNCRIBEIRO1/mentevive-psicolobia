@@ -1,4 +1,7 @@
-export const WHATSAPP_LINK = "https://wa.me/5511988840525";
-export const INSTAGRAM_URL = "https://www.instagram.com/psicolobiaa";
-export const TIKTOK_URL = "https://www.tiktok.com/@psicolobiaa";
-export const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || "https://mentevive.vercel.app";
+import { tenantConfig } from "@/lib/tenant.config";
+
+export const WHATSAPP_LINK = tenantConfig.urls.whatsapp;
+export const INSTAGRAM_URL = tenantConfig.social.instagram;
+export const TIKTOK_URL = tenantConfig.social.tiktok;
+export const PLATFORM_URL = tenantConfig.urls.platformUrl;
+export const SITE_URL = tenantConfig.urls.siteUrl;
