@@ -72,7 +72,7 @@ export function Chatbot() {
       portal: ["portal", "login", "entrar"],
       videochamada: ["video", "online", "chamada"],
       contato: ["contato", "whatsapp", "telefone"],
-      psicologo: ["psicologo", "psicologa", "consultorio", "tenant"],
+      psicologo: ["psicologo", "psicologa", "consultorio", "profissional"],
     };
     for (const [key, words] of Object.entries(map)) {
       if (words.some((w) => lower.includes(w))) return key;

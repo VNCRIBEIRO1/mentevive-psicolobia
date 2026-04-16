@@ -67,7 +67,7 @@ export function Contact() {
                 <GlassCard className="flex gap-3.5 !p-4">
                   <div className="w-[42px] h-[42px] bg-teal/10 rounded-full flex items-center justify-center shrink-0">{c.icon}</div>
                   <div>
-                    <h4 className="text-sm font-bold">{c.title}</h4>
+                    <h3 className="text-sm font-bold">{c.title}</h3>
                     {c.href ? (
                       <a href={c.href} target="_blank" rel="noopener" className="text-xs text-teal-dark hover:underline">{c.content}</a>
                     ) : (
