@@ -3,7 +3,6 @@ import { Hero } from "@/app/components/landing/Hero";
 import { Journey } from "@/app/components/landing/Journey";
 import { About } from "@/app/components/landing/About";
 import { Services } from "@/app/components/landing/Services";
-import { Blog } from "@/app/components/landing/Blog";
 import { Contact } from "@/app/components/landing/Contact";
 import { Footer } from "@/app/components/landing/Footer";
 import { WhatsAppFloat } from "@/app/components/landing/WhatsAppFloat";
@@ -18,12 +17,15 @@ const Scheduling = dynamic(
 const Chatbot = dynamic(
   () => import("@/app/components/landing/Chatbot").then((m) => m.Chatbot)
 );
+const PortalShowcase = dynamic(
+  () => import("@/app/components/landing/PortalShowcase").then((m) => m.PortalShowcase),
+  { loading: () => <div className="py-20" /> }
+);
 
 const { name, description, professional, urls, social, location, branding } = tenantConfig;
 const siteUrl = urls.siteUrl;
 const namePath = `${siteUrl}/#organization`;
 const personPath = `${siteUrl}/#${professional.nickname.toLowerCase()}`;
-// Extract phone from whatsapp URL (wa.me/5511988840525 → +5511988840525)
 const phone = urls.whatsapp.replace("https://wa.me/", "+");
 
 const jsonLd = [
@@ -32,7 +34,7 @@ const jsonLd = [
     "@type": "ProfessionalService",
     "@id": namePath,
     name,
-    alternateName: `${name} — ${professional.name}`,
+    alternateName: `${name} - ${professional.name}`,
     description,
     url: siteUrl,
     telephone: phone,
@@ -62,7 +64,7 @@ const jsonLd = [
       givenName: professional.name.split(" ")[0],
       familyName: professional.name.split(" ").slice(1).join(" "),
       jobTitle: professional.title,
-      description: `${professional.crp} — ${professional.formation}. ${professional.specialties.join(" e ")}.`,
+      description: `${professional.crp} - ${professional.formation}. ${professional.specialties.join(" e ")}.`,
       image: `${siteUrl}${professional.photo}`,
       url: siteUrl,
       sameAs: [social.instagram, social.tiktok],
@@ -70,7 +72,7 @@ const jsonLd = [
     areaServed: { "@type": "Country", name: location.country },
     serviceType: [
       "Terapia Individual Online",
-      "Ansiedade e Depressão",
+      "Ansiedade e Depressao",
       "Tratamento de Traumas",
     ],
     openingHoursSpecification: {
@@ -82,42 +84,30 @@ const jsonLd = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Início",
-        item: siteUrl,
-      },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
         "@type": "Question",
-        name: "Como funciona a terapia online?",
+        name: "Como funciona o cadastro no portal?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "As sessões acontecem por videochamada em uma sala segura e privada. Você pode participar de qualquer lugar com internet. A eficácia é a mesma da terapia presencial.",
+          text: "Voce cria a conta pelo link do tenant e entra no Portal do Paciente para agendar e acompanhar sessoes.",
         },
       },
       {
         "@type": "Question",
-        name: "Qual a abordagem terapêutica utilizada?",
+        name: "Como funciona o agendamento?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `A principal abordagem é ${professional.specialties[0]}, que ajuda a desenvolver flexibilidade psicológica e a viver de acordo com seus valores.`,
+          text: "O agendamento e feito no portal, com horarios disponiveis em tempo real e confirmacao no proprio sistema.",
         },
       },
       {
         "@type": "Question",
-        name: "Quanto tempo dura cada sessão?",
+        name: "As sessoes sao presenciais ou online?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "As sessões individuais têm duração de 50 minutos. Sessões de casal podem ter duração diferenciada conforme a necessidade.",
+          text: "As sessoes sao realizadas por videochamada em ambiente seguro.",
         },
       },
     ],
@@ -144,9 +134,9 @@ export default function Home() {
         <SectionDivider variant="wave-down" />
         <Services />
         <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
-        <Scheduling />
+        <PortalShowcase />
         <SectionDivider variant="wave-down" colorFrom="var(--teal)" colorTo="var(--primary)" />
-        <Blog />
+        <Scheduling />
         <SectionDivider variant="wave-down" colorFrom="var(--primary)" colorTo="var(--teal)" />
         <Contact />
       </main>

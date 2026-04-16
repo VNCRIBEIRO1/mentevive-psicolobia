@@ -8,11 +8,13 @@ import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 const navLinks = [
   { href: "#jornada", label: "Jornada" },
   { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#agendamento", label: "Agendar" },
-  { href: "#blog", label: "Blog" },
+  { href: "#servicos", label: "Atuacao" },
+  { href: "#agendamento", label: "Cadastro e Agenda" },
   { href: "#contato", label: "Contato" },
 ];
+
+const loginUrl = `${PLATFORM_URL}/login?tenant=${TENANT_SLUG}`;
+const registerUrl = `${PLATFORM_URL}/registro?tenant=${TENANT_SLUG}`;
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,19 +29,20 @@ export function Header() {
   return (
     <>
       <a href="#main" className="absolute -top-full left-4 bg-primary text-white px-6 py-3 rounded-b-lg z-[200] focus:top-0">
-        Pular para o conteúdo
+        Pular para o conteudo
       </a>
       <header
-        className={`fixed top-0 left-0 right-0 z-[100] px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300
-        ${scrolled ? "bg-white/90 shadow-warm-md backdrop-blur-2xl" : "bg-[#FFF5EE]/80 backdrop-blur-xl"} border-b border-primary/5`}
+        className={`fixed top-0 left-0 right-0 z-[100] px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 ${
+          scrolled ? "bg-white/90 shadow-warm-md backdrop-blur-2xl" : "bg-[#FFF5EE]/80 backdrop-blur-xl"
+        } border-b border-primary/5`}
       >
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center text-white font-heading text-xl font-bold shadow-warm-sm group-hover:shadow-teal-glow transition-shadow duration-300">
-            Ψ
+            P
           </div>
           <div>
             <span className="font-heading text-lg font-semibold text-txt block leading-tight">Psicolobia</span>
-            <span className="text-[0.6rem] text-txt-muted block">Beatriz · Psicóloga Clínica</span>
+            <span className="text-[0.6rem] text-txt-muted block">Portal Multi-tenant MenteVive</span>
           </div>
         </Link>
 
@@ -49,11 +52,11 @@ export function Header() {
               {l.label}
             </a>
           ))}
-          <a href={`${PLATFORM_URL}/login?tenant=${TENANT_SLUG}`} className="text-sm font-semibold text-teal-dark hover:text-primary transition-colors">
+          <a href={loginUrl} className="text-sm font-semibold text-teal-dark hover:text-primary transition-colors">
             Entrar
           </a>
-          <a href="#agendamento" className="btn-brand-primary text-xs !py-2 !px-4">
-            <Leaf className="w-3.5 h-3.5" /> Agendar
+          <a href={registerUrl} className="btn-brand-primary text-xs !py-2 !px-4">
+            <Leaf className="w-3.5 h-3.5" /> Criar conta
           </a>
         </nav>
 
@@ -62,7 +65,6 @@ export function Header() {
         </button>
       </header>
 
-      {/* Mobile Nav Overlay */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -88,15 +90,10 @@ export function Header() {
                 {l.label}
               </motion.a>
             ))}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: navLinks.length * 0.06 }}
-            >
-              <a href={`${PLATFORM_URL}/login?tenant=${TENANT_SLUG}`} onClick={() => setMobileOpen(false)} className="font-heading text-xl text-teal-dark">
-                Entrar
-              </a>
-            </motion.div>
+            <div className="flex gap-4">
+              <a href={loginUrl} onClick={() => setMobileOpen(false)} className="font-heading text-xl text-teal-dark">Entrar</a>
+              <a href={registerUrl} onClick={() => setMobileOpen(false)} className="font-heading text-xl text-primary">Criar conta</a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
