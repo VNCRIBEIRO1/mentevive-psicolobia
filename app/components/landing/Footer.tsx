@@ -3,10 +3,11 @@ import { Smartphone, Camera, Music } from "lucide-react";
 import { WHATSAPP_LINK, WHATSAPP_DISPLAY, INSTAGRAM_URL, TIKTOK_URL, PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
 const siteLinks = [
-  { href: "#jornada", label: "Jornada" },
   { href: "#sobre", label: "Sobre" },
   { href: "#servicos", label: "Atuacao" },
-  { href: "#agendamento", label: "Cadastro e Agenda" },
+  { href: "#portal", label: "Portal" },
+  { href: "#blog", label: "Blog" },
+  { href: "#agendamento", label: "Cadastro" },
   { href: "#contato", label: "Contato" },
 ];
 

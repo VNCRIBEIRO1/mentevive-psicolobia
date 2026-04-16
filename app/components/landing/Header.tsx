@@ -6,10 +6,11 @@ import Link from "next/link";
 import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#jornada", label: "Jornada" },
   { href: "#sobre", label: "Sobre" },
   { href: "#servicos", label: "Atuacao" },
-  { href: "#agendamento", label: "Cadastro e Agenda" },
+  { href: "#portal", label: "Portal" },
+  { href: "#blog", label: "Blog" },
+  { href: "#agendamento", label: "Cadastro" },
   { href: "#contato", label: "Contato" },
 ];
 
