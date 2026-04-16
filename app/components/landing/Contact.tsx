@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Smartphone, Camera, Music, Monitor, Send, CheckCircle, Leaf } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { WHATSAPP_LINK, INSTAGRAM_URL, TIKTOK_URL } from "@/lib/utils";
+import { WHATSAPP_LINK, INSTAGRAM_URL, TIKTOK_URL, PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import { GlassCard } from "./GlassCard";
 import type { ReactNode } from "react";
@@ -18,7 +18,7 @@ export function Contact() {
     setSending(true);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`${PLATFORM_URL}/api/contact?tenant=${TENANT_SLUG}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

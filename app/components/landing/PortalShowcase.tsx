@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { PLATFORM_URL } from "@/lib/utils";
+import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 const features: { icon: ReactNode; title: string; desc: string; color: string; iconBg: string }[] = [
@@ -162,7 +162,7 @@ export function PortalShowcase() {
               whileTap={reduce ? {} : { scale: 0.97 }}
             >
               <Link
-                href={`${PLATFORM_URL}/registro?tenant=psicolobia`}
+                href={`${PLATFORM_URL}/registro?tenant=${TENANT_SLUG}`}
                 className="inline-flex items-center gap-2.5 bg-gradient-to-r from-teal to-teal-dark text-white font-bold text-sm px-8 py-4 rounded-full shadow-teal-glow hover:shadow-lg transition-all duration-300 group"
               >
                 Criar minha conta

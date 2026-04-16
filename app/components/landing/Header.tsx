@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Leaf } from "lucide-react";
 import Link from "next/link";
-import { PLATFORM_URL } from "@/lib/utils";
+import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
 const navLinks = [
   { href: "#jornada", label: "Jornada" },
@@ -49,7 +49,7 @@ export function Header() {
               {l.label}
             </a>
           ))}
-          <a href={`${PLATFORM_URL}/login?tenant=psicolobia`} className="text-sm font-semibold text-teal-dark hover:text-primary transition-colors">
+          <a href={`${PLATFORM_URL}/login?tenant=${TENANT_SLUG}`} className="text-sm font-semibold text-teal-dark hover:text-primary transition-colors">
             Entrar
           </a>
           <a href="#agendamento" className="btn-brand-primary text-xs !py-2 !px-4">
@@ -93,7 +93,7 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: navLinks.length * 0.06 }}
             >
-              <a href={`${PLATFORM_URL}/login?tenant=psicolobia`} onClick={() => setMobileOpen(false)} className="font-heading text-xl text-teal-dark">
+              <a href={`${PLATFORM_URL}/login?tenant=${TENANT_SLUG}`} onClick={() => setMobileOpen(false)} className="font-heading text-xl text-teal-dark">
                 Entrar
               </a>
             </motion.div>

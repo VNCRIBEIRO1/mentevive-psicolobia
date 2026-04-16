@@ -1,10 +1,10 @@
 "use client";
 import { CalendarDays, Leaf, ArrowRight } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
-import { PLATFORM_URL } from "@/lib/utils";
+import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
 export function Scheduling() {
-  const portalUrl = `${PLATFORM_URL}/login?tenant=psicolobia`;
+  const portalUrl = `${PLATFORM_URL}/login?tenant=${TENANT_SLUG}`;
 
   return (
     <section className="py-20 px-4 md:px-8" id="agendar">

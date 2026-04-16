@@ -1,5 +1,6 @@
 import { tenantConfig } from "@/lib/tenant.config";
 
+export const TENANT_SLUG = tenantConfig.slug;
 export const WHATSAPP_LINK = tenantConfig.urls.whatsapp;
 export const INSTAGRAM_URL = tenantConfig.social.instagram;
 export const TIKTOK_URL = tenantConfig.social.tiktok;
