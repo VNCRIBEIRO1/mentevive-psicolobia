@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import { useHydrated } from "@/lib/useHydrated";
 
 interface FloatingOrbsProps {
   className?: string;
@@ -34,6 +35,7 @@ const orbs = [
 ];
 
 export function FloatingOrbs({ className = "" }: FloatingOrbsProps) {
+  const hydrated = useHydrated();
   const containerRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
 
@@ -44,7 +46,7 @@ export function FloatingOrbs({ className = "" }: FloatingOrbsProps) {
   const springY = useSpring(mouseY, { stiffness: 60, damping: 30 });
 
   useEffect(() => {
-    if (shouldReduceMotion) return;
+    if (shouldReduceMotion || !hydrated) return;
 
     function handleMouseMove(e: MouseEvent) {
       const rect = containerRef.current?.getBoundingClientRect();
@@ -57,7 +59,10 @@ export function FloatingOrbs({ className = "" }: FloatingOrbsProps) {
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [shouldReduceMotion, mouseX, mouseY]);
+  }, [shouldReduceMotion, hydrated, mouseX, mouseY]);
+
+  /* Don't render until after hydration to avoid React 19 mismatch */
+  if (!hydrated || shouldReduceMotion) return null;
 
   return (
     <div
@@ -71,9 +76,7 @@ export function FloatingOrbs({ className = "" }: FloatingOrbsProps) {
           className={`absolute ${orb.size} ${orb.color} ${orb.blur} ${orb.radius} ${orb.speed} opacity-[0.12]`}
           style={{
             ...orb.offset,
-            transform: shouldReduceMotion
-              ? undefined
-              : `translate(${springX.get()}px, ${springY.get()}px)`,
+            transform: `translate(${springX.get()}px, ${springY.get()}px)`,
           }}
         />
       ))}

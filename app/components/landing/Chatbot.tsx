@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Leaf } from "lucide-react";
 import { PLATFORM_URL, TENANT_SLUG, WHATSAPP_DISPLAY, WHATSAPP_LINK } from "@/lib/utils";
+import { useHydrated } from "@/lib/useHydrated";
 
 type BotResponse = { msg: string; opts: string[] };
 
@@ -97,15 +98,13 @@ export function Chatbot() {
 
   return (
     <>
-      <motion.button
+      <button
         onClick={toggle}
         aria-label="Assistente virtual"
-        className="fixed bottom-8 right-8 w-[52px] h-[52px] rounded-full bg-gradient-to-br from-primary to-teal border-none cursor-pointer flex items-center justify-center z-[90] shadow-warm-lg no-print"
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-8 right-8 w-[52px] h-[52px] rounded-full bg-gradient-to-br from-primary to-teal border-none cursor-pointer flex items-center justify-center z-[90] shadow-warm-lg no-print transition-transform duration-200 hover:scale-[1.08] active:scale-95"
       >
         <MessageSquare className="w-6 h-6 text-white" />
-      </motion.button>
+      </button>
 
       <AnimatePresence>
         {open && (

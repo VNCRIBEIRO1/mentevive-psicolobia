@@ -1,6 +1,7 @@
 "use client";
 import { motion, useReducedMotion, type Variant, type Variants } from "framer-motion";
 import { type ReactNode } from "react";
+import { useHydrated } from "@/lib/useHydrated";
 
 type Direction = "up" | "left" | "right" | "scale";
 type StaggerType = "gentle" | "premium";
@@ -48,9 +49,11 @@ export function AnimatedSection({
   staggerChildren = 0.1,
   once = true,
 }: AnimatedSectionProps) {
+  const hydrated = useHydrated();
   const shouldReduceMotion = useReducedMotion();
 
-  if (shouldReduceMotion) {
+  /* Before hydration or with reduced motion: render visible static content */
+  if (!hydrated || shouldReduceMotion) {
     return <div className={className}>{children}</div>;
   }
 
@@ -74,7 +77,8 @@ export function AnimatedSection({
       className={className}
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once, amount: 0.05 }}
     >
       {children}
     </motion.div>

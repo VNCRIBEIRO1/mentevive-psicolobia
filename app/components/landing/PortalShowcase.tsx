@@ -14,6 +14,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 import type { ReactNode } from "react";
+import { useHydrated } from "@/lib/useHydrated";
 
 const features: { icon: ReactNode; title: string; desc: string; color: string; iconBg: string }[] = [
   {
@@ -63,7 +64,8 @@ const features: { icon: ReactNode; title: string; desc: string; color: string; i
 /* Floating particle dots for background atmosphere */
 function FloatingDots() {
   const reduce = useReducedMotion();
-  if (reduce) return null;
+  const hydrated = useHydrated();
+  if (reduce || !hydrated) return null;
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
@@ -93,6 +95,7 @@ function FloatingDots() {
 
 export function PortalShowcase() {
   const reduce = useReducedMotion();
+  const hydrated = useHydrated();
 
   return (
     <section className="py-24 px-4 md:px-8 bg-bg relative overflow-hidden" id="portal">
@@ -107,7 +110,7 @@ export function PortalShowcase() {
             Um espaço digital pensado com carinho para que você acompanhe cada etapa do seu processo terapêutico — com segurança, praticidade e acolhimento.
           </p>
           {/* Animated underline */}
-          {!reduce && (
+          {!reduce && hydrated && (
             <motion.div
               className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-teal/40 to-transparent rounded-full mb-12"
               initial={{ width: 0 }}

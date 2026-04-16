@@ -15,7 +15,8 @@ const Scheduling = dynamic(
   { loading: () => <div className="py-20" /> }
 );
 const Chatbot = dynamic(
-  () => import("@/app/components/landing/Chatbot").then((m) => m.Chatbot)
+  () => import("@/app/components/landing/Chatbot").then((m) => m.Chatbot),
+  { loading: () => null }
 );
 const PortalShowcase = dynamic(
   () => import("@/app/components/landing/PortalShowcase").then((m) => m.PortalShowcase),
