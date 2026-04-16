@@ -92,7 +92,7 @@ const jsonLd = [
         name: "Como funciona o cadastro no portal?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Você cria a conta pelo link do tenant e entra no Portal do Paciente para agendar e acompanhar sessões.",
+          text: "Você cria a conta pelo site e entra no Portal do Paciente para agendar e acompanhar sessões.",
         },
       },
       {

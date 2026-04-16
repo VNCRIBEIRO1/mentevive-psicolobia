@@ -17,9 +17,9 @@ export function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1100px] mx-auto">
         <div>
           <h4 className="text-white font-heading text-base mb-3">Psicolobia</h4>
-          <p className="text-sm leading-relaxed">Psicologia online com fluxo multi-tenant no MenteVive.</p>
+          <p className="text-sm leading-relaxed">Psicologia clínica online com escuta sensível e acolhimento.</p>
           <p className="mt-3 text-[0.7rem] opacity-40">
-            Cadastro, login e agendamento em ambiente seguro para pacientes e consultórios.
+            Atendimento individual por videochamada em ambiente seguro.
           </p>
         </div>
         <div>

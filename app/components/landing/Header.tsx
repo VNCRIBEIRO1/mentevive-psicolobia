@@ -43,7 +43,7 @@ export function Header() {
           </div>
           <div>
             <span className="font-heading text-lg font-semibold text-txt block leading-tight">Psicolobia</span>
-            <span className="text-[0.6rem] text-txt-muted block">Portal Multi-tenant MenteVive</span>
+            <span className="text-[0.6rem] text-txt-muted block">Psicóloga Clínica Online</span>
           </div>
         </Link>
 

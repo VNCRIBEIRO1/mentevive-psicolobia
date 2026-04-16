@@ -50,9 +50,9 @@ export function Blog() {
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-widest mb-4">
             <Sparkles className="w-3.5 h-3.5" /> Conteúdos
           </span>
-          <h2 className="section-title">Blog da landing</h2>
+          <h2 className="section-title">Artigos e Orientações</h2>
           <p className="text-sm text-txt-light max-w-xl mt-2">
-            Conteúdo estático para SEO e educação do paciente. Não é editável pelo painel do SaaS.
+            Informações úteis sobre terapia, saúde emocional e o processo terapêutico.
           </p>
         </div>
       </AnimatedSection>
