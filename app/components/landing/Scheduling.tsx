@@ -15,8 +15,8 @@ export function Scheduling() {
           <div className="section-label justify-center">Cadastro e Agendamento</div>
           <h2 className="section-title">Fluxo novo do portal multi-tenant</h2>
           <p className="text-txt-light max-w-2xl mx-auto mt-3 mb-8">
-            Toda a jornada acontece no MenteVive com tenant pre-selecionado: cadastro, login,
-            agendamento e acompanhamento da sessao por videochamada.
+            Toda a jornada acontece no MenteVive com tenant pré-selecionado: cadastro, login,
+            agendamento e acompanhamento da sessão por videochamada.
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 text-left">
@@ -25,7 +25,7 @@ export function Scheduling() {
                 <UserPlus className="w-5 h-5 text-teal" />
               </div>
               <h3 className="font-heading text-lg font-semibold mb-2">Sou paciente novo</h3>
-              <p className="text-sm text-txt-light mb-4">Crie sua conta ja vinculada ao consultorio e acesse o portal seguro.</p>
+              <p className="text-sm text-txt-light mb-4">Crie sua conta já vinculada ao consultório e acesse o portal seguro.</p>
               <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-dark">Criar conta <ArrowRight className="w-4 h-4" /></span>
             </a>
 
@@ -33,8 +33,8 @@ export function Scheduling() {
               <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <LogIn className="w-5 h-5 text-primary-dark" />
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-2">Ja tenho conta</h3>
-              <p className="text-sm text-txt-light mb-4">Entre direto no portal do tenant para agendar, remarcar e acompanhar sua evolucao.</p>
+              <h3 className="font-heading text-lg font-semibold mb-2">Já tenho conta</h3>
+              <p className="text-sm text-txt-light mb-4">Entre direto no portal do tenant para agendar, remarcar e acompanhar sua evolução.</p>
               <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-dark">Acessar portal <ArrowRight className="w-4 h-4" /></span>
             </a>
 
@@ -42,9 +42,9 @@ export function Scheduling() {
               <div className="w-11 h-11 rounded-full bg-accent/20 flex items-center justify-center mb-4">
                 <Leaf className="w-5 h-5 text-accent-dark" />
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-2">Sou psicologo(a)</h3>
-              <p className="text-sm text-txt-light mb-4">Crie seu proprio consultorio no SaaS MenteVive e tenha seu tenant dedicado.</p>
-              <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-dark">Criar consultorio <ArrowRight className="w-4 h-4" /></span>
+              <h3 className="font-heading text-lg font-semibold mb-2">Sou psicólogo(a)</h3>
+              <p className="text-sm text-txt-light mb-4">Crie seu próprio consultório no SaaS MenteVive e tenha seu tenant dedicado.</p>
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-dark">Criar consultório <ArrowRight className="w-4 h-4" /></span>
             </a>
           </div>
 
@@ -56,13 +56,13 @@ export function Scheduling() {
               <h3 className="font-heading text-lg font-semibold">Como o agendamento funciona</h3>
             </div>
             <ol className="grid sm:grid-cols-2 gap-3 text-sm text-txt-light">
-              <li>1. Crie conta ou faca login com tenant predefinido.</li>
-              <li>2. Abra o modulo de agenda no Portal do Paciente.</li>
-              <li>3. Escolha horario disponivel e confirme o agendamento.</li>
-              <li>4. Receba notificacoes e link da videochamada no dia da sessao.</li>
+              <li>1. Crie conta ou faça login com tenant predefinido.</li>
+              <li>2. Abra o módulo de agenda no Portal do Paciente.</li>
+              <li>3. Escolha horário disponível e confirme o agendamento.</li>
+              <li>4. Receba notificações e link da videochamada no dia da sessão.</li>
             </ol>
             <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-teal-dark">
-              <Video className="w-4 h-4" /> Sessao unica por videochamada (online)
+              <Video className="w-4 h-4" /> Sessão única por videochamada (online)
             </div>
           </div>
         </AnimatedSection>

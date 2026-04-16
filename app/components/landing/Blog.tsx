@@ -14,28 +14,28 @@ const articles: Article[] = [
   {
     id: "online-funciona",
     title: "Terapia online funciona?",
-    excerpt: "Sim. A eficacia e comparavel ao presencial para diversos quadros clinicos.",
+    excerpt: "Sim. A eficácia é comparável ao presencial para diversos quadros clínicos.",
     content: [
-      "Atendimento online e regulamentado e permite vinculo terapeutico profundo com praticidade.",
-      "Quando ha plano clinico, frequencia e continuidade, os ganhos em ansiedade, depressao e autoconhecimento aparecem de forma consistente.",
+      "Atendimento online é regulamentado e permite vínculo terapêutico profundo com praticidade.",
+      "Quando há plano clínico, frequência e continuidade, os ganhos em ansiedade, depressão e autoconhecimento aparecem de forma consistente.",
     ],
   },
   {
     id: "ansiedade-digital",
     title: "Ansiedade e rotina digital",
-    excerpt: "Sobrecarga de informacao e comparacao constante impactam o emocional.",
+    excerpt: "Sobrecarga de informação e comparação constante impactam o emocional.",
     content: [
-      "A rotina hiperconectada pode amplificar sintomas de ansiedade, culpa e exaustao.",
-      "A terapia ajuda a reorganizar limites, recuperar foco e construir uma relacao mais saudavel com trabalho e redes.",
+      "A rotina hiperconectada pode amplificar sintomas de ansiedade, culpa e exaustão.",
+      "A terapia ajuda a reorganizar limites, recuperar foco e construir uma relação mais saudável com trabalho e redes.",
     ],
   },
   {
     id: "primeira-sessao",
-    title: "Como e a primeira sessao",
+    title: "Como é a primeira sessão",
     excerpt: "A primeira conversa define objetivos, contexto e combinados do processo.",
     content: [
-      "Voce pode levar sua principal queixa, duvidas e expectativas sem precisar 'ter tudo pronto'.",
-      "A sessao inicial e um espaco de acolhimento para entender sua historia e montar o plano terapeutico com clareza.",
+      "Você pode levar sua principal queixa, dúvidas e expectativas sem precisar 'ter tudo pronto'.",
+      "A sessão inicial é um espaço de acolhimento para entender sua história e montar o plano terapêutico com clareza.",
     ],
   },
 ];
@@ -48,11 +48,11 @@ export function Blog() {
       <AnimatedSection className="max-w-[900px] mx-auto" direction="up">
         <div className="flex flex-col items-center text-center mb-10">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-widest mb-4">
-            <Sparkles className="w-3.5 h-3.5" /> Conteudos
+            <Sparkles className="w-3.5 h-3.5" /> Conteúdos
           </span>
           <h2 className="section-title">Blog da landing</h2>
           <p className="text-sm text-txt-light max-w-xl mt-2">
-            Conteudo estatico para SEO e educacao do paciente. Nao e editavel pelo painel do SaaS.
+            Conteúdo estático para SEO e educação do paciente. Não é editável pelo painel do SaaS.
           </p>
         </div>
       </AnimatedSection>

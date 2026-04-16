@@ -38,7 +38,7 @@ export function Contact() {
         setToast("Erro ao enviar. Tente novamente ou use WhatsApp.");
       }
     } catch {
-      setToast("Erro de conexao. Tente novamente.");
+      setToast("Erro de conexão. Tente novamente.");
     } finally {
       setSending(false);
       setTimeout(() => setToast(""), 4000);
@@ -48,8 +48,8 @@ export function Contact() {
   const contacts: { icon: ReactNode; title: string; content: string; href?: string }[] = [
     { icon: <Smartphone className="w-5 h-5 text-teal" />, title: "WhatsApp", content: "Contato direto", href: WHATSAPP_LINK },
     { icon: <Camera className="w-5 h-5 text-teal" />, title: "Instagram", content: "Perfil oficial", href: INSTAGRAM_URL },
-    { icon: <Music className="w-5 h-5 text-teal" />, title: "TikTok", content: "Conteudos e orientacoes", href: TIKTOK_URL },
-    { icon: <Monitor className="w-5 h-5 text-teal" />, title: "Atendimento", content: "Sessoes online por videochamada" },
+    { icon: <Music className="w-5 h-5 text-teal" />, title: "TikTok", content: "Conteúdos e orientações", href: TIKTOK_URL },
+    { icon: <Monitor className="w-5 h-5 text-teal" />, title: "Atendimento", content: "Sessões online por videochamada" },
   ];
 
   return (
@@ -97,9 +97,9 @@ export function Contact() {
                 <div>
                   <label className="block text-xs font-bold mb-1">Assunto</label>
                   <select name="subject" className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-white text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow">
-                    <option>Agendar sessao</option>
-                    <option>Duvida sobre cadastro no portal</option>
-                    <option>Duvida sobre atendimento online</option>
+                    <option>Agendar sessão</option>
+                    <option>Dúvida sobre cadastro no portal</option>
+                    <option>Dúvida sobre atendimento online</option>
                     <option>Outro</option>
                   </select>
                 </div>

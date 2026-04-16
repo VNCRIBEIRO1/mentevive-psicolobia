@@ -7,7 +7,7 @@ import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Atuacao" },
+  { href: "#servicos", label: "Atuação" },
   { href: "#portal", label: "Portal" },
   { href: "#blog", label: "Blog" },
   { href: "#agendamento", label: "Cadastro" },
@@ -30,7 +30,7 @@ export function Header() {
   return (
     <>
       <a href="#main" className="absolute -top-full left-4 bg-primary text-white px-6 py-3 rounded-b-lg z-[200] focus:top-0">
-        Pular para o conteudo
+        Pular para o conteúdo
       </a>
       <header
         className={`fixed top-0 left-0 right-0 z-[100] px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 ${

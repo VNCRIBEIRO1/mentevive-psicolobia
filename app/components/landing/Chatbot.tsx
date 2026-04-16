@@ -20,11 +20,11 @@ const botResponses: Record<string, BotResponse> = {
     opts: ["cadastro", "portal", "contato"],
   },
   portal: {
-    msg: "No portal voce consegue agendar, remarcar, acompanhar sessoes e pagamentos em um unico lugar.",
+    msg: "No portal você consegue agendar, remarcar, acompanhar sessões e pagamentos em um único lugar.",
     opts: ["agendar", "videochamada", "contato"],
   },
   videochamada: {
-    msg: "As sessoes acontecem online por videochamada segura, com link liberado no fluxo da sessao.",
+    msg: "As sessões acontecem online por videochamada segura, com link liberado no fluxo da sessão.",
     opts: ["agendar", "portal", "contato"],
   },
   contato: {
@@ -32,7 +32,7 @@ const botResponses: Record<string, BotResponse> = {
     opts: ["cadastro", "agendar", "portal"],
   },
   psicologo: {
-    msg: `Se voce e psicologo(a), crie seu consultorio no MenteVive: ${therapistUrl}`,
+    msg: `Se você é psicólogo(a), crie seu consultório no MenteVive: ${therapistUrl}`,
     opts: ["cadastro", "agendar", "contato"],
   },
 };
@@ -67,7 +67,7 @@ export function Chatbot() {
     const lower = input.toLowerCase();
     const map: Record<string, string[]> = {
       cadastro: ["cadastro", "registr", "conta", "criar"],
-      agendar: ["agendar", "agenda", "horario", "sessao", "consulta"],
+      agendar: ["agendar", "agenda", "horário", "sessão", "consulta"],
       portal: ["portal", "login", "entrar"],
       videochamada: ["video", "online", "chamada"],
       contato: ["contato", "whatsapp", "telefone"],

@@ -4,7 +4,7 @@ import { WHATSAPP_LINK, WHATSAPP_DISPLAY, INSTAGRAM_URL, TIKTOK_URL, PLATFORM_UR
 
 const siteLinks = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Atuacao" },
+  { href: "#servicos", label: "Atuação" },
   { href: "#portal", label: "Portal" },
   { href: "#blog", label: "Blog" },
   { href: "#agendamento", label: "Cadastro" },
@@ -19,11 +19,11 @@ export function Footer() {
           <h4 className="text-white font-heading text-base mb-3">Psicolobia</h4>
           <p className="text-sm leading-relaxed">Psicologia online com fluxo multi-tenant no MenteVive.</p>
           <p className="mt-3 text-[0.7rem] opacity-40">
-            Cadastro, login e agendamento em ambiente seguro para pacientes e consultorios.
+            Cadastro, login e agendamento em ambiente seguro para pacientes e consultórios.
           </p>
         </div>
         <div>
-          <h4 className="text-white font-heading text-base mb-3">Navegacao</h4>
+          <h4 className="text-white font-heading text-base mb-3">Navegação</h4>
           <ul className="space-y-1">
             {siteLinks.map((l) => (
               <li key={l.href}>

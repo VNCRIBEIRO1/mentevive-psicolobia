@@ -72,7 +72,7 @@ const jsonLd = [
     areaServed: { "@type": "Country", name: location.country },
     serviceType: [
       "Terapia Individual Online",
-      "Ansiedade e Depressao",
+      "Ansiedade e Depressão",
       "Tratamento de Traumas",
     ],
     openingHoursSpecification: {
@@ -91,7 +91,7 @@ const jsonLd = [
         name: "Como funciona o cadastro no portal?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Voce cria a conta pelo link do tenant e entra no Portal do Paciente para agendar e acompanhar sessoes.",
+          text: "Você cria a conta pelo link do tenant e entra no Portal do Paciente para agendar e acompanhar sessões.",
         },
       },
       {
@@ -99,15 +99,15 @@ const jsonLd = [
         name: "Como funciona o agendamento?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "O agendamento e feito no portal, com horarios disponiveis em tempo real e confirmacao no proprio sistema.",
+          text: "O agendamento é feito no portal, com horários disponíveis em tempo real e confirmação no próprio sistema.",
         },
       },
       {
         "@type": "Question",
-        name: "As sessoes sao presenciais ou online?",
+        name: "As sessões são presenciais ou online?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "As sessoes sao realizadas por videochamada em ambiente seguro.",
+          text: "As sessões são realizadas por videochamada em ambiente seguro.",
         },
       },
     ],
