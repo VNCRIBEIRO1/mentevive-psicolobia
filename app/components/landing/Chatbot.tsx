@@ -101,7 +101,7 @@ export function Chatbot() {
       <button
         onClick={toggle}
         aria-label="Assistente virtual"
-        className="fixed bottom-8 right-8 w-[52px] h-[52px] rounded-full bg-gradient-to-br from-primary to-teal border-none cursor-pointer flex items-center justify-center z-[90] shadow-warm-lg no-print transition-transform duration-200 hover:scale-[1.08] active:scale-95"
+        className="fixed bottom-8 right-8 w-[52px] h-[52px] rounded-full bg-gradient-to-br from-primary to-primary-dark border-none cursor-pointer flex items-center justify-center z-[90] shadow-soft-lg no-print transition-transform duration-200 hover:scale-[1.08] active:scale-95"
       >
         <MessageSquare className="w-6 h-6 text-white" />
       </button>
@@ -113,9 +113,9 @@ export function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", stiffness: 200, damping: 22 }}
-            className="fixed bottom-24 right-8 w-[350px] max-h-[480px] glass-strong border border-primary/10 rounded-brand flex flex-col z-[91] shadow-warm-xl max-md:w-[calc(100vw-2rem)] max-md:right-4 max-md:bottom-[5.5rem] no-print"
+            className="fixed bottom-24 right-8 w-[350px] max-h-[480px] glass-strong border border-primary/10 rounded-2xl flex flex-col z-[91] shadow-soft-xl max-md:w-[calc(100vw-2rem)] max-md:right-4 max-md:bottom-[5.5rem] no-print"
           >
-            <div className="bg-gradient-to-r from-primary to-teal px-5 py-4 rounded-t-brand flex justify-between items-center">
+            <div className="bg-gradient-to-r from-primary to-primary-dark px-5 py-4 rounded-t-2xl flex justify-between items-center">
               <h4 className="text-white font-heading text-sm flex items-center gap-1.5"><Leaf className="w-3.5 h-3.5" /> Assistente do Portal</h4>
               <button onClick={toggle} className="text-white/70 hover:text-white transition-colors"><X className="w-4 h-4" /></button>
             </div>
@@ -167,7 +167,7 @@ export function Chatbot() {
               className="px-4 pb-3 flex gap-2"
             >
               <input type="text" value={textInput} onChange={(e) => setTextInput(e.target.value)} placeholder="Digite sua duvida..." className="flex-1 py-2 px-3 border border-primary/15 rounded-full text-xs font-body bg-bg text-txt focus:outline-none focus:border-primary" />
-              <button type="submit" className="w-8 h-8 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-dark transition-colors">
+              <button type="submit" className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-colors">
                 <Send className="w-3.5 h-3.5" />
               </button>
             </form>

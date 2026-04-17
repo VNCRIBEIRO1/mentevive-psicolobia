@@ -3,45 +3,43 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: { DEFAULT: "#D4A574", dark: "#B8895C", light: "#E8C9A8" },
-        accent: { DEFAULT: "#E8A0BF", light: "#F5C8DE" },
-        teal: { DEFAULT: "#0f766e", dark: "#0a6158", light: "#14b8a6" },
-        sage: { DEFAULT: "#e6f0eb", dark: "#c8ddd0" },
-        bg: { DEFAULT: "#FFF5EE", white: "#FFFFFF", soft: "#FDE8D8", warm: "#F9EDE3" },
-        txt: { DEFAULT: "#3D2B1F", light: "#6B5445", muted: "#7D6E62" },
+        primary: { DEFAULT: "#0f766e", dark: "#0a6158", light: "#14b8a6" },
+        accent: { DEFAULT: "#c4956a", dark: "#a67c52", light: "#dbb896" },
+        sage: { DEFAULT: "#e8f0ec", dark: "#c8ddd0" },
+        bg: { DEFAULT: "#fafaf8", white: "#ffffff", soft: "#f3f1ee", warm: "#f7f5f2" },
+        txt: { DEFAULT: "#1a1a1f", light: "#4a4a52", muted: "#71717a" },
+        border: { DEFAULT: "#e4e4e7", light: "#f0f0f2" },
       },
       fontFamily: {
         heading: ["var(--font-heading)", "Georgia", "serif"],
         body: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        brand: "18px",
+        brand: "16px",
         "brand-sm": "10px",
-        "brand-full": "50px",
       },
       boxShadow: {
-        "warm-sm": "0 1px 3px 0 rgba(212,165,116,0.12), 0 1px 2px -1px rgba(212,165,116,0.08)",
-        "warm-md": "0 4px 12px -2px rgba(212,165,116,0.16), 0 2px 6px -2px rgba(212,165,116,0.10)",
-        "warm-lg": "0 10px 25px -5px rgba(212,165,116,0.18), 0 4px 10px -5px rgba(212,165,116,0.10)",
-        "warm-xl": "0 20px 40px -10px rgba(212,165,116,0.22), 0 8px 16px -8px rgba(212,165,116,0.12)",
-        "warm-2xl": "0 25px 50px -12px rgba(212,165,116,0.28)",
-        "warm-glow": "0 0 20px -5px rgba(212,165,116,0.25)",
-        "teal-glow": "0 0 20px -5px rgba(15,118,110,0.25)",
-        "glass-inner": "inset 0 0 25px -5px rgba(212,165,116,0.08)",
+        "soft-sm": "0 1px 2px rgba(0,0,0,0.04)",
+        "soft-md": "0 4px 12px rgba(0,0,0,0.06)",
+        "soft-lg": "0 8px 24px rgba(0,0,0,0.08)",
+        "soft-xl": "0 16px 40px rgba(0,0,0,0.1)",
+        "glow-primary": "0 0 24px -6px rgba(15,118,110,0.2)",
+        "glow-accent": "0 0 24px -6px rgba(196,149,106,0.25)",
       },
       keyframes: {
         "liquid-float": {
           "0%, 100%": { transform: "translateY(0) scale(1) rotate(0deg)" },
-          "33%": { transform: "translateY(-8px) scale(1.02) rotate(1deg)" },
-          "66%": { transform: "translateY(4px) scale(0.98) rotate(-1deg)" },
+          "33%": { transform: "translateY(-6px) scale(1.01) rotate(0.5deg)" },
+          "66%": { transform: "translateY(3px) scale(0.99) rotate(-0.5deg)" },
         },
         "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 15px -5px rgba(212,165,116,0.2)" },
-          "50%": { boxShadow: "0 0 25px -5px rgba(212,165,116,0.4)" },
+          "0%, 100%": { boxShadow: "0 0 12px -4px rgba(15,118,110,0.15)" },
+          "50%": { boxShadow: "0 0 20px -4px rgba(15,118,110,0.3)" },
         },
         "mesh-shift": {
           "0%": { backgroundPosition: "0% 50%" },
@@ -54,22 +52,22 @@ const config: Config = {
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-6px)" },
+          "50%": { transform: "translateY(-4px)" },
         },
         "pulse-soft": {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.7" },
         },
         reveal: {
-          from: { opacity: "0", transform: "translateY(25px)" },
+          from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "none" },
         },
       },
       animation: {
         "liquid-float": "liquid-float 8s ease-in-out infinite",
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
-        "mesh-shift": "mesh-shift 15s ease infinite",
-        shimmer: "shimmer 2s ease-in-out infinite",
+        "mesh-shift": "mesh-shift 20s ease infinite",
+        shimmer: "shimmer 3s ease-in-out infinite",
         float: "float 4s ease-in-out infinite",
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
         reveal: "reveal 0.6s ease forwards",

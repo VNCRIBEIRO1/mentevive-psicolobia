@@ -2,11 +2,11 @@ import { Header } from "@/app/components/landing/Header";
 import { Hero } from "@/app/components/landing/Hero";
 import { About } from "@/app/components/landing/About";
 import { Services } from "@/app/components/landing/Services";
+import { Testimonials } from "@/app/components/landing/Testimonials";
 import { Blog } from "@/app/components/landing/Blog";
 import { Contact } from "@/app/components/landing/Contact";
 import { Footer } from "@/app/components/landing/Footer";
 import { WhatsAppFloat } from "@/app/components/landing/WhatsAppFloat";
-import { SectionDivider } from "@/app/components/landing/SectionDivider";
 import { tenantConfig } from "@/lib/tenant.config";
 import dynamic from "next/dynamic";
 
@@ -128,17 +128,12 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
-        <SectionDivider variant="wave-up" colorFrom="var(--teal)" colorTo="var(--primary)" />
         <About />
-        <SectionDivider variant="wave-down" />
         <Services />
-        <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
+        <Testimonials />
         <PortalShowcase />
-        <SectionDivider variant="wave-down" colorFrom="var(--teal)" colorTo="var(--primary)" />
         <Blog />
-        <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
         <Scheduling />
-        <SectionDivider variant="wave-down" colorFrom="var(--primary)" colorTo="var(--teal)" />
         <Contact />
       </main>
       <Footer />

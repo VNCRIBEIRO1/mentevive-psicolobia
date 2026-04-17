@@ -4,23 +4,24 @@ import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export function About() {
   return (
-    <section className="py-20 px-4 md:px-8" id="sobre">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 items-center max-w-[1100px] mx-auto">
+    <section className="py-20 lg:py-28 px-5 md:px-8" id="sobre">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
         {/* Photo */}
         <AnimatedSection direction="left" staggerType="premium" className="relative max-w-[420px] mx-auto lg:mx-0">
-          <div className="p-1 bg-gradient-to-br from-primary/30 via-teal/20 to-accent/30 rounded-[24px_24px_24px_80px]">
+          <div className="relative">
             <Image
               src="/pefilsobrre.jpeg"
               alt="Beatriz — Psicóloga Clínica Psicolobia"
               width={400}
               height={500}
-              className="rounded-[24px_24px_24px_80px] shadow-warm-lg w-full h-[500px] object-cover object-top"
+              className="rounded-3xl shadow-soft-xl w-full h-[500px] object-cover object-top"
               priority
             />
+            <div className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
           </div>
-          <div className="glass-strong absolute bottom-5 right-5 p-4 rounded-brand shadow-warm-md flex items-center gap-3">
-            <div className="w-10 h-10 bg-teal/10 rounded-full flex items-center justify-center">
-              <Award className="w-5 h-5 text-teal" />
+          <div className="glass-strong absolute bottom-5 right-5 p-4 rounded-2xl shadow-soft-md flex items-center gap-3">
+            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+              <Award className="w-5 h-5 text-primary" />
             </div>
             <div>
               <div className="text-sm font-bold">+3.500 Atendimentos</div>
@@ -33,15 +34,15 @@ export function About() {
         <AnimatedSection direction="right" staggerType="premium" staggerChildren={0.08}>
           <AnimatedItem direction="up">
             <div className="section-label">Sobre Mim</div>
-            <h2 className="section-title">Beatriz (Bea)</h2>
-            <p className="text-xs text-teal-dark font-semibold mb-2">
+            <h2 className="section-title !text-left">Beatriz (Bea)</h2>
+            <p className="text-xs text-primary-dark font-semibold mb-2">
               CRP 06/173961 · UNOESTE — Universidade do Oeste Paulista
             </p>
           </AnimatedItem>
 
           {/* Einstein Badge */}
           <AnimatedItem direction="up">
-            <div className="glass inline-flex items-center gap-2.5 rounded-brand-sm px-4 py-2.5 mb-5">
+            <div className="glass inline-flex items-center gap-2.5 rounded-xl px-4 py-2.5 mb-5">
               <Award className="w-6 h-6 text-amber-600" />
               <div>
                 <p className="text-xs font-bold text-amber-800">Certificação — Faculdade Israelita Albert Einstein</p>
@@ -66,7 +67,7 @@ export function About() {
           <AnimatedItem direction="up">
             <div className="mb-5">
               <h3 className="text-xs font-bold text-txt uppercase tracking-wide mb-3 flex items-center gap-1.5">
-                <Target className="w-3.5 h-3.5 text-teal" /> Áreas de Atuação
+                <Target className="w-3.5 h-3.5 text-primary" /> Áreas de Atuação
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -74,7 +75,7 @@ export function About() {
                   "Burnout Digital", "Relacionamentos", "Luto",
                   "Autoconhecimento", "ACT",
                 ].map((area) => (
-                  <span key={area} className="px-3 py-1 rounded-full text-[0.68rem] font-semibold bg-teal/10 text-teal-dark border border-teal/15 hover:bg-teal/20 transition-colors">
+                  <span key={area} className="px-3 py-1 rounded-full text-[0.68rem] font-semibold bg-primary/8 text-primary-dark border border-primary/12 hover:bg-primary/15 transition-colors">
                     {area}
                   </span>
                 ))}
@@ -86,12 +87,12 @@ export function About() {
           <AnimatedItem direction="up">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
               {[
-                { icon: <Brain className="w-4 h-4 text-teal" />, title: "Psicóloga Clínica (desde ago/2024)", sub: "35 atendimentos semanais · Público adulto · Remoto" },
-                { icon: <Building className="w-4 h-4 text-teal" />, title: "Privacy (2022 – 2024)", sub: "35-40 atendimentos/semana · Criadores digitais · Colunista" },
-                { icon: <Building className="w-4 h-4 text-teal" />, title: "CRAS (2021 – 2022)", sub: "Vulnerabilidade social · Grupos · Visitas domiciliares" },
-                { icon: <Backpack className="w-4 h-4 text-teal" />, title: "Colégio APOGEU (2019 – 2021)", sub: "Acompanhante terapêutica · Inclusão infantil (TEA)" },
+                { icon: <Brain className="w-4 h-4 text-primary" />, title: "Psicóloga Clínica (desde ago/2024)", sub: "35 atendimentos semanais · Público adulto · Remoto" },
+                { icon: <Building className="w-4 h-4 text-primary" />, title: "Privacy (2022 – 2024)", sub: "35-40 atendimentos/semana · Criadores digitais · Colunista" },
+                { icon: <Building className="w-4 h-4 text-primary" />, title: "CRAS (2021 – 2022)", sub: "Vulnerabilidade social · Grupos · Visitas domiciliares" },
+                { icon: <Backpack className="w-4 h-4 text-primary" />, title: "Colégio APOGEU (2019 – 2021)", sub: "Acompanhante terapêutica · Inclusão infantil (TEA)" },
               ].map((exp) => (
-                <div key={exp.title} className="glass rounded-brand-sm p-3 flex items-start gap-2">
+                <div key={exp.title} className="glass rounded-xl p-3 flex items-start gap-2">
                   {exp.icon}
                   <div>
                     <p className="text-xs font-bold text-txt">{exp.title}</p>
@@ -103,7 +104,7 @@ export function About() {
           </AnimatedItem>
 
           <AnimatedItem direction="up">
-            <p className="text-sm font-bold text-teal-dark mb-2">
+            <p className="text-sm font-bold text-primary-dark mb-2">
               Psicóloga Clínica · CRP 06/173961 · Terapia Online · +3.500 Atendimentos
             </p>
             <p className="flex gap-4 text-sm">

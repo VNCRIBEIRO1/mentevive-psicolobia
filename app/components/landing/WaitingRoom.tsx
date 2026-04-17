@@ -43,7 +43,7 @@ export function WaitingRoom() {
         </p>
       </div>
 
-      <div className="max-w-[650px] mx-auto mt-8 bg-bg rounded-brand p-10 shadow-md text-center">
+      <div className="max-w-[650px] mx-auto mt-8 bg-bg rounded-2xl p-10 shadow-md text-center">
         <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-4
           ${ready ? "bg-green-100 text-green-600 border border-green-200" : "bg-yellow-50 text-yellow-600 border border-yellow-200"}`}>
           {ready ? "✅ Pronto! Pode entrar na sessão." : started ? "⏳ Aguardando… Respire fundo" : "⏳ Aguardando sua sessão"}

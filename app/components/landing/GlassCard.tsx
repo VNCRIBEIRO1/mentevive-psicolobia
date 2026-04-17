@@ -22,7 +22,7 @@ export function GlassCard({
   hover = true,
 }: GlassCardProps) {
   const hoverClass = hover
-    ? "transition-all duration-300 hover:shadow-warm-lg hover:-translate-y-0.5"
+    ? "transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-0.5"
     : "";
 
   return (
