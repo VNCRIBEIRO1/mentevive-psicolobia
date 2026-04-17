@@ -35,8 +35,8 @@ export function Header() {
       </a>
       <header
         className={`fixed top-0 left-0 right-0 z-[100] px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "bg-bg-white/90 shadow-warm-md backdrop-blur-2xl" : "bg-bg/80 backdrop-blur-xl"
-        } border-b border-primary/10`}
+          scrolled ? "bg-white/90 shadow-warm-md backdrop-blur-2xl" : "bg-[#FFF5EE]/80 backdrop-blur-xl"
+        } border-b border-primary/5`}
       >
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center text-white font-heading text-xl font-bold shadow-warm-sm group-hover:shadow-teal-glow transition-shadow duration-300">
@@ -74,7 +74,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 bg-bg/98 backdrop-blur-2xl z-[200] flex flex-col items-center justify-center gap-6"
+            className="fixed inset-0 bg-[#FFF5EE]/98 backdrop-blur-2xl z-[200] flex flex-col items-center justify-center gap-6"
           >
             <button className="absolute top-6 right-6 p-2 rounded-lg hover:bg-primary/10 transition-colors" onClick={() => setMobileOpen(false)} aria-label="Fechar menu">
               <X className="w-6 h-6 text-txt" />

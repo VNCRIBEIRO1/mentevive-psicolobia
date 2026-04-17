@@ -34,7 +34,7 @@ export function WaitingRoom() {
   const s = (seconds % 60).toString().padStart(2, "0");
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-bg-white" id="sala-espera">
+    <section className="py-20 px-4 md:px-8 bg-white" id="sala-espera">
       <div className="max-w-[1100px] mx-auto text-center">
         <div className="section-label justify-center flex">Sala de Espera Virtual</div>
         <h2 className="section-title">Prepare-se para sua Sessão</h2>
