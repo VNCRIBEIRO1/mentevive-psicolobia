@@ -45,7 +45,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/5 mt-8 pt-4 text-center max-w-[1100px] mx-auto">
-        <p className="text-[0.7rem] text-white/60">Psicolobia e MenteVive - {new Date().getFullYear()}.</p>
+        <p className="text-[0.7rem] text-white/60">Psicolobia © {new Date().getFullYear()}</p>
       </div>
     </footer>
   );

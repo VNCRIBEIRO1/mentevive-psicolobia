@@ -42,7 +42,7 @@ export const tenantConfig = {
 
   // ── URLs ───────────────────────────────────────────────────
   urls: {
-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://mentevive-psicolobia.vercel.app",
+    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://psicolobia.vercel.app",
     platformUrl: process.env.NEXT_PUBLIC_PLATFORM_URL || "https://mentevive.vercel.app",
     whatsapp: "https://wa.me/5511988840525",
   },
