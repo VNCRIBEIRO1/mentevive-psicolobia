@@ -49,8 +49,8 @@ const features: { icon: ReactNode; title: string; desc: string; color: string; i
     icon: <ShieldCheck className="w-5 h-5" />,
     title: "Triagem Pré-Sessão",
     desc: "Questionário rápido que ajuda a Bea a personalizar cada sessão.",
-    color: "text-purple-600",
-    iconBg: "bg-purple-50 ring-purple-100",
+    color: "text-primary",
+    iconBg: "bg-primary/10 ring-primary/20",
   },
   {
     icon: <Sparkles className="w-5 h-5" />,
@@ -129,7 +129,7 @@ export function PortalShowcase() {
               {features.map((f, i) => (
                 <AnimatedItem key={i} direction="left" staggerType="premium">
                   <motion.div
-                    className="group relative bg-white/70 backdrop-blur-sm rounded-xl p-4 ring-1 ring-primary/5 hover:ring-teal/20 transition-all duration-300 cursor-default"
+                    className="group relative bg-bg-white/70 backdrop-blur-sm rounded-xl p-4 ring-1 ring-primary/5 hover:ring-teal/20 transition-all duration-300 cursor-default"
                     whileHover={reduce ? {} : { y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                   >
                     {/* Hover glow */}

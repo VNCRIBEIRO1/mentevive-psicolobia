@@ -62,7 +62,7 @@ export function Blog() {
           const isOpen = open === article.id;
           return (
             <AnimatedItem key={article.id} direction="up">
-              <div className="rounded-2xl border border-primary/10 bg-white overflow-hidden">
+              <div className="rounded-2xl border border-primary/10 bg-bg-white overflow-hidden">
                 <button
                   className="w-full px-5 py-4 flex items-start justify-between gap-3 text-left"
                   onClick={() => setOpen(isOpen ? null : article.id)}

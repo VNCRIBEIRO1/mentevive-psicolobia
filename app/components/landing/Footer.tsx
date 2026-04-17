@@ -13,7 +13,7 @@ const siteLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-txt text-white/60 py-14 px-4 md:px-8">
+    <footer className="bg-sage-dark text-white/60 py-14 px-4 md:px-8 border-t border-primary/5">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1100px] mx-auto">
         <div>
           <h4 className="text-white font-heading text-base mb-3">Psicolobia</h4>

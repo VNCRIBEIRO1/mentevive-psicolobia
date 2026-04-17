@@ -163,7 +163,7 @@ export function HowItWorks() {
   return (
     <div className="relative overflow-hidden">
       {/* ═══════ Hero Section ═══════ */}
-      <section className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-bg via-bg to-white relative">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-bg via-bg to-bg-white relative">
         {/* Decorative orbs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-teal/5 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -184,7 +184,7 @@ export function HowItWorks() {
           {/* ─── Role Switcher Tabs ─── */}
           <AnimatedSection direction="up" delay={0.2}>
             <div className="flex justify-center mt-10 mb-4">
-              <div className="inline-flex bg-white/80 backdrop-blur-xl rounded-2xl p-1.5 shadow-warm-md ring-1 ring-primary/10">
+              <div className="inline-flex bg-bg-white/80 backdrop-blur-xl rounded-2xl p-1.5 shadow-warm-md ring-1 ring-primary/10">
                 {roles.map((r) => (
                   <button
                     key={r.id}
@@ -221,7 +221,7 @@ export function HowItWorks() {
       </section>
 
       {/* ═══════ Step-by-step Journey ═══════ */}
-      <section className="py-16 md:py-20 px-4 md:px-8 bg-white relative">
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-bg-white relative">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection direction="up">
             <div className="text-center mb-12">
@@ -247,7 +247,7 @@ export function HowItWorks() {
                     initial={reduce ? {} : { opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.08, duration: 0.4 }}
-                    className="group relative bg-gradient-to-br from-bg/50 to-white rounded-2xl p-5 ring-1 ring-primary/5 hover:ring-teal/15 transition-all duration-300"
+                    className="group relative bg-gradient-to-br from-bg/50 to-bg-white rounded-2xl p-5 ring-1 ring-primary/5 hover:ring-teal/15 transition-all duration-300"
                   >
                     {/* Step number */}
                     <div className={`absolute -top-3 -left-1 w-7 h-7 rounded-full bg-gradient-to-r ${role.gradient} flex items-center justify-center text-white text-xs font-bold shadow-warm-sm`}>
@@ -277,8 +277,8 @@ export function HowItWorks() {
       {/* ═══════ Interactive Demo + Features ═══════ */}
       <section className="py-16 md:py-24 px-4 md:px-8 bg-bg relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-bg-white to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-bg-white to-transparent" />
 
         <div className="max-w-[1100px] mx-auto relative">
           <AnimatedSection direction="up">
@@ -312,7 +312,7 @@ export function HowItWorks() {
                     {features.map((f, i) => (
                       <AnimatedItem key={`${activeRole}-${i}`} direction="left" staggerType="premium">
                         <motion.div
-                          className="group relative bg-white/70 backdrop-blur-sm rounded-xl p-4 ring-1 ring-primary/5 hover:ring-teal/20 transition-all duration-300 cursor-default"
+                          className="group relative bg-bg-white/70 backdrop-blur-sm rounded-xl p-4 ring-1 ring-primary/5 hover:ring-teal/20 transition-all duration-300 cursor-default"
                           whileHover={reduce ? {} : { y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                         >
                           <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-teal/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -340,7 +340,7 @@ export function HowItWorks() {
       </section>
 
       {/* ═══════ Highlights — Key Differentials ═══════ */}
-      <section className="py-16 md:py-20 px-4 md:px-8 bg-white">
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-bg-white">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="up">
             <div className="text-center mb-12">
@@ -357,42 +357,42 @@ export function HowItWorks() {
                 icon: <Lock className="w-5 h-5 text-amber-600" />,
                 title: "Notas em 3 camadas",
                 desc: "Anotações privadas da terapeuta, feedback visível ao paciente e notas pessoais do paciente — tudo separado e seguro.",
-                gradient: "from-amber-50 to-white",
-                border: "border-amber-100",
+                gradient: "from-amber-900/20 to-bg-white",
+                border: "border-amber-800/30",
               },
               {
                 icon: <Eye className="w-5 h-5 text-purple-600" />,
                 title: "Prontuários com visibilidade",
                 desc: "Controle fino: cada registro clínico pode ser marcado como privado ou visível ao paciente.",
-                gradient: "from-purple-50 to-white",
-                border: "border-purple-100",
+                gradient: "from-purple-900/20 to-bg-white",
+                border: "border-purple-800/30",
               },
               {
                 icon: <Sprout className="w-5 h-5 text-teal" />,
                 title: "Evolução Terapêutica",
                 desc: "Linha do tempo visual que mostra o progresso do paciente com feedbacks e anotações pessoais.",
-                gradient: "from-teal/8 to-white",
+                gradient: "from-teal/8 to-bg-white",
                 border: "border-teal/15",
               },
               {
                 icon: <Video className="w-5 h-5 text-teal-dark" />,
                 title: "Sessão 100% Online",
                 desc: "Videochamada segura integrada com sala de espera e meditação guiada pré-sessão.",
-                gradient: "from-teal/8 to-white",
+                gradient: "from-teal/8 to-bg-white",
                 border: "border-teal/15",
               },
               {
                 icon: <ShieldCheck className="w-5 h-5 text-emerald-600" />,
                 title: "Triagem Inteligente",
                 desc: "Questionário pré-sessão que prepara a terapeuta com dados atualizados do paciente.",
-                gradient: "from-emerald-50 to-white",
-                border: "border-emerald-100",
+                gradient: "from-emerald-900/20 to-bg-white",
+                border: "border-emerald-800/30",
               },
               {
                 icon: <Leaf className="w-5 h-5 text-primary-dark" />,
                 title: "Design Acolhedor",
                 desc: "Interface pensada para transmitir calma e confiança — paleta quente e tipografia suave.",
-                gradient: "from-primary/8 to-white",
+                gradient: "from-primary/8 to-bg-white",
                 border: "border-primary/10",
               },
             ].map((item, i) => (
@@ -414,7 +414,7 @@ export function HowItWorks() {
       </section>
 
       {/* ═══════ CTA ═══════ */}
-      <section className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-b from-white via-bg to-bg">
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-b from-bg-white via-bg to-bg">
         <AnimatedSection direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="section-title !text-2xl md:!text-3xl mb-4">

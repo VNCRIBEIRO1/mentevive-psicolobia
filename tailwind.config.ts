@@ -7,12 +7,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: { DEFAULT: "#D4A574", dark: "#B8895C", light: "#E8C9A8" },
-        accent: { DEFAULT: "#E8A0BF", light: "#F5C8DE" },
-        teal: { DEFAULT: "#0f766e", dark: "#0a6158", light: "#14b8a6" },
-        sage: { DEFAULT: "#e6f0eb", dark: "#c8ddd0" },
-        bg: { DEFAULT: "#FFF5EE", white: "#FFFFFF", soft: "#FDE8D8", warm: "#F9EDE3" },
-        txt: { DEFAULT: "#3D2B1F", light: "#6B5445", muted: "#7D6E62" },
+        primary: { DEFAULT: "#9B8ACE", dark: "#7C6BB5", light: "#BFB0E0" },
+        accent: { DEFAULT: "#C084CF", light: "#D9A8E3" },
+        teal: { DEFAULT: "#6D8DA8", dark: "#567A94", light: "#8EAFC5" },
+        sage: { DEFAULT: "#2A2D3A", dark: "#1E2029" },
+        bg: { DEFAULT: "#1A1B2E", white: "#222338", soft: "#1E1F33", warm: "#242540" },
+        txt: { DEFAULT: "#E8E6F0", light: "#B0ADBF", muted: "#8A879C" },
       },
       fontFamily: {
         heading: ["var(--font-heading)", "Georgia", "serif"],
@@ -24,14 +24,14 @@ const config: Config = {
         "brand-full": "50px",
       },
       boxShadow: {
-        "warm-sm": "0 1px 3px 0 rgba(212,165,116,0.12), 0 1px 2px -1px rgba(212,165,116,0.08)",
-        "warm-md": "0 4px 12px -2px rgba(212,165,116,0.16), 0 2px 6px -2px rgba(212,165,116,0.10)",
-        "warm-lg": "0 10px 25px -5px rgba(212,165,116,0.18), 0 4px 10px -5px rgba(212,165,116,0.10)",
-        "warm-xl": "0 20px 40px -10px rgba(212,165,116,0.22), 0 8px 16px -8px rgba(212,165,116,0.12)",
-        "warm-2xl": "0 25px 50px -12px rgba(212,165,116,0.28)",
-        "warm-glow": "0 0 20px -5px rgba(212,165,116,0.25)",
-        "teal-glow": "0 0 20px -5px rgba(15,118,110,0.25)",
-        "glass-inner": "inset 0 0 25px -5px rgba(212,165,116,0.08)",
+        "warm-sm": "0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 2px -1px rgba(155,138,206,0.08)",
+        "warm-md": "0 4px 12px -2px rgba(0,0,0,0.25), 0 2px 6px -2px rgba(155,138,206,0.10)",
+        "warm-lg": "0 10px 25px -5px rgba(0,0,0,0.3), 0 4px 10px -5px rgba(155,138,206,0.10)",
+        "warm-xl": "0 20px 40px -10px rgba(0,0,0,0.35), 0 8px 16px -8px rgba(155,138,206,0.12)",
+        "warm-2xl": "0 25px 50px -12px rgba(0,0,0,0.4)",
+        "warm-glow": "0 0 20px -5px rgba(155,138,206,0.25)",
+        "teal-glow": "0 0 20px -5px rgba(109,141,168,0.3)",
+        "glass-inner": "inset 0 0 25px -5px rgba(155,138,206,0.08)",
       },
       keyframes: {
         "liquid-float": {

@@ -53,7 +53,7 @@ export function Contact() {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-white" id="contato">
+    <section className="py-20 px-4 md:px-8 bg-bg-white" id="contato">
       <div className="max-w-[1100px] mx-auto">
         <AnimatedSection direction="up">
           <div className="section-label">Contato</div>
@@ -88,15 +88,15 @@ export function Contact() {
                 <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                 <div>
                   <label className="block text-xs font-bold mb-1">Nome *</label>
-                  <input type="text" name="name" required placeholder="Seu nome" className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-white text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow" />
+                  <input type="text" name="name" required placeholder="Seu nome" className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-bg-soft text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow" />
                 </div>
                 <div>
                   <label className="block text-xs font-bold mb-1">E-mail *</label>
-                  <input type="email" name="email" required placeholder="seu@email.com" className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-white text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow" />
+                  <input type="email" name="email" required placeholder="seu@email.com" className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-bg-soft text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow" />
                 </div>
                 <div>
                   <label className="block text-xs font-bold mb-1">Assunto</label>
-                  <select name="subject" className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-white text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow">
+                  <select name="subject" className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-bg-soft text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow">
                     <option>Agendar sessão</option>
                     <option>Dúvida sobre cadastro no portal</option>
                     <option>Dúvida sobre atendimento online</option>
@@ -105,7 +105,7 @@ export function Contact() {
                 </div>
                 <div>
                   <label className="block text-xs font-bold mb-1">Mensagem *</label>
-                  <textarea name="message" required placeholder="Como podemos te ajudar?" rows={3} className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-white text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow resize-y" />
+                  <textarea name="message" required placeholder="Como podemos te ajudar?" rows={3} className="w-full py-2.5 px-3 border-[1.5px] border-primary/15 rounded-brand-sm font-body text-sm bg-bg-soft text-txt focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/10 transition-shadow resize-y" />
                 </div>
                 <button type="submit" disabled={sending} className="btn-brand-primary w-full justify-center">
                   {sending ? "Enviando..." : <><Leaf className="w-4 h-4" /> Enviar mensagem</>}
