@@ -7,62 +7,62 @@ import {
   CalendarPlus, Wallet,
 } from "lucide-react";
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-   Fake data â€” Active patient "Camila Ribeiro"
+/* ─────────────────────────────────────────────────
+   Fake data — Active patient "Camila Ribeiro"
    who has completed sessions, made notes, and paid
-   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+   ───────────────────────────────────────────────── */
 const PATIENT = { name: "Camila", initials: "CR" };
 
 const SESSIONS = [
-  { day: 14, month: "abr", time: "14:00 â€“ 14:50", status: "Confirmada", statusColor: "bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200", modality: "online" },
-  { day: 21, month: "abr", time: "14:00 â€“ 14:50", status: "Pendente", statusColor: "bg-amber-50 text-amber-600 ring-1 ring-amber-200", modality: "online" },
-  { day: 28, month: "abr", time: "14:00 â€“ 14:50", status: "Pendente", statusColor: "bg-amber-50 text-amber-600 ring-1 ring-amber-200", modality: "online" },
+  { day: 14, month: "abr", time: "14:00 – 14:50", status: "Confirmada", statusColor: "bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200", modality: "online" },
+  { day: 21, month: "abr", time: "14:00 – 14:50", status: "Pendente", statusColor: "bg-amber-50 text-amber-600 ring-1 ring-amber-200", modality: "online" },
+  { day: 28, month: "abr", time: "14:00 – 14:50", status: "Pendente", statusColor: "bg-amber-50 text-amber-600 ring-1 ring-amber-200", modality: "online" },
 ];
 
 const TIMELINE = [
-  { num: 8, date: "07 abr 2026", feedback: "Excelente progresso com exercÃ­cios de ACT. Continue praticando a defusÃ£o cognitiva.", note: "Me senti mais leve essa semana. Consegui usar a respiraÃ§Ã£o no trabalho." },
-  { num: 7, date: "31 mar 2026", feedback: "Identificamos padrÃµes de evitaÃ§Ã£o. Proposta de exercÃ­cios de exposiÃ§Ã£o gradual.", note: "Percebi que evito situaÃ§Ãµes no trabalho. Quero trabalhar isso." },
-  { num: 6, date: "24 mar 2026", feedback: null, note: "Semana difÃ­cil, mas a meditaÃ§Ã£o ajudou." },
+  { num: 8, date: "07 abr 2026", feedback: "Excelente progresso com exercícios de ACT. Continue praticando a defusão cognitiva.", note: "Me senti mais leve essa semana. Consegui usar a respiração no trabalho." },
+  { num: 7, date: "31 mar 2026", feedback: "Identificamos padrões de evitação. Proposta de exercícios de exposição gradual.", note: "Percebi que evito situações no trabalho. Quero trabalhar isso." },
+  { num: 6, date: "24 mar 2026", feedback: null, note: "Semana difícil, mas a meditação ajudou." },
 ];
 
 const PAYMENTS = [
-  { date: "07/04", desc: "SessÃ£o #8 â€” Individual", val: "R$ 180,00", status: "Pago", color: "text-emerald-600 bg-emerald-50" },
-  { date: "31/03", desc: "SessÃ£o #7 â€” Individual", val: "R$ 180,00", status: "Pago", color: "text-emerald-600 bg-emerald-50" },
-  { date: "14/04", desc: "SessÃ£o #9 â€” Individual", val: "R$ 180,00", status: "Pendente", color: "text-amber-600 bg-amber-50" },
+  { date: "07/04", desc: "Sessão #8 — Individual", val: "R$ 180,00", status: "Pago", color: "text-emerald-600 bg-emerald-50" },
+  { date: "31/03", desc: "Sessão #7 — Individual", val: "R$ 180,00", status: "Pago", color: "text-emerald-600 bg-emerald-50" },
+  { date: "14/04", desc: "Sessão #9 — Individual", val: "R$ 180,00", status: "Pendente", color: "text-amber-600 bg-amber-50" },
 ];
 
 const TRIAGE_DATA = {
   mood: "Bem",
-  moodEmoji: "ðŸ™‚",
-  sleep: "Bom â€” poderia ser melhor",
+  moodEmoji: "🙂",
+  sleep: "Bom — poderia ser melhor",
   anxiety: 4,
-  concern: "Ansiedade antes de reuniÃµes importantes no trabalho",
+  concern: "Ansiedade antes de reuniões importantes no trabalho",
 };
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* ─────────────────────────────────────────────────
    Screen mockup components (5 screens)
-   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+   ───────────────────────────────────────────────── */
 
 function ScreenDashboard() {
   return (
     <div className="space-y-3">
       {/* Greeting */}
-      <div className="bg-gradient-to-r from-primary/8 to-primary/5 rounded-xl p-3.5 flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">
+      <div className="bg-gradient-to-r from-teal/8 to-primary/5 rounded-xl p-3.5 flex items-center gap-3">
+        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-teal to-primary flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">
           {PATIENT.initials}
         </div>
         <div>
-          <p className="text-[11px] font-bold text-txt">Boa tarde, {PATIENT.name} ðŸŒ¿</p>
-          <p className="text-[9px] text-txt-muted">Seu espaÃ§o seguro. Acompanhe sessÃµes, evoluÃ§Ã£o e tudo sobre seu processo.</p>
+          <p className="text-[11px] font-bold text-txt">Boa tarde, {PATIENT.name} 🌿</p>
+          <p className="text-[9px] text-txt-muted">Seu espaço seguro. Acompanhe sessões, evolução e tudo sobre seu processo.</p>
         </div>
       </div>
 
       {/* Stats */}
       <div className="grid grid-cols-4 gap-1.5">
         {[
-          { icon: <CalendarCheck className="w-3 h-3 text-emerald-600" />, val: "3", label: "PrÃ³ximas", bg: "from-emerald-50 ring-emerald-100" },
-          { icon: <CheckCircle className="w-3 h-3 text-primary" />, val: "8", label: "Realizadas", bg: "from-primary/8 ring-primary/10" },
-          { icon: <Clock className="w-3 h-3 text-primary-dark" />, val: "14 abr", label: "PrÃ³xima", bg: "from-primary/8 ring-primary/10" },
+          { icon: <CalendarCheck className="w-3 h-3 text-emerald-600" />, val: "3", label: "Próximas", bg: "from-emerald-50 ring-emerald-100" },
+          { icon: <CheckCircle className="w-3 h-3 text-teal" />, val: "8", label: "Realizadas", bg: "from-teal/8 ring-teal/10" },
+          { icon: <Clock className="w-3 h-3 text-primary-dark" />, val: "14 abr", label: "Próxima", bg: "from-primary/8 ring-primary/10" },
           { icon: <Wallet className="w-3 h-3 text-amber-600" />, val: "R$ 180", label: "Pendente", bg: "from-amber-50 ring-amber-100" },
         ].map((s) => (
           <div key={s.label} className={`bg-gradient-to-br ${s.bg} to-transparent rounded-lg p-2 ring-1 text-center`}>
@@ -76,12 +76,12 @@ function ScreenDashboard() {
       {/* Session list */}
       <div className="bg-white rounded-xl border border-gray-100 p-2.5">
         <p className="text-[9px] font-bold text-txt mb-2 flex items-center gap-1">
-          <CalendarCheck className="w-3 h-3 text-primary" /> PrÃ³ximas SessÃµes
+          <CalendarCheck className="w-3 h-3 text-teal" /> Próximas Sessões
         </p>
         {SESSIONS.slice(0, 2).map((s, i) => (
           <div key={i} className="flex items-center gap-2.5 py-1.5 border-b border-gray-50 last:border-0">
             <div className="w-8 text-center flex-shrink-0">
-              <p className="text-[11px] font-bold text-primary-dark leading-none">{s.day}</p>
+              <p className="text-[11px] font-bold text-teal-dark leading-none">{s.day}</p>
               <p className="text-[7px] uppercase text-txt-muted">{s.month}</p>
             </div>
             <div className="flex-1">
@@ -102,8 +102,8 @@ function ScreenDashboard() {
       {/* Quick actions */}
       <div className="grid grid-cols-3 gap-1.5">
         {[
-          { icon: <CalendarPlus className="w-3 h-3" />, label: "Agendar", col: "text-primary" },
-          { icon: <Sprout className="w-3 h-3" />, label: "EvoluÃ§Ã£o", col: "text-primary-dark" },
+          { icon: <CalendarPlus className="w-3 h-3" />, label: "Agendar", col: "text-teal" },
+          { icon: <Sprout className="w-3 h-3" />, label: "Evolução", col: "text-teal-dark" },
           { icon: <CreditCard className="w-3 h-3" />, label: "Pagamentos", col: "text-primary-dark" },
         ].map((a) => (
           <div key={a.label} className="flex items-center gap-1.5 bg-white rounded-lg py-2 px-2.5 border border-gray-100">
@@ -120,17 +120,17 @@ function ScreenSessions() {
   return (
     <div className="space-y-3">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary/8 to-transparent rounded-xl p-3 flex items-center justify-between">
+      <div className="bg-gradient-to-r from-teal/8 to-transparent rounded-xl p-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary/12 flex items-center justify-center">
-            <CalendarCheck className="w-4 h-4 text-primary" />
+          <div className="w-8 h-8 rounded-lg bg-teal/12 flex items-center justify-center">
+            <CalendarCheck className="w-4 h-4 text-teal" />
           </div>
           <div>
-            <p className="text-[11px] font-bold text-txt">Minhas SessÃµes</p>
-            <p className="text-[8px] text-txt-muted">HistÃ³rico e prÃ³ximas sessÃµes</p>
+            <p className="text-[11px] font-bold text-txt">Minhas Sessões</p>
+            <p className="text-[8px] text-txt-muted">Histórico e próximas sessões</p>
           </div>
         </div>
-        <div className="bg-primary text-white text-[8px] font-bold px-2 py-1 rounded-md flex items-center gap-1">
+        <div className="bg-teal text-white text-[8px] font-bold px-2 py-1 rounded-md flex items-center gap-1">
           <CalendarPlus className="w-2.5 h-2.5" /> Agendar
         </div>
       </div>
@@ -138,7 +138,7 @@ function ScreenSessions() {
       {/* Filter pills */}
       <div className="flex gap-1">
         {["Todas", "Pendentes", "Confirmadas", "Realizadas"].map((f, i) => (
-          <span key={f} className={`text-[7px] font-bold px-2 py-1 rounded-full ${i === 0 ? "bg-primary text-white" : "bg-gray-100 text-txt-muted"}`}>
+          <span key={f} className={`text-[7px] font-bold px-2 py-1 rounded-full ${i === 0 ? "bg-teal text-white" : "bg-gray-100 text-txt-muted"}`}>
             {f}
           </span>
         ))}
@@ -146,9 +146,9 @@ function ScreenSessions() {
 
       {/* Sessions */}
       {SESSIONS.map((s, i) => (
-        <div key={i} className="flex items-center gap-2.5 p-2.5 bg-white rounded-xl border border-gray-50 hover:border-primary/20">
-          <div className="w-10 text-center flex-shrink-0 bg-gradient-to-br from-primary/8 to-transparent rounded-lg py-1.5">
-            <p className="text-sm font-bold text-primary-dark leading-none">{s.day}</p>
+        <div key={i} className="flex items-center gap-2.5 p-2.5 bg-white rounded-xl border border-gray-50 hover:border-teal/20">
+          <div className="w-10 text-center flex-shrink-0 bg-gradient-to-br from-teal/8 to-transparent rounded-lg py-1.5">
+            <p className="text-sm font-bold text-teal-dark leading-none">{s.day}</p>
             <p className="text-[7px] uppercase text-txt-muted font-semibold">{s.month}</p>
           </div>
           <div className="flex-1">
@@ -156,7 +156,7 @@ function ScreenSessions() {
               <Clock className="w-2.5 h-2.5 text-txt-muted" /> {s.time}
             </p>
             <div className="flex items-center gap-1 mt-0.5">
-              <Video className="w-2.5 h-2.5 text-primary" />
+              <Video className="w-2.5 h-2.5 text-teal" />
               <span className="text-[8px] text-txt-muted">Online</span>
             </div>
           </div>
@@ -164,7 +164,7 @@ function ScreenSessions() {
             <span className={`text-[7px] font-bold px-1.5 py-0.5 rounded-md ${s.statusColor}`}>{s.status}</span>
             <div className="flex gap-1.5 mt-1 justify-end">
               <span className="text-[7px] text-accent font-bold">Triagem</span>
-              <span className="text-[7px] text-primary-dark font-bold">Sala de Espera</span>
+              <span className="text-[7px] text-teal-dark font-bold">Sala de Espera</span>
             </div>
           </div>
         </div>
@@ -177,48 +177,48 @@ function ScreenEvolution() {
   return (
     <div className="space-y-3">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary/8 to-transparent rounded-xl p-3 flex items-center gap-2">
-        <div className="w-8 h-8 rounded-lg bg-primary/12 flex items-center justify-center">
-          <Sprout className="w-4 h-4 text-primary" />
+      <div className="bg-gradient-to-r from-teal/8 to-transparent rounded-xl p-3 flex items-center gap-2">
+        <div className="w-8 h-8 rounded-lg bg-teal/12 flex items-center justify-center">
+          <Sprout className="w-4 h-4 text-teal" />
         </div>
         <div>
-          <p className="text-[11px] font-bold text-txt">Minha EvoluÃ§Ã£o</p>
-          <p className="text-[8px] text-txt-muted">Acompanhe seu processo terapÃªutico</p>
+          <p className="text-[11px] font-bold text-txt">Minha Evolução</p>
+          <p className="text-[8px] text-txt-muted">Acompanhe seu processo terapêutico</p>
         </div>
       </div>
 
       {/* Stats */}
       <div className="grid grid-cols-2 gap-2">
-        <div className="bg-gradient-to-br from-primary/8 to-transparent rounded-lg p-2.5 ring-1 ring-primary/10 text-center">
-          <p className="text-lg font-bold text-primary-dark">8</p>
-          <p className="text-[8px] text-txt-muted">SessÃµes realizadas</p>
+        <div className="bg-gradient-to-br from-teal/8 to-transparent rounded-lg p-2.5 ring-1 ring-teal/10 text-center">
+          <p className="text-lg font-bold text-teal-dark">8</p>
+          <p className="text-[8px] text-txt-muted">Sessões realizadas</p>
         </div>
         <div className="bg-gradient-to-br from-accent/8 to-transparent rounded-lg p-2.5 ring-1 ring-accent/10 text-center">
           <p className="text-lg font-bold text-accent">5</p>
-          <p className="text-[8px] text-txt-muted">Registros clÃ­nicos</p>
+          <p className="text-[8px] text-txt-muted">Registros clínicos</p>
         </div>
       </div>
 
       {/* Timeline */}
       <div className="relative pl-5">
-        <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/30 via-primary/20 to-accent/30" />
+        <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal/30 via-primary/20 to-accent/30" />
         {TIMELINE.map((t, i) => (
           <div key={i} className="relative mb-3 last:mb-0">
-            <div className="absolute -left-3 top-1.5 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-primary to-primary-dark border-2 border-white shadow-sm" />
+            <div className="absolute -left-3 top-1.5 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-teal to-primary border-2 border-white shadow-sm" />
             <div className="bg-white rounded-xl p-2.5 border border-gray-50">
               <div className="flex items-center justify-between mb-1">
-                <p className="text-[9px] font-bold text-txt">SessÃ£o #{t.num}</p>
+                <p className="text-[9px] font-bold text-txt">Sessão #{t.num}</p>
                 <p className="text-[7px] text-txt-muted">{t.date}</p>
               </div>
               {t.feedback && (
                 <div className="bg-purple-50 border border-purple-100 rounded-lg p-2 mb-1.5">
-                  <p className="text-[7px] font-bold text-purple-600 mb-0.5">ðŸ’¬ Feedback da Bea:</p>
+                  <p className="text-[7px] font-bold text-purple-600 mb-0.5">💬 Feedback da Bea:</p>
                   <p className="text-[8px] text-txt leading-relaxed">{t.feedback}</p>
                 </div>
               )}
               {t.note && (
                 <div className="bg-blue-50 border border-blue-100 rounded-lg p-2">
-                  <p className="text-[7px] font-bold text-blue-600 mb-0.5">ðŸ“ Minha anotaÃ§Ã£o:</p>
+                  <p className="text-[7px] font-bold text-blue-600 mb-0.5">📝 Minha anotação:</p>
                   <p className="text-[8px] text-txt leading-relaxed">{t.note}</p>
                 </div>
               )}
@@ -240,7 +240,7 @@ function ScreenPayments() {
         </div>
         <div>
           <p className="text-[11px] font-bold text-txt">Meus Pagamentos</p>
-          <p className="text-[8px] text-txt-muted">HistÃ³rico e pendÃªncias</p>
+          <p className="text-[8px] text-txt-muted">Histórico e pendências</p>
         </div>
       </div>
 
@@ -288,23 +288,23 @@ function ScreenTriage() {
           <ShieldCheck className="w-4 h-4 text-accent" />
         </div>
         <div>
-          <p className="text-[11px] font-bold text-txt">Triagem PrÃ©-SessÃ£o</p>
-          <p className="text-[8px] text-txt-muted">SessÃ£o #9 â€” 14 abr 2026</p>
+          <p className="text-[11px] font-bold text-txt">Triagem Pré-Sessão</p>
+          <p className="text-[8px] text-txt-muted">Sessão #9 — 14 abr 2026</p>
         </div>
       </div>
 
       {/* Mood */}
       <div className="bg-white rounded-xl border border-gray-50 p-3">
-        <p className="text-[8px] font-bold text-txt mb-2">Como vocÃª estÃ¡ se sentindo hoje?</p>
+        <p className="text-[8px] font-bold text-txt mb-2">Como você está se sentindo hoje?</p>
         <div className="flex gap-1.5">
           {[
-            { emoji: "ðŸ˜„", label: "Muito bem", active: false },
-            { emoji: "ðŸ™‚", label: "Bem", active: true },
-            { emoji: "ðŸ˜", label: "Neutro", active: false },
-            { emoji: "ðŸ˜Ÿ", label: "Mal", active: false },
-            { emoji: "ðŸ˜¢", label: "Muito mal", active: false },
+            { emoji: "😄", label: "Muito bem", active: false },
+            { emoji: "🙂", label: "Bem", active: true },
+            { emoji: "😐", label: "Neutro", active: false },
+            { emoji: "😟", label: "Mal", active: false },
+            { emoji: "😢", label: "Muito mal", active: false },
           ].map((m) => (
-            <div key={m.label} className={`flex-1 text-center p-1.5 rounded-lg border ${m.active ? "border-primary bg-primary/8 ring-1 ring-primary/20" : "border-gray-100"}`}>
+            <div key={m.label} className={`flex-1 text-center p-1.5 rounded-lg border ${m.active ? "border-teal bg-teal/8 ring-1 ring-teal/20" : "border-gray-100"}`}>
               <span className="text-sm">{m.emoji}</span>
               <p className="text-[6px] text-txt-muted mt-0.5">{m.label}</p>
             </div>
@@ -315,38 +315,38 @@ function ScreenTriage() {
       {/* Sleep */}
       <div className="bg-white rounded-xl border border-gray-50 p-3">
         <p className="text-[8px] font-bold text-txt mb-1.5">Qualidade do sono</p>
-        <div className="bg-primary/8 text-primary-dark text-[8px] font-medium px-2.5 py-1.5 rounded-lg">
-          âœ“ {TRIAGE_DATA.sleep}
+        <div className="bg-teal/8 text-teal-dark text-[8px] font-medium px-2.5 py-1.5 rounded-lg">
+          ✓ {TRIAGE_DATA.sleep}
         </div>
       </div>
 
       {/* Anxiety level */}
       <div className="bg-white rounded-xl border border-gray-50 p-3">
         <div className="flex items-center justify-between mb-1.5">
-          <p className="text-[8px] font-bold text-txt">NÃ­vel de ansiedade</p>
-          <span className="text-[9px] font-bold text-primary">{TRIAGE_DATA.anxiety}/10</span>
+          <p className="text-[8px] font-bold text-txt">Nível de ansiedade</p>
+          <span className="text-[9px] font-bold text-teal">{TRIAGE_DATA.anxiety}/10</span>
         </div>
         <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-primary to-primary-dark rounded-full" style={{ width: `${TRIAGE_DATA.anxiety * 10}%` }} />
+          <div className="h-full bg-gradient-to-r from-teal to-teal-dark rounded-full" style={{ width: `${TRIAGE_DATA.anxiety * 10}%` }} />
         </div>
       </div>
 
       {/* Main concern */}
       <div className="bg-white rounded-xl border border-gray-50 p-3">
-        <p className="text-[8px] font-bold text-txt mb-1">Principal preocupaÃ§Ã£o</p>
+        <p className="text-[8px] font-bold text-txt mb-1">Principal preocupação</p>
         <p className="text-[8px] text-txt-light leading-relaxed">{TRIAGE_DATA.concern}</p>
       </div>
     </div>
   );
 }
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* ─────────────────────────────────────────────────
    Screen configuration
-   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+   ───────────────────────────────────────────────── */
 const screens = [
-  { id: "dashboard", label: "InÃ­cio", icon: <Home className="w-3.5 h-3.5" />, component: ScreenDashboard, url: "/portal" },
-  { id: "sessions", label: "SessÃµes", icon: <CalendarCheck className="w-3.5 h-3.5" />, component: ScreenSessions, url: "/portal/sessoes" },
-  { id: "evolution", label: "EvoluÃ§Ã£o", icon: <Sprout className="w-3.5 h-3.5" />, component: ScreenEvolution, url: "/portal/evolucao" },
+  { id: "dashboard", label: "Início", icon: <Home className="w-3.5 h-3.5" />, component: ScreenDashboard, url: "/portal" },
+  { id: "sessions", label: "Sessões", icon: <CalendarCheck className="w-3.5 h-3.5" />, component: ScreenSessions, url: "/portal/sessoes" },
+  { id: "evolution", label: "Evolução", icon: <Sprout className="w-3.5 h-3.5" />, component: ScreenEvolution, url: "/portal/evolucao" },
   { id: "payments", label: "Pagamentos", icon: <CreditCard className="w-3.5 h-3.5" />, component: ScreenPayments, url: "/portal/pagamentos" },
   { id: "triage", label: "Triagem", icon: <ShieldCheck className="w-3.5 h-3.5" />, component: ScreenTriage, url: "/portal/triagem" },
 ];
@@ -363,9 +363,9 @@ function getDirection(from: number, to: number) {
   return to > from ? 1 : -1;
 }
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* ─────────────────────────────────────────────────
    Main exported component: animated browser carousel
-   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+   ───────────────────────────────────────────────── */
 export function PortalScreenCarousel() {
   const reduce = useReducedMotion();
   const [current, setCurrent] = useState(0);
@@ -511,7 +511,7 @@ export function PortalScreenCarousel() {
       />
 
       {/* Browser chrome */}
-      <div className="relative bg-white rounded-2xl shadow-soft-xl overflow-hidden ring-1 ring-black/5">
+      <div className="relative bg-white rounded-2xl shadow-warm-xl overflow-hidden ring-1 ring-black/5">
         {/* Title bar */}
         <div className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-gray-50 to-white border-b border-gray-100">
           <div className="flex gap-1.5">
@@ -536,7 +536,7 @@ export function PortalScreenCarousel() {
           {/* Mini sidebar */}
           <div className="hidden sm:flex flex-col w-14 border-r border-gray-50 bg-gradient-to-b from-white to-gray-50/50 py-3 gap-0.5 items-center">
             {/* Avatar */}
-            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white text-[8px] font-bold mb-2">
+            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-teal to-primary flex items-center justify-center text-white text-[8px] font-bold mb-2">
               {PATIENT.initials}
             </div>
             {screens.map((s, i) => (
@@ -547,13 +547,13 @@ export function PortalScreenCarousel() {
                 aria-current={i === current ? "page" : undefined}
                 className={`relative w-9 h-9 rounded-lg flex flex-col items-center justify-center gap-0.5 transition-all duration-200 ${
                   i === current
-                    ? "bg-primary/10 text-primary shadow-[0_8px_22px_rgba(15,118,110,0.12)]"
+                    ? "bg-teal/10 text-teal shadow-[0_8px_22px_rgba(15,118,110,0.12)]"
                     : "text-gray-400 hover:bg-gray-100 hover:text-gray-600"
                 }`}
               >
                 {showAutoDemo && autoTarget === i && (
                   <motion.span
-                    className="pointer-events-none absolute inset-0 rounded-lg border border-primary/20"
+                    className="pointer-events-none absolute inset-0 rounded-lg border border-teal/20"
                     animate={isAutoPressing ? { scale: [1, 0.92, 1.05], opacity: [0.55, 0.9, 0] } : { scale: 1, opacity: 0.35 }}
                     transition={{ duration: 0.45, ease: "easeOut" }}
                   />
@@ -602,19 +602,19 @@ export function PortalScreenCarousel() {
                 aria-current={i === current ? "page" : undefined}
                 className={`relative isolate flex items-center gap-1 px-2 py-1 rounded-full text-[8px] font-bold transition-all duration-300 ${
                   i === current
-                    ? "bg-primary/10 text-primary scale-105 shadow-[0_12px_26px_rgba(15,118,110,0.12)]"
+                    ? "bg-teal/10 text-teal scale-105 shadow-[0_12px_26px_rgba(15,118,110,0.12)]"
                     : "text-gray-400 hover:text-gray-600"
                 }`}
               >
                 {showAutoDemo && autoTarget === i && (
                   <>
                     <motion.span
-                      className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-primary/10"
+                      className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-teal/10"
                       animate={isAutoPressing ? { scale: [1, 0.94, 1.08], opacity: [0.35, 0.55, 0.05] } : { scale: 1, opacity: 0.15 }}
                       transition={{ duration: 0.42, ease: "easeOut" }}
                     />
                     <motion.span
-                      className="pointer-events-none absolute inset-0 -z-10 rounded-full ring-2 ring-primary/20"
+                      className="pointer-events-none absolute inset-0 -z-10 rounded-full ring-2 ring-teal/20"
                       animate={isAutoPressing ? { scale: [1, 1.12], opacity: [0.8, 0] } : { scale: 1, opacity: 0.45 }}
                       transition={{ duration: 0.5, ease: "easeOut" }}
                     />
@@ -627,13 +627,13 @@ export function PortalScreenCarousel() {
 
           </div>
 
-          <button onClick={next} className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors" aria-label="PrÃ³xima tela">
+          <button onClick={next} className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Próxima tela">
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
       </div>
 
-      {/* Floating cursor â€” rendered outside the overflow-hidden chrome */}
+      {/* Floating cursor — rendered outside the overflow-hidden chrome */}
       {showAutoDemo && cursorPos.ready && (
         <motion.div
           className="pointer-events-none absolute left-0 top-0 z-30"
@@ -653,7 +653,7 @@ export function PortalScreenCarousel() {
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-teal/25 blur-lg scale-150" />
             <div className="relative flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-white shadow-[0_10px_28px_rgba(15,118,110,0.25)]">
-              <span className="h-3 w-3 rounded-full bg-gradient-to-br from-primary to-primary-dark" />
+              <span className="h-3 w-3 rounded-full bg-gradient-to-br from-teal to-primary" />
             </div>
             <div className="absolute left-1/2 top-full h-3 w-3 -translate-x-1/2 -translate-y-2 rotate-45 border-b-2 border-r-2 border-white bg-white" />
           </div>
@@ -665,7 +665,7 @@ export function PortalScreenCarousel() {
         <div className="mt-3 mx-auto w-48 h-1 bg-gray-100 rounded-full overflow-hidden">
           <motion.div
             key={`prog-${current}`}
-            className="h-full bg-gradient-to-r from-primary to-primary-dark rounded-full"
+            className="h-full bg-gradient-to-r from-teal to-primary rounded-full"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: SCREEN_INTERVAL / 1000, ease: "linear" }}

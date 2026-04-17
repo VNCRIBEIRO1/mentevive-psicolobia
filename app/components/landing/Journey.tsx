@@ -30,13 +30,13 @@ export function Journey() {
           {steps.map((s, i) => (
             <AnimatedItem key={i} direction="up" staggerType="premium" className="flex items-center">
               <div className="flex flex-col items-center gap-1.5 group cursor-default">
-                <div className="w-11 h-11 rounded-full bg-bg border-2 border-primary flex items-center justify-center text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-glow-primary">
+                <div className="w-11 h-11 rounded-full bg-bg border-2 border-teal flex items-center justify-center text-teal transition-all duration-300 group-hover:bg-teal group-hover:text-white group-hover:shadow-teal-glow">
                   {s.icon}
                 </div>
-                <span className="text-[10px] font-bold text-txt-muted group-hover:text-primary transition-colors">{s.label}</span>
+                <span className="text-[10px] font-bold text-txt-muted group-hover:text-teal transition-colors">{s.label}</span>
               </div>
               {i < steps.length - 1 && (
-                <div className="w-8 sm:w-14 h-0.5 bg-gradient-to-r from-primary/30 to-primary/30 mx-1 sm:mx-2 mb-5" />
+                <div className="w-8 sm:w-14 h-0.5 bg-gradient-to-r from-teal/30 to-primary/30 mx-1 sm:mx-2 mb-5" />
               )}
             </AnimatedItem>
           ))}

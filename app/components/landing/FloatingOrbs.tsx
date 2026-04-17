@@ -17,7 +17,7 @@ const orbs = [
     offset: { top: "-5%", left: "10%" },
   },
   {
-    color: "bg-primary/8",
+    color: "bg-teal/8",
     size: "w-96 h-96",
     blur: "blur-[140px]",
     radius: "rounded-[55%_45%_48%_52%]",

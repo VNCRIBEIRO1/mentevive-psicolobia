@@ -21,15 +21,15 @@ const features: { icon: ReactNode; title: string; desc: string; color: string; i
     icon: <CalendarCheck className="w-5 h-5" />,
     title: "Agendamento Online",
     desc: "Escolha seu horário ideal e agende diretamente, 24h por dia.",
-    color: "text-primary",
-    iconBg: "bg-primary/10 ring-primary/20",
+    color: "text-teal",
+    iconBg: "bg-teal/10 ring-teal/20",
   },
   {
     icon: <Leaf className="w-5 h-5" />,
     title: "Evolução Terapêutica",
     desc: "Acompanhe sua jornada com linha do tempo e anotações pessoais.",
-    color: "text-primary-dark",
-    iconBg: "bg-primary/8 ring-primary/15",
+    color: "text-teal-dark",
+    iconBg: "bg-teal/8 ring-teal/15",
   },
   {
     icon: <CreditCard className="w-5 h-5" />,
@@ -56,8 +56,8 @@ const features: { icon: ReactNode; title: string; desc: string; color: string; i
     icon: <Sparkles className="w-5 h-5" />,
     title: "Sala de Espera Virtual",
     desc: "Ambiente acolhedor com meditação guiada antes da sua sessão.",
-    color: "text-primary",
-    iconBg: "bg-primary/10 ring-primary/20",
+    color: "text-teal",
+    iconBg: "bg-teal/10 ring-teal/20",
   },
 ];
 
@@ -72,7 +72,7 @@ function FloatingDots() {
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 rounded-full bg-primary/10"
+          className="absolute w-2 h-2 rounded-full bg-teal/10"
           style={{
             left: `${15 + i * 15}%`,
             top: `${20 + (i % 3) * 25}%`,
@@ -112,7 +112,7 @@ export function PortalShowcase() {
           {/* Animated underline */}
           {!reduce && hydrated && (
             <motion.div
-              className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-primary/40 to-transparent rounded-full mb-12"
+              className="mx-auto h-0.5 bg-gradient-to-r from-transparent via-teal/40 to-transparent rounded-full mb-12"
               initial={{ width: 0 }}
               whileInView={{ width: 200 }}
               viewport={{ once: true }}
@@ -129,11 +129,11 @@ export function PortalShowcase() {
               {features.map((f, i) => (
                 <AnimatedItem key={i} direction="left" staggerType="premium">
                   <motion.div
-                    className="group relative bg-white/70 backdrop-blur-sm rounded-xl p-4 ring-1 ring-primary/5 hover:ring-primary/20 transition-all duration-300 cursor-default"
+                    className="group relative bg-white/70 backdrop-blur-sm rounded-xl p-4 ring-1 ring-primary/5 hover:ring-teal/20 transition-all duration-300 cursor-default"
                     whileHover={reduce ? {} : { y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                   >
                     {/* Hover glow */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-teal/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="relative">
                       <motion.div
                         className={`w-10 h-10 rounded-xl ${f.iconBg} ${f.color} ring-1 flex items-center justify-center mb-3`}
@@ -166,7 +166,7 @@ export function PortalShowcase() {
             >
               <Link
                 href={`${PLATFORM_URL}/registro?tenant=${TENANT_SLUG}`}
-                className="inline-flex items-center gap-2.5 bg-primary text-white font-bold text-sm px-8 py-4 rounded-full shadow-glow-primary hover:shadow-soft-lg transition-all duration-300 group"
+                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-teal to-teal-dark text-white font-bold text-sm px-8 py-4 rounded-full shadow-teal-glow hover:shadow-lg transition-all duration-300 group"
               >
                 Criar minha conta
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

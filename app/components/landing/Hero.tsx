@@ -1,115 +1,69 @@
 "use client";
 import Image from "next/image";
-import { ArrowRight, Shield, Video, CalendarCheck } from "lucide-react";
+import { Leaf } from "lucide-react";
 import { FloatingOrbs } from "./FloatingOrbs";
-
-const stats = [
-  { value: "3.500+", label: "Atendimentos" },
-  { value: "98%", label: "Satisfação" },
-  { value: "5+", label: "Anos de Experiência" },
-];
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-24 pb-16 lg:pb-24">
+    <section className="min-h-screen flex items-center justify-center text-center px-4 md:px-8 pt-28 pb-16 relative overflow-hidden">
       <FloatingOrbs className="z-0" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left — Copy */}
-          <div className="max-w-xl">
-            <div
-              className="glass inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold text-primary mb-6 hero-fade-in-scale"
-              style={{ animationDelay: "0.15s" }}
-            >
-              <Shield className="w-3.5 h-3.5" />
-              CRP 06/173961 · Atendimento 100% Online
-            </div>
-
-            <h1
-              className="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-bold leading-[1.1] mb-5 hero-fade-in text-balance"
-              style={{ animationDelay: "0.25s", letterSpacing: "-0.03em" }}
-            >
-              Especialista no{" "}
-              <span className="text-primary">emocional</span> de quem vive da{" "}
-              <span className="text-accent">internet</span>
-            </h1>
-
-            <p
-              className="text-base lg:text-lg text-txt-light leading-relaxed mb-8 max-w-md hero-fade-in"
-              style={{ animationDelay: "0.4s" }}
-            >
-              Terapia online acolhedora com escuta sensível. Cada história merece espaço, profundidade e presença real.
-            </p>
-
-            <div
-              className="flex gap-3 flex-wrap mb-10 hero-fade-in"
-              style={{ animationDelay: "0.5s" }}
-            >
-              <a href="#agendamento" className="btn-brand-primary shimmer-btn">
-                Agendar Sessão <ArrowRight className="w-4 h-4" />
-              </a>
-              <a href="#sobre" className="btn-brand-outline">Conheça a Profissional</a>
-            </div>
-
-            {/* Trust badges */}
-            <div
-              className="flex items-center gap-5 text-xs text-txt-muted hero-fade-in"
-              style={{ animationDelay: "0.6s" }}
-            >
-              <span className="flex items-center gap-1.5">
-                <Video className="w-3.5 h-3.5 text-primary" /> Videochamada segura
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CalendarCheck className="w-3.5 h-3.5 text-primary" /> Agenda flexível
-              </span>
-            </div>
-          </div>
-
-          {/* Right — Photo + Stats */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div
-              className="relative hero-fade-in-scale"
-              style={{ animationDelay: "0.35s" }}
-            >
-              <div className="relative">
-                <Image
-                  src="/pefilsobrre.jpeg"
-                  alt="Beatriz — Psicóloga Clínica Psicolobia"
-                  width={420}
-                  height={520}
-                  className="rounded-3xl shadow-soft-xl object-cover object-top w-[320px] h-[400px] sm:w-[380px] sm:h-[480px] lg:w-[420px] lg:h-[520px]"
-                  priority
-                />
-                {/* Decorative gradient behind */}
-                <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/8 via-sage to-accent/8" />
-              </div>
-
-              {/* Floating stat card */}
-              <div className="glass-strong absolute -left-6 bottom-12 sm:-left-10 sm:bottom-16 p-4 rounded-2xl shadow-soft-lg max-w-[200px]">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                    <CalendarCheck className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold text-txt leading-tight">3.500+</div>
-                    <div className="text-[0.68rem] text-txt-muted">Atendimentos realizados</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div
+        className="relative z-10 max-w-[650px] hero-fade-in"
+      >
+        <div
+          className="glass inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-teal-dark mb-6 hero-fade-in-scale"
+          style={{ animationDelay: "0.2s" }}
+        >
+          <Leaf className="w-3.5 h-3.5 text-teal" /> Beatriz (Bea) · Psicóloga Clínica — +3500 atendimentos
         </div>
 
-        {/* Stats bar */}
-        <div
-          className="mt-16 lg:mt-20 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0 hero-fade-in"
-          style={{ animationDelay: "0.7s" }}
+        <h1
+          className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.15] mb-4 hero-fade-in"
+          style={{ animationDelay: "0.3s" }}
         >
-          {stats.map((s) => (
-            <div key={s.label} className="text-center lg:text-left">
-              <div className="font-heading text-2xl sm:text-3xl font-bold text-primary">{s.value}</div>
-              <div className="text-xs text-txt-muted mt-0.5">{s.label}</div>
+          Especialista no{" "}
+          <span className="text-teal-dark">emocional</span> de quem vive da{" "}
+          <span className="text-accent">internet</span>
+        </h1>
+
+        <p
+          className="text-base text-txt-light max-w-[500px] mx-auto mb-8 leading-relaxed hero-fade-in"
+          style={{ animationDelay: "0.45s" }}
+        >
+          Terapia online acolhedora com escuta sensível. Sem pressa, sem moldes, sem máscaras. Cada história merece ser acolhida de verdade.
+        </p>
+
+        <div
+          className="flex gap-4 justify-center flex-wrap hero-fade-in"
+          style={{ animationDelay: "0.55s" }}
+        >
+          <a href="#agendamento" className="btn-brand-primary">
+            <Leaf className="w-4 h-4" /> Agendar Sessão
+          </a>
+          <a href="#sobre" className="btn-brand-outline">Conheça a Profissional</a>
+        </div>
+
+        <div className="mt-10 flex justify-center gap-4 flex-wrap">
+          {[
+            { src: "/bia.png", alt: "Beatriz — Psicóloga Clínica Psicolobia", delay: 0.6, mt: "" },
+            { src: "/bia2.png", alt: "Beatriz — Atendimento Online", delay: 0.7, mt: "mt-6" },
+            { src: "/bia3.webp", alt: "Beatriz — Consultório Psicolobia", delay: 0.8, mt: "" },
+          ].map((img) => (
+            <div
+              key={img.src}
+              className={`${img.mt} hero-fade-in-scale`}
+              style={{ animationDelay: `${img.delay}s` }}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={140}
+                height={180}
+                className="rounded-[20px] shadow-warm-lg object-cover w-[140px] h-[180px] hover:shadow-warm-xl transition-shadow duration-300"
+                priority={img.src === "/bia.png"}
+                loading={img.src === "/bia.png" ? undefined : "lazy"}
+              />
             </div>
           ))}
         </div>
