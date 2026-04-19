@@ -19,7 +19,7 @@ export function Scheduling() {
           </p>
 
           {/* How therapy works */}
-          <div className="glass-strong rounded-brand p-6 max-w-3xl mx-auto text-left mb-8">
+          <div className="glass-strong gold-border-accent rounded-brand p-6 max-w-3xl mx-auto text-left mb-8">
             <h3 className="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
               <Leaf className="w-4 h-4 text-teal" /> Como funciona a terapia
             </h3>
@@ -59,20 +59,20 @@ export function Scheduling() {
 
           {/* Pricing */}
           <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10">
-            <div className="glass-strong rounded-brand p-6 text-center border-2 border-teal/30">
+            <div className="glass-strong gold-border-accent rounded-brand p-6 text-center border-2 border-gold/30">
               <div className="text-[0.68rem] font-bold text-teal uppercase tracking-widest mb-2">Sessão Semanal</div>
               <div className="font-heading text-3xl font-bold text-txt">R$ 120<span className="text-base font-normal text-txt-muted">/sessão</span></div>
               <p className="text-xs text-txt-light mt-2">Frequência semanal com valor reduzido para continuidade do processo terapêutico.</p>
             </div>
-            <div className="glass-strong rounded-brand p-6 text-center">
+            <div className="glass-strong gold-border-accent rounded-brand p-6 text-center">
               <div className="text-[0.68rem] font-bold text-primary-dark uppercase tracking-widest mb-2">Avulsa / Quinzenal / Mensal</div>
               <div className="font-heading text-3xl font-bold text-txt">R$ 150<span className="text-base font-normal text-txt-muted">/sessão</span></div>
               <p className="text-xs text-txt-light mt-2">Para sessões avulsas ou com frequência quinzenal ou mensal.</p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 text-left">
-            <a href={registerPatientUrl} className="glass-strong rounded-brand p-6 hover:shadow-warm-lg transition-all">
+          <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
+            <a href={registerPatientUrl} className="glass-strong gold-border-accent rounded-brand p-6 hover:shadow-warm-lg transition-all">
               <div className="w-11 h-11 rounded-full bg-teal/10 flex items-center justify-center mb-4">
                 <UserPlus className="w-5 h-5 text-teal" />
               </div>
@@ -81,7 +81,7 @@ export function Scheduling() {
               <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-dark">Criar conta <ArrowRight className="w-4 h-4" /></span>
             </a>
 
-            <a href={loginUrl} className="glass-strong rounded-brand p-6 hover:shadow-warm-lg transition-all">
+            <a href={loginUrl} className="glass-strong gold-border-accent rounded-brand p-6 hover:shadow-warm-lg transition-all">
               <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <LogIn className="w-5 h-5 text-primary-dark" />
               </div>
@@ -89,18 +89,9 @@ export function Scheduling() {
               <p className="text-sm text-txt-light mb-4">Entre no portal para agendar, remarcar e acompanhar sua evolução.</p>
               <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-dark">Acessar portal <ArrowRight className="w-4 h-4" /></span>
             </a>
-
-            <a href={registerTherapistUrl} className="glass-strong rounded-brand p-6 hover:shadow-warm-lg transition-all">
-              <div className="w-11 h-11 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                <Leaf className="w-5 h-5 text-accent-dark" />
-              </div>
-              <h3 className="font-heading text-lg font-semibold mb-2">Sou psicólogo(a)</h3>
-              <p className="text-sm text-txt-light mb-4">Crie seu próprio consultório online no MenteVive e gerencie tudo em um só lugar.</p>
-              <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-dark">Criar consultório <ArrowRight className="w-4 h-4" /></span>
-            </a>
           </div>
 
-          <div className="mt-8 glass rounded-brand p-6 max-w-3xl mx-auto text-left">
+          <div className="mt-8 glass gold-border-accent rounded-brand p-6 max-w-3xl mx-auto text-left">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center">
                 <CalendarDays className="w-5 h-5 text-teal" />

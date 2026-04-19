@@ -105,7 +105,7 @@ export function Blog() {
           const isOpen = open === article.id;
           return (
             <AnimatedItem key={article.id} direction="up">
-              <div className="rounded-2xl border border-primary/10 bg-white overflow-hidden">
+              <div className="rounded-2xl border border-gold/15 hover:border-gold/30 bg-white overflow-hidden transition-colors duration-300 hover:shadow-gold-glow">
                 <button
                   className="w-full px-5 py-4 flex items-start justify-between gap-3 text-left"
                   onClick={() => setOpen(isOpen ? null : article.id)}
@@ -117,7 +117,7 @@ export function Blog() {
                   {isOpen ? <ChevronUp className="w-4 h-4 text-teal mt-1" /> : <ChevronDown className="w-4 h-4 text-teal mt-1" />}
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 text-sm text-txt-light space-y-3 border-t border-primary/10">
+                  <div className="px-5 pb-5 text-sm text-txt-light space-y-3 border-t border-gold/10">
                     {article.content.map((p, i) => (
                       <p key={i} className="pt-3">{p}</p>
                     ))}

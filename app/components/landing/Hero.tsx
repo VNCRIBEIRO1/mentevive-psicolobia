@@ -12,7 +12,7 @@ export function Hero() {
         className="relative z-10 max-w-[650px] hero-fade-in"
       >
         <div
-          className="glass inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-teal-dark mb-6 hero-fade-in-scale"
+          className="glass inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-teal-dark mb-6 hero-fade-in-scale border border-gold/20"
           style={{ animationDelay: "0.2s" }}
         >
           <Leaf className="w-3.5 h-3.5 text-teal" /> Beatriz (Bea) · Psicóloga Clínica — +3500 atendimentos
@@ -46,7 +46,7 @@ export function Hero() {
 
         <div className="mt-10 flex justify-center gap-4 flex-wrap">
           {[
-            { src: "/bia-perfil.jpg", alt: "Beatriz — Psicóloga Clínica Psicolobia", delay: 0.6, mt: "" },
+            { src: "/bia-perfil.jpeg", alt: "Beatriz — Psicóloga Clínica Psicolobia", delay: 0.6, mt: "" },
             { src: "/bia2.png", alt: "Beatriz — Atendimento Online", delay: 0.7, mt: "mt-6" },
             { src: "/bia3.webp", alt: "Beatriz — Consultório Psicolobia", delay: 0.8, mt: "" },
           ].map((img) => (
@@ -60,9 +60,9 @@ export function Hero() {
                 alt={img.alt}
                 width={140}
                 height={180}
-                className="rounded-[20px] shadow-warm-lg object-cover w-[140px] h-[180px] hover:shadow-warm-xl transition-shadow duration-300"
-                priority={img.src === "/bia-perfil.jpg"}
-                loading={img.src === "/bia-perfil.jpg" ? undefined : "lazy"}
+                className="rounded-[20px] shadow-warm-lg object-cover w-[140px] h-[180px] hover:shadow-gold-glow transition-shadow duration-300 ring-1 ring-gold/15"
+                priority={img.src === "/bia-perfil.jpeg"}
+                loading={img.src === "/bia-perfil.jpeg" ? undefined : "lazy"}
               />
             </div>
           ))}

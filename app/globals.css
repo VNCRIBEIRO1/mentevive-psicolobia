@@ -108,6 +108,26 @@
       inset 0 0 20px -5px rgba(212, 165, 116, 0.08);
   }
 
+  /* Gold border accent — elegant warm gold for card sophistication */
+  .gold-border-top {
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, rgba(201,160,80,0.15), rgba(218,165,32,0.55), rgba(201,160,80,0.15)) 1;
+  }
+  .gold-border-accent {
+    border: 1px solid rgba(201, 160, 80, 0.18);
+    box-shadow:
+      0 4px 12px -2px rgba(201, 160, 80, 0.10),
+      inset 0 0 18px -5px rgba(201, 160, 80, 0.04);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gold-border-accent:hover {
+    border-color: rgba(201, 160, 80, 0.35);
+    box-shadow:
+      0 8px 24px -4px rgba(201, 160, 80, 0.18),
+      0 0 16px -4px rgba(218, 165, 32, 0.12),
+      inset 0 0 18px -5px rgba(201, 160, 80, 0.06);
+  }
+
   .gradient-mesh {
     background: linear-gradient(
       -45deg,

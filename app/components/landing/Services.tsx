@@ -26,7 +26,7 @@ export function Services() {
         <AnimatedSection direction="up" delay={0.15} staggerChildren={0.1} staggerType="premium" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
           {services.map((s, i) => (
             <AnimatedItem key={i} direction="up" staggerType="premium">
-              <GlassCard className="border-t-[3px] border-t-transparent hover:border-t-teal transition-colors h-full">
+              <GlassCard className="gold-border-accent border-t-[3px] border-t-transparent hover:border-t-gold transition-colors h-full">
                 <div className="mb-3">{s.icon}</div>
                 <h3 className="font-heading text-base font-semibold mb-2">{s.title}</h3>
                 <p className="text-xs text-txt-light leading-relaxed">{s.desc}</p>

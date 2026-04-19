@@ -8,9 +8,9 @@ export function About() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 items-center max-w-[1100px] mx-auto">
         {/* Photo */}
         <AnimatedSection direction="left" staggerType="premium" className="relative max-w-[420px] mx-auto lg:mx-0">
-          <div className="p-1 bg-gradient-to-br from-primary/30 via-teal/20 to-accent/30 rounded-[24px_24px_24px_80px]">
+          <div className="p-1 bg-gradient-to-br from-gold/30 via-teal/15 to-gold/20 rounded-[24px_24px_24px_80px]">
             <Image
-              src="/bia-perfil.jpg"
+              src="/bia-perfil.jpeg"
               alt="Beatriz — Psicóloga Clínica Psicolobia"
               width={400}
               height={500}
@@ -18,7 +18,7 @@ export function About() {
               priority
             />
           </div>
-          <div className="glass-strong absolute bottom-5 right-5 p-4 rounded-brand shadow-warm-md flex items-center gap-3">
+          <div className="glass-strong absolute bottom-5 right-5 p-4 rounded-brand shadow-warm-md flex items-center gap-3 border border-gold/20">
             <div className="w-10 h-10 bg-teal/10 rounded-full flex items-center justify-center">
               <Award className="w-5 h-5 text-teal" />
             </div>
@@ -41,13 +41,13 @@ export function About() {
 
           {/* Einstein Badge — Destaque */}
           <AnimatedItem direction="up">
-            <div className="relative rounded-brand p-5 mb-6 bg-gradient-to-r from-amber-50 via-amber-100/60 to-amber-50 border border-amber-200/60 shadow-warm-md">
-              <div className="absolute -top-3 left-5 px-3 py-0.5 rounded-full bg-amber-600 text-white text-[0.6rem] font-bold uppercase tracking-widest">
+            <div className="relative rounded-brand p-5 mb-6 bg-gradient-to-r from-gold-soft/60 via-amber-50 to-gold-soft/60 border border-gold/25 shadow-warm-md hover:shadow-gold-glow transition-shadow duration-300">
+              <div className="absolute -top-3 left-5 px-3 py-0.5 rounded-full bg-teal text-white text-[0.6rem] font-bold uppercase tracking-widest shadow-sm">
                 Certificação
               </div>
               <div className="flex items-center gap-3.5 mt-1">
-                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center shrink-0 ring-2 ring-amber-300/40">
-                  <Award className="w-7 h-7 text-amber-600" />
+                <div className="w-12 h-12 bg-gradient-to-br from-gold-soft to-amber-100 rounded-full flex items-center justify-center shrink-0 ring-2 ring-gold/30 shadow-sm">
+                  <Award className="w-7 h-7 text-gold-dark" />
                 </div>
                 <div>
                   <p className="text-sm font-bold text-amber-900">Faculdade Israelita Albert Einstein</p>
@@ -83,7 +83,7 @@ export function About() {
                   "Autoconhecimento", "Regulação Emocional",
                   "Flexibilidade Psicológica", "ACT",
                 ].map((area) => (
-                  <span key={area} className="px-3 py-1 rounded-full text-[0.68rem] font-semibold bg-teal/10 text-teal-dark border border-teal/15 hover:bg-teal/20 transition-colors">
+                  <span key={area} className="px-3 py-1 rounded-full text-[0.68rem] font-semibold bg-teal/10 text-teal-dark border border-gold/15 hover:border-gold/30 hover:bg-teal/20 transition-colors">
                     {area}
                   </span>
                 ))}
@@ -93,7 +93,7 @@ export function About() {
 
           {/* Experience highlight — Privacy */}
           <AnimatedItem direction="up">
-            <div className="glass rounded-brand-sm p-4 mb-5 flex items-start gap-3">
+            <div className="glass gold-border-accent rounded-brand-sm p-4 mb-5 flex items-start gap-3">
               <Building className="w-5 h-5 text-teal mt-0.5" />
               <div>
                 <p className="text-sm font-bold text-txt">Privacy — Psicóloga Clínica (2022 – 2024)</p>

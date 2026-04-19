@@ -129,7 +129,7 @@ export function PortalShowcase() {
               {features.map((f, i) => (
                 <AnimatedItem key={i} direction="left" staggerType="premium">
                   <motion.div
-                    className="group relative bg-white/70 backdrop-blur-sm rounded-xl p-4 ring-1 ring-primary/5 hover:ring-teal/20 transition-all duration-300 cursor-default"
+                    className="group relative bg-white/70 backdrop-blur-sm rounded-xl p-4 ring-1 ring-gold/15 hover:ring-gold/35 hover:shadow-gold-glow transition-all duration-300 cursor-default"
                     whileHover={reduce ? {} : { y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                   >
                     {/* Hover glow */}
