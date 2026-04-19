@@ -46,7 +46,7 @@ export function Hero() {
 
         <div className="mt-10 flex justify-center gap-4 flex-wrap">
           {[
-            { src: "/bia.png", alt: "Beatriz — Psicóloga Clínica Psicolobia", delay: 0.6, mt: "" },
+            { src: "/bia-perfil.jpg", alt: "Beatriz — Psicóloga Clínica Psicolobia", delay: 0.6, mt: "" },
             { src: "/bia2.png", alt: "Beatriz — Atendimento Online", delay: 0.7, mt: "mt-6" },
             { src: "/bia3.webp", alt: "Beatriz — Consultório Psicolobia", delay: 0.8, mt: "" },
           ].map((img) => (
@@ -61,8 +61,8 @@ export function Hero() {
                 width={140}
                 height={180}
                 className="rounded-[20px] shadow-warm-lg object-cover w-[140px] h-[180px] hover:shadow-warm-xl transition-shadow duration-300"
-                priority={img.src === "/bia.png"}
-                loading={img.src === "/bia.png" ? undefined : "lazy"}
+                priority={img.src === "/bia-perfil.jpg"}
+                loading={img.src === "/bia-perfil.jpg" ? undefined : "lazy"}
               />
             </div>
           ))}

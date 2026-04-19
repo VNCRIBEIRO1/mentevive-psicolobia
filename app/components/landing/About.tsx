@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Award, Brain, Building, Backpack, Target } from "lucide-react";
+import { Award, Building, Target } from "lucide-react";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export function About() {
@@ -10,7 +10,7 @@ export function About() {
         <AnimatedSection direction="left" staggerType="premium" className="relative max-w-[420px] mx-auto lg:mx-0">
           <div className="p-1 bg-gradient-to-br from-primary/30 via-teal/20 to-accent/30 rounded-[24px_24px_24px_80px]">
             <Image
-              src="/pefilsobrre.jpeg"
+              src="/bia-perfil.jpg"
               alt="Beatriz — Psicóloga Clínica Psicolobia"
               width={400}
               height={500}
@@ -24,7 +24,7 @@ export function About() {
             </div>
             <div>
               <div className="text-sm font-bold">+3.500 Atendimentos</div>
-              <div className="text-[0.68rem] text-txt-muted">Escuta sensível e acolhimento</div>
+              <div className="text-[0.68rem] text-txt-muted">Escuta sensível e acolhimento real</div>
             </div>
           </div>
         </AnimatedSection>
@@ -39,26 +39,34 @@ export function About() {
             </p>
           </AnimatedItem>
 
-          {/* Einstein Badge */}
+          {/* Einstein Badge — Destaque */}
           <AnimatedItem direction="up">
-            <div className="glass inline-flex items-center gap-2.5 rounded-brand-sm px-4 py-2.5 mb-5">
-              <Award className="w-6 h-6 text-amber-600" />
-              <div>
-                <p className="text-xs font-bold text-amber-800">Certificação — Faculdade Israelita Albert Einstein</p>
-                <p className="text-[0.68rem] text-amber-600">Transtorno Ansioso e Depressivo · ago/2023</p>
+            <div className="relative rounded-brand p-5 mb-6 bg-gradient-to-r from-amber-50 via-amber-100/60 to-amber-50 border border-amber-200/60 shadow-warm-md">
+              <div className="absolute -top-3 left-5 px-3 py-0.5 rounded-full bg-amber-600 text-white text-[0.6rem] font-bold uppercase tracking-widest">
+                Certificação
+              </div>
+              <div className="flex items-center gap-3.5 mt-1">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center shrink-0 ring-2 ring-amber-300/40">
+                  <Award className="w-7 h-7 text-amber-600" />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-amber-900">Faculdade Israelita Albert Einstein</p>
+                  <p className="text-xs text-amber-700 mt-0.5">Transtorno Ansioso e Depressivo · agosto de 2023</p>
+                  <p className="text-[0.68rem] text-amber-600/80 mt-1">Formação complementar em uma das instituições de saúde mais renomadas do Brasil.</p>
+                </div>
               </div>
             </div>
           </AnimatedItem>
 
           <AnimatedItem direction="up">
             <p className="text-sm text-txt-light leading-relaxed mb-4">
-              Psicóloga Clínica especialista no emocional de quem vive da internet. Já realizei mais de 3.500 atendimentos e construí uma metodologia própria, baseada na escuta sensível, na ética e na profundidade de quem acredita que cada história merece ser acolhida.
+              Sou psicóloga clínica e atuo com foco no emocional de quem vive da internet. Ao longo da minha trajetória, já realizei mais de 3.500 atendimentos e desenvolvi uma abordagem própria — fundamentada na escuta genuína, na ética profissional e no compromisso de acolher cada história com a profundidade que ela merece.
             </p>
             <p className="text-sm text-txt-light leading-relaxed mb-4">
-              Com experiência em atendimento de criadores de conteúdo digital, atuação em políticas públicas (CRAS) e acompanhamento terapêutico infantil, trago uma visão ampla e humana da psicologia. Especialista em <strong>Terapia de Aceitação e Compromisso (ACT)</strong> e <strong>tratamento de traumas</strong>.
+              Minha principal referência teórica é a <strong>Terapia de Aceitação e Compromisso (ACT)</strong>, que me permite trabalhar flexibilidade psicológica, regulação emocional e construção de uma vida orientada por valores — mesmo em meio à ansiedade, ao esgotamento ou à pressão de estar sempre visível.
             </p>
             <p className="text-sm text-txt-light leading-relaxed mb-5">
-              Atendo online, mas o vínculo é vivo, humano e presente. Sem pressa, sem moldes, sem máscaras. Se você sente que é hora de ser escutado de verdade, talvez seja hora de me encontrar.
+              Atendo exclusivamente online, mas a conexão é viva, humana e presente. Sem pressa, sem moldes, sem máscaras. Se você sente que é hora de ser escutado(a) de verdade, talvez seja hora de a gente se conhecer.
             </p>
           </AnimatedItem>
 
@@ -70,9 +78,10 @@ export function About() {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Ansiedade", "Depressão", "Traumas", "Autoestima",
+                  "Ansiedade", "Depressão", "Autoestima",
                   "Burnout Digital", "Relacionamentos", "Luto",
-                  "Autoconhecimento", "ACT",
+                  "Autoconhecimento", "Regulação Emocional",
+                  "Flexibilidade Psicológica", "ACT",
                 ].map((area) => (
                   <span key={area} className="px-3 py-1 rounded-full text-[0.68rem] font-semibold bg-teal/10 text-teal-dark border border-teal/15 hover:bg-teal/20 transition-colors">
                     {area}
@@ -82,23 +91,16 @@ export function About() {
             </div>
           </AnimatedItem>
 
-          {/* Experience highlights */}
+          {/* Experience highlight — Privacy */}
           <AnimatedItem direction="up">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
-              {[
-                { icon: <Brain className="w-4 h-4 text-teal" />, title: "Psicóloga Clínica (desde ago/2024)", sub: "35 atendimentos semanais · Público adulto · Remoto" },
-                { icon: <Building className="w-4 h-4 text-teal" />, title: "Privacy (2022 – 2024)", sub: "35-40 atendimentos/semana · Criadores digitais · Colunista" },
-                { icon: <Building className="w-4 h-4 text-teal" />, title: "CRAS (2021 – 2022)", sub: "Vulnerabilidade social · Grupos · Visitas domiciliares" },
-                { icon: <Backpack className="w-4 h-4 text-teal" />, title: "Colégio APOGEU (2019 – 2021)", sub: "Acompanhante terapêutica · Inclusão infantil (TEA)" },
-              ].map((exp) => (
-                <div key={exp.title} className="glass rounded-brand-sm p-3 flex items-start gap-2">
-                  {exp.icon}
-                  <div>
-                    <p className="text-xs font-bold text-txt">{exp.title}</p>
-                    <p className="text-[0.68rem] text-txt-muted mt-0.5">{exp.sub}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="glass rounded-brand-sm p-4 mb-5 flex items-start gap-3">
+              <Building className="w-5 h-5 text-teal mt-0.5" />
+              <div>
+                <p className="text-sm font-bold text-txt">Privacy — Psicóloga Clínica (2022 – 2024)</p>
+                <p className="text-xs text-txt-light mt-1 leading-relaxed">
+                  Durante dois anos, conduzi entre 35 e 40 atendimentos semanais voltados a criadores de conteúdo digital e colunistas — profissionais que enfrentam demandas emocionais específicas da exposição online, como cobrança por performance, comparação constante e dificuldade de impor limites entre vida pessoal e pública.
+                </p>
+              </div>
             </div>
           </AnimatedItem>
 

@@ -17,6 +17,10 @@ const PortalShowcase = dynamic(
   () => import("@/app/components/landing/PortalShowcase").then((m) => m.PortalShowcase),
   { loading: () => <div className="py-20" /> }
 );
+const Scheduling = dynamic(
+  () => import("@/app/components/landing/Scheduling").then((m) => m.Scheduling),
+  { loading: () => <div className="py-20" /> }
+);
 
 const { name, description, professional, urls, social, location, branding } = tenantConfig;
 const siteUrl = urls.siteUrl;
@@ -69,7 +73,7 @@ const jsonLd = [
     serviceType: [
       "Terapia Individual Online",
       "Ansiedade e Depressão",
-      "Tratamento de Traumas",
+      "Terapia de Aceitação e Compromisso (ACT)",
     ],
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -130,6 +134,8 @@ export default function Home() {
         <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
         <PortalShowcase />
         <SectionDivider variant="wave-down" colorFrom="var(--teal)" colorTo="var(--primary)" />
+        <Scheduling />
+        <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
         <Blog />
       </main>
       <Footer />

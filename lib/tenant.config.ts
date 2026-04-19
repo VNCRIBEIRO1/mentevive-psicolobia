@@ -21,9 +21,9 @@ export const tenantConfig = {
   name: "Psicolobia",
   tagline: "Psicóloga Clínica Online",
   description:
-    "Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia com ACT, ansiedade, depressão e traumas.",
+    "Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com ACT, ansiedade, depressão e autoconhecimento.",
   longDescription:
-    "Beatriz Ribeiro (Bea) — Psicóloga Clínica CRP 06/173961. Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com ACT, tratamento de ansiedade, depressão e traumas. Agende sua sessão.",
+    "Beatriz Ribeiro (Bea) — Psicóloga Clínica CRP 06/173961. Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com Terapia de Aceitação e Compromisso (ACT), ansiedade, depressão, autoestima e autoconhecimento. Agende sua sessão.",
 
   // ── Profissional ───────────────────────────────────────────
   professional: {
@@ -34,9 +34,8 @@ export const tenantConfig = {
     formation: "UNOESTE",
     specialties: [
       "Terapia de Aceitação e Compromisso (ACT)",
-      "Terapia para Tratamento de Traumas",
     ],
-    photo: "/bia.png", // Coloque a foto na pasta public/
+    photo: "/bia-perfil.jpg", // Coloque a foto na pasta public/
     sessionCount: "+3500 atendimentos",
   },
 
@@ -83,7 +82,8 @@ export const tenantConfig = {
       "terapia ACT",
       "ansiedade",
       "depressão",
-      "tratamento de traumas",
+      "autoestima",
+      "autoconhecimento",
       "criadores de conteúdo",
       "burnout digital",
       "autoconhecimento",

@@ -13,29 +13,72 @@ type Article = {
 const articles: Article[] = [
   {
     id: "online-funciona",
-    title: "Terapia online funciona?",
-    excerpt: "Sim. A eficácia é comparável ao presencial para diversos quadros clínicos.",
+    title: "Terapia online realmente funciona?",
+    excerpt: "Estudos comprovam: a eficácia é comparável ao atendimento presencial para a maioria dos quadros clínicos.",
     content: [
-      "Atendimento online é regulamentado e permite vínculo terapêutico profundo com praticidade.",
-      "Quando há plano clínico, frequência e continuidade, os ganhos em ansiedade, depressão e autoconhecimento aparecem de forma consistente.",
+      "O atendimento psicológico online é regulamentado pelo Conselho Federal de Psicologia e permite a construção de um vínculo terapêutico profundo, seguro e prático — sem sair de casa.",
+      "Quando há plano clínico estruturado, frequência consistente e compromisso mútuo, os resultados em quadros de ansiedade, depressão e dificuldades emocionais são expressivos e duradouros.",
+      "A modalidade online também amplia o acesso: pessoas em cidades menores, com rotinas intensas ou que preferem a privacidade do próprio espaço conseguem manter a regularidade do processo sem barreiras geográficas.",
     ],
   },
   {
     id: "ansiedade-digital",
-    title: "Ansiedade e rotina digital",
-    excerpt: "Sobrecarga de informação e comparação constante impactam o emocional.",
+    title: "Ansiedade e a rotina de quem vive da internet",
+    excerpt: "Sobrecarga de informação, comparação constante e cobrança por performance afetam o equilíbrio emocional.",
     content: [
-      "A rotina hiperconectada pode amplificar sintomas de ansiedade, culpa e exaustão.",
-      "A terapia ajuda a reorganizar limites, recuperar foco e construir uma relação mais saudável com trabalho e redes.",
+      "A hiperconexão pode amplificar sintomas de ansiedade, culpa, exaustão e até despersonalização — a sensação de que a vida online e a vida real são duas pessoas diferentes.",
+      "Criadores de conteúdo, colunistas e profissionais digitais enfrentam demandas únicas: métricas de engajamento, exposição contínua e a pressão de estarem sempre \"disponíveis\" e \"relevantes\".",
+      "A terapia oferece ferramentas concretas para reorganizar limites, identificar gatilhos, recuperar o foco e construir uma relação mais saudável entre trabalho digital e saúde mental.",
     ],
   },
   {
     id: "primeira-sessao",
-    title: "Como é a primeira sessão",
-    excerpt: "A primeira conversa define objetivos, contexto e combinados do processo.",
+    title: "Como é a primeira sessão de terapia?",
+    excerpt: "Um espaço de acolhimento onde definimos juntos os objetivos, o contexto e os combinados do processo.",
     content: [
-      "Você pode levar sua principal queixa, dúvidas e expectativas sem precisar 'ter tudo pronto'.",
-      "A sessão inicial é um espaço de acolhimento para entender sua história e montar o plano terapêutico com clareza.",
+      "Você não precisa chegar com tudo pronto ou com um diagnóstico em mente. Traga sua principal inquietação, suas dúvidas e suas expectativas — o restante a gente constrói junto.",
+      "A primeira sessão é dedicada a conhecer sua história, entender o que te trouxe até aqui e alinhar como o processo terapêutico vai funcionar na prática: frequência, formato e objetivos iniciais.",
+      "É normal sentir um misto de ansiedade e alívio. O importante é saber que você não será julgado(a) — apenas acolhido(a).",
+    ],
+  },
+  {
+    id: "autoestima-autoimagem",
+    title: "Autoestima: como a terapia pode ajudar",
+    excerpt: "A autocrítica excessiva e a comparação constante minam a confiança. A terapia reconstrói essa relação.",
+    content: [
+      "A autoestima não é sobre achar que somos perfeitos — é sobre desenvolver uma relação honesta e compassiva consigo. Na terapia, investigamos padrões de pensamento que alimentam a insegurança e a desvalorização pessoal.",
+      "Muitas pessoas convivem com uma voz interna severa que minimiza conquistas, amplifica falhas e gera paralisia diante de decisões importantes. Esse padrão pode ser trabalhado e transformado.",
+      "Com a abordagem ACT, aprendemos a observar esses pensamentos sem nos fundir a eles, direcionando energia para ações alinhadas aos nossos valores reais — não às expectativas dos outros.",
+    ],
+  },
+  {
+    id: "burnout-digital",
+    title: "Burnout digital: quando a exaustão vai além do cansaço",
+    excerpt: "A sobrecarga emocional do trabalho online tem características próprias que merecem atenção clínica.",
+    content: [
+      "O burnout digital não é apenas cansaço físico: envolve esgotamento emocional, cinismo em relação ao próprio trabalho e sensação de ineficácia — mesmo quando os resultados externos parecem positivos.",
+      "Para quem vive da internet, os limites entre vida pessoal e profissional se diluem. O celular é ao mesmo tempo ferramenta de trabalho e canal de lazer, o que torna a desconexão quase impossível sem estratégia.",
+      "O processo terapêutico ajuda a identificar o ponto de ruptura, restabelecer fronteiras saudáveis e reconstruir uma rotina que respeite a capacidade real — não apenas a expectativa do algoritmo.",
+    ],
+  },
+  {
+    id: "flexibilidade-psicologica",
+    title: "O que é flexibilidade psicológica e por que ela importa",
+    excerpt: "A base da Terapia de Aceitação e Compromisso (ACT): agir com presença e propósito, mesmo diante do desconforto.",
+    content: [
+      "Flexibilidade psicológica é a capacidade de estar presente no momento atual, aceitar experiências internas difíceis (pensamentos, emoções, sensações) e agir de forma alinhada com o que realmente importa para você.",
+      "Na prática, significa parar de lutar contra a ansiedade para eliminá-la e começar a construir uma vida rica e significativa mesmo quando ela aparece.",
+      "A ACT não busca \"consertar\" o que você sente. Busca ampliar seu repertório de ação para que emoções desconfortáveis não ditem suas escolhas. É uma mudança sutil, mas profundamente transformadora.",
+    ],
+  },
+  {
+    id: "regulacao-emocional",
+    title: "Regulação emocional: entender antes de reagir",
+    excerpt: "Aprender a reconhecer e acolher emoções é o primeiro passo para não ser controlado por elas.",
+    content: [
+      "Regulação emocional não é sobre reprimir sentimentos ou manter a calma o tempo todo. É a habilidade de perceber o que sentimos, nomear essa experiência e escolher como responder — em vez de reagir no automático.",
+      "Pessoas com dificuldade de regulação frequentemente alternam entre explosões emocionais e entorpecimento. Ambos são estratégias de proteção que, com o tempo, geram sofrimento.",
+      "Na terapia, desenvolvemos juntos um vocabulário emocional mais rico, práticas de atenção ao corpo e técnicas de defusão cognitiva que ajudam a criar espaço entre o estímulo e a resposta.",
     ],
   },
 ];
