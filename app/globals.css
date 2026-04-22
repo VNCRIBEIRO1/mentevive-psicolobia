@@ -181,3 +181,9 @@
   opacity: 0;
   animation: heroFadeInScale 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
+
+/* Hero background photos — slow reveal */
+@keyframes hero-photo-in {
+  from { opacity: 0; transform: scale(1.08); }
+  to { opacity: 1; transform: scale(1.02); }
+}
