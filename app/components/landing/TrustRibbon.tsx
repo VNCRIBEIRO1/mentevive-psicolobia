@@ -3,7 +3,7 @@ import { AnimatedSection } from "./AnimatedSection";
 const stats = [
   { value: "+3.500", label: "Sessões", sub: "conduzidas pessoalmente" },
   { value: "CRP 06", label: "173961", sub: "registro ativo no e-Psí" },
-  { value: "Einstein", label: "2023", sub: "formação em ansiedade e depressão" },
+  { value: "Einstein", label: "Formação", sub: "ansiedade e depressão" },
   { value: "ACT", label: "Base teórica", sub: "terapia baseada em evidências" },
 ];
 

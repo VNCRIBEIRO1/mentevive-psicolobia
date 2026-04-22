@@ -4,9 +4,9 @@ import { Leaf, ShieldCheck, Video, Calendar } from "lucide-react";
 import { FloatingOrbs } from "./FloatingOrbs";
 
 const heroImages = [
-  { src: "/bia.png", alt: "Beatriz Ribeiro — atendimento online", mt: "mt-8" },
-  { src: "/bia2.png", alt: "Beatriz Ribeiro — sessão de terapia online", mt: "" },
-  { src: "/bia3.webp", alt: "Beatriz Ribeiro — consultório online Psicolobia", mt: "mt-6" },
+  { src: "/bia1.jpeg", alt: "Beatriz Ribeiro — Psicóloga Clínica, atendimento online", mt: "mt-8" },
+  { src: "/bia2.png", alt: "Beatriz Ribeiro — editorial Ser Psicóloga", mt: "" },
+  { src: "/bia3.png", alt: "Beatriz Ribeiro — retrato institucional Psicolobia", mt: "mt-6" },
 ];
 
 export function Hero() {

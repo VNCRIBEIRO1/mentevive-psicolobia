@@ -15,7 +15,7 @@ export function About() {
               Psicóloga · CRP 06/173961
             </div>
             <Image
-              src="/pefilsobrre.jpeg"
+              src="/perfilsobre.jpeg"
               alt="Beatriz Ribeiro — Psicóloga Clínica, CRP 06/173961"
               width={520}
               height={680}
@@ -38,11 +38,19 @@ export function About() {
             </li>
             <li className="flex items-start gap-2.5">
               <span className="mt-1 w-3 h-px bg-gold shrink-0" aria-hidden />
-              <span><strong className="text-txt font-semibold">Formação complementar</strong> em Transtornos de Ansiedade e Depressivos — Faculdade Israelita Albert Einstein (2023)</span>
+              <span><strong className="text-txt font-semibold">Formação complementar</strong> em Transtornos de Ansiedade e Depressivos — Faculdade Israelita Albert Einstein</span>
             </li>
             <li className="flex items-start gap-2.5">
               <span className="mt-1 w-3 h-px bg-gold shrink-0" aria-hidden />
-              <span><strong className="text-txt font-semibold">Experiência</strong> na Privacy (2022–2024) — atendimento especializado a criadores de conteúdo</span>
+              <span><strong className="text-txt font-semibold">Atuação no CRAS</strong> — atendimento clínico e social em rede pública (SUAS)</span>
+            </li>
+            <li className="flex items-start gap-2.5">
+              <span className="mt-1 w-3 h-px bg-gold shrink-0" aria-hidden />
+              <span><strong className="text-txt font-semibold">Atendimento infantil</strong> a crianças no espectro autista (TEA)</span>
+            </li>
+            <li className="flex items-start gap-2.5">
+              <span className="mt-1 w-3 h-px bg-gold shrink-0" aria-hidden />
+              <span><strong className="text-txt font-semibold">Experiência na Privacy</strong> — atendimento especializado a criadores de conteúdo digital</span>
             </li>
             <li className="flex items-start gap-2.5">
               <span className="mt-1 w-3 h-px bg-gold shrink-0" aria-hidden />

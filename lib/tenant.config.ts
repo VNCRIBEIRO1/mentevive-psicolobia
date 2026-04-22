@@ -35,7 +35,7 @@ export const tenantConfig = {
     specialties: [
       "Terapia de Aceitação e Compromisso (ACT)",
     ],
-    photo: "/bia-perfil.jpeg", // Coloque a foto na pasta public/
+    photo: "/perfilsobre.jpeg", // Foto principal do About (usada em OG/JSON-LD)
     sessionCount: "+3500 atendimentos",
   },
 
