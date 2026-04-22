@@ -42,21 +42,11 @@ export const metadata: Metadata = {
     siteName: name,
     title: `${name} — ${professional.name} | ${professional.title} Online`,
     description,
-    images: [
-      {
-        url: "/og",
-        width: 1200,
-        height: 630,
-        alt: `${professional.name} — ${professional.title} ${name}`,
-        type: "image/png",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${name} — ${professional.name} | ${professional.title} Online`,
     description,
-    images: ["/og"],
     ...(seo.twitterHandle ? { creator: seo.twitterHandle } : {}),
   },
   robots: {
