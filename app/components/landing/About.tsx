@@ -36,6 +36,15 @@ export function About() {
             <h2 className="section-title">Beatriz (Bea)</h2>
             <p className="text-xs text-teal-dark font-semibold mb-2">
               CRP 06/173961 · UNOESTE — Universidade do Oeste Paulista
+              {" · "}
+              <a
+                href="https://cadastro.cfp.org.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-dotted hover:text-primary-dark"
+              >
+                verifique no e-Psí
+              </a>
             </p>
           </AnimatedItem>
 

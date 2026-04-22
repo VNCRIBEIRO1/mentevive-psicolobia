@@ -32,10 +32,10 @@ export function Contact() {
       });
 
       if (res.ok) {
-        setToast("Mensagem enviada. Retornaremos em breve.");
+        setToast("Mensagem enviada. Retorno em até 24h úteis.");
         form.reset();
       } else {
-        setToast("Erro ao enviar. Tente novamente ou use WhatsApp.");
+        setToast("Não consegui enviar agora. Tente novamente ou me chame no WhatsApp.");
       }
     } catch {
       setToast("Erro de conexão. Tente novamente.");
@@ -57,7 +57,10 @@ export function Contact() {
       <div className="max-w-[1100px] mx-auto">
         <AnimatedSection direction="up">
           <div className="section-label">Contato</div>
-          <h2 className="section-title">Fale com a equipe</h2>
+          <h2 className="section-title">Fale com a Bea</h2>
+          <p className="text-sm text-txt-light max-w-xl mt-3">
+            Tire dúvidas sobre o atendimento, peça orientações sobre agendamento ou converse antes de decidir. Respondo pessoalmente cada mensagem.
+          </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">

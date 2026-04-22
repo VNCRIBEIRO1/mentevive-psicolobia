@@ -1,3 +1,12 @@
+// ============================================================
+// AVISO ÉTICO — NÃO UTILIZAR EM PRODUÇÃO
+// ------------------------------------------------------------
+// O Código de Ética Profissional do Psicólogo (art. 20) e a
+// Resolução CFP 11/2018 VEDAM o uso de depoimentos como forma
+// de divulgação de serviços psicológicos. Este componente contém
+// depoimentos fictícios e é mantido apenas como referência de
+// template genérico — NÃO importar em /app/page.tsx.
+// ============================================================
 import { Quote, Star } from "lucide-react";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import { GlassCard } from "./GlassCard";

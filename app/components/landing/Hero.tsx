@@ -15,7 +15,7 @@ export function Hero() {
           className="glass inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-teal-dark mb-6 hero-fade-in-scale border border-gold/20"
           style={{ animationDelay: "0.2s" }}
         >
-          <Leaf className="w-3.5 h-3.5 text-teal" /> Beatriz (Bea) · Psicóloga Clínica — +3500 atendimentos
+          <Leaf className="w-3.5 h-3.5 text-teal" /> Beatriz Ribeiro · CRP 06/173961 · +3.500 atendimentos
         </div>
 
         <h1
@@ -28,20 +28,38 @@ export function Hero() {
         </h1>
 
         <p
-          className="text-base text-txt-light max-w-[500px] mx-auto mb-8 leading-relaxed hero-fade-in"
+          className="text-base text-txt-light max-w-[500px] mx-auto mb-6 leading-relaxed hero-fade-in"
           style={{ animationDelay: "0.45s" }}
         >
-          Terapia online acolhedora com escuta sensível. Sem pressa, sem moldes, sem máscaras. Cada história merece ser acolhida de verdade.
+          Terapia online com escuta sensível e ética clínica. Sem pressa, sem moldes, sem máscaras — cada história recebe o tempo que precisa.
         </p>
+
+        <div
+          className="flex items-center justify-center gap-2 flex-wrap text-[0.7rem] text-txt-muted mb-7 hero-fade-in"
+          style={{ animationDelay: "0.5s" }}
+        >
+          <a
+            href="https://cadastro.cfp.org.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 hover:text-teal-dark underline decoration-dotted underline-offset-2"
+          >
+            Registro no e-Psí / CFP
+          </a>
+          <span aria-hidden>·</span>
+          <span>Sigilo profissional garantido</span>
+          <span aria-hidden>·</span>
+          <span>Videochamada criptografada</span>
+        </div>
 
         <div
           className="flex gap-4 justify-center flex-wrap hero-fade-in"
           style={{ animationDelay: "0.55s" }}
         >
           <a href="#agendamento" className="btn-brand-primary">
-            <Leaf className="w-4 h-4" /> Agendar Sessão
+            <Leaf className="w-4 h-4" /> Agendar primeira sessão
           </a>
-          <a href="#sobre" className="btn-brand-outline">Conheça a Profissional</a>
+          <a href="#sobre" className="btn-brand-outline">Conhecer a Bea</a>
         </div>
 
         <div className="mt-10 flex justify-center gap-4 flex-wrap">

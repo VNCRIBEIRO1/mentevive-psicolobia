@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     template: seo.titleTemplate,
   },
   description: longDescription,
-  keywords: [...seo.keywords],
   authors: [{ name: professional.name, url: siteUrl }],
   creator: `${professional.name} — ${professional.title}`,
   publisher: name,
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: professional.photo,
+        url: "/og",
         width: 1200,
         height: 630,
         alt: `${professional.name} — ${professional.title} ${name}`,
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${name} — ${professional.name} | ${professional.title} Online`,
     description,
-    images: [professional.photo],
+    images: ["/og"],
     ...(seo.twitterHandle ? { creator: seo.twitterHandle } : {}),
   },
   robots: {
