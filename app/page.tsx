@@ -2,6 +2,7 @@ import { Header } from "@/app/components/landing/Header";
 import { Hero } from "@/app/components/landing/Hero";
 import { About } from "@/app/components/landing/About";
 import { Services } from "@/app/components/landing/Services";
+import { TrustRibbon } from "@/app/components/landing/TrustRibbon";
 import { Blog } from "@/app/components/landing/Blog";
 import { Footer } from "@/app/components/landing/Footer";
 import { WhatsAppFloat } from "@/app/components/landing/WhatsAppFloat";
@@ -230,7 +231,7 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
-        <SectionDivider variant="wave-up" colorFrom="var(--teal)" colorTo="var(--primary)" />
+        <TrustRibbon />
         <About />
         <SectionDivider variant="wave-down" />
         <Services />
