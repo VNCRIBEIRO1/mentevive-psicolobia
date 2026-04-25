@@ -8,7 +8,7 @@ export function Scheduling() {
   const registerPatientUrl = `${PLATFORM_URL}/registro?tenant=${TENANT_SLUG}`;
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-white" id="agendamento">
+    <section className="py-24 px-4 md:px-8 bg-transparent border-t border-primary/5" id="agendamento">
       <div className="max-w-[800px] mx-auto">
         <AnimatedSection direction="up" className="text-center">
           <div className="section-label justify-center">O Próximo Passo</div>

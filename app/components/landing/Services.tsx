@@ -66,7 +66,7 @@ export function Services() {
   };
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-bg-warm" id="servicos">
+    <section className="py-24 px-4 md:px-8 bg-transparent" id="servicos">
       <div className="max-w-[1000px] mx-auto text-center">
         <AnimatedSection direction="up">
           <div className="section-label justify-center">Áreas de atuação</div>
@@ -90,7 +90,7 @@ export function Services() {
           return (
             <AnimatedSection direction="up" delay={0.05 * i} key={s.id}>
               <div 
-                className={`bg-white border rounded-lg overflow-hidden transition-all duration-300 ${isExpanded ? 'border-accent shadow-[0_4px_20px_-2px_rgba(178,152,220,0.25)]' : 'border-gold/30 hover:border-accent hover:shadow-[0_4px_12px_-2px_rgba(178,152,220,0.15)] cursor-pointer'}`}
+                className={`bg-white/70 backdrop-blur-md border rounded-lg overflow-hidden transition-all duration-300 ${isExpanded ? 'border-accent shadow-[0_4px_20px_-2px_rgba(178,152,220,0.25)]' : 'border-gold/30 hover:border-accent hover:shadow-[0_4px_12px_-2px_rgba(178,152,220,0.15)] cursor-pointer'}`}
               >
                 <button 
                   onClick={() => toggleExpand(s.id)}

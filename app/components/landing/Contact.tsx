@@ -53,7 +53,7 @@ export function Contact() {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-white" id="contato">
+    <section className="py-20 px-4 md:px-8 bg-transparent" id="contato">
       <div className="max-w-[1100px] mx-auto">
         <AnimatedSection direction="up">
           <div className="section-label">Contato</div>

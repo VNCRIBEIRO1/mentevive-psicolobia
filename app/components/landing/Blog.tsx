@@ -87,7 +87,7 @@ export function Blog() {
   const [open, setOpen] = useState<string | null>(articles[0].id);
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-bg-warm" id="blog">
+    <section className="py-24 px-4 md:px-8 bg-transparent" id="blog">
       <AnimatedSection className="max-w-[900px] mx-auto" direction="up">
         <div className="flex flex-col items-center text-center mb-10">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-widest mb-4">

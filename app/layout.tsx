@@ -73,7 +73,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${fraunces.variable} ${inter.variable}`} suppressHydrationWarning>
-      <body>{children}</body>
+      <body className="bg-[url('/planofundo.jpeg')] bg-center bg-cover bg-fixed">{children}</body>
     </html>
   );
 }
