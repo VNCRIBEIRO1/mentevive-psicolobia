@@ -38,10 +38,10 @@ export function Header() {
         <Link href="/" className="flex items-center group py-2">
           <div className="relative h-20 w-64 sm:h-24 sm:w-80 md:h-28 md:w-[420px] lg:h-32 lg:w-[500px] transition-opacity duration-300 group-hover:opacity-80">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="Logo Psicolobia"
               fill
-              className="object-contain object-left mix-blend-multiply"
+              className="object-contain object-left"
               sizes="(max-width: 640px) 210px, (max-width: 768px) 260px, 360px"
               priority
             />

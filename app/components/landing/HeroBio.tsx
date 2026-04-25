@@ -7,7 +7,7 @@ import { FloatingSpirals } from "./FloatingSpirals";
 
 export function HeroBio() {
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-36 pb-24 px-4 md:px-8 bg-[#FBF6EF]" id="sobre">
+    <section className="relative overflow-hidden pt-44 md:pt-52 lg:pt-60 pb-24 px-4 md:px-8 bg-[#FBF6EF]" id="sobre">
       <FloatingOrbs className="z-[1]" />
       <FloatingSpirals />
 
