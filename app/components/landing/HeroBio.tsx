@@ -11,6 +11,14 @@ export function HeroBio() {
       <FloatingOrbs className="z-[1]" />
       <FloatingSpirals />
 
+      <div className="relative z-10 max-w-[1100px] mx-auto hero-fade-in mb-10 md:mb-16">
+        <AnimatedSection direction="up" className="text-center w-full px-4 md:px-0">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-txt leading-[1.05] drop-shadow-sm">
+            Prazer, Bea<br className="sm:hidden" /> sua nova <span className="text-accent italic font-semibold">psicanalista</span>
+          </h2>
+        </AnimatedSection>
+      </div>
+
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center max-w-[1100px] mx-auto hero-fade-in">
         
         {/* Photo Column */}
