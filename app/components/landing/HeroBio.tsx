@@ -31,8 +31,9 @@ export function HeroBio() {
             />
             
             <div className="absolute -bottom-6 -right-2 lg:-right-6 bg-white border border-gold/30 px-5 py-4 shadow-warm-md z-20">
-              <p className="text-[0.65rem] tracking-[0.2em] uppercase text-teal font-semibold">Trajetória clínica</p>
-              <p className="text-[0.7rem] text-txt-muted mt-0.5">conduzidas clinicamente</p>
+              <p className="text-[0.65rem] tracking-[0.2em] uppercase text-teal font-semibold mb-1">Trajetória clínica</p>
+              <p className="font-heading text-xl font-bold text-txt leading-tight">+3.500 sessões</p>
+              <p className="text-[0.7rem] text-txt-muted mt-0.5">realizadas clinicamente</p>
             </div>
           </div>
         </AnimatedSection>
@@ -54,8 +55,11 @@ export function HeroBio() {
             <p className="text-[0.95rem] md:text-[1.05rem] text-txt-light leading-relaxed mb-4">
               Costumo receber pessoas que se sentem constantemente esgotadas e cobradas — profissionais digitais, criadores de conteúdo e quem sente o peso da ansiedade que o mundo hiperconectado impõe.
             </p>
+            <p className="text-[0.95rem] md:text-[1.05rem] text-txt-light leading-relaxed mb-4">
+              Meu papel é ajudar você a construir <strong className="text-txt font-bold">flexibilidade emocional</strong> para viver com mais acolhimento, sem os julgamentos do antigo formato de terapia.
+            </p>
             <p className="text-[0.95rem] md:text-[1.05rem] text-txt-light leading-relaxed mb-8">
-              Meu papel é ajudar você a construir <strong className="text-txt font-semibold">flexibilidade emocional</strong> para viver com mais acolhimento, sem os julgamentos do antigo formato engessado de terapia.
+              Psicóloga <strong className="text-txt font-bold">CRP 06/173961</strong> com formação em Ansiedade e Depressão pelo <strong className="text-txt font-extrabold underline decoration-accent decoration-2 underline-offset-2">Albert Einstein</strong>.
             </p>
           </AnimatedItem>
 

@@ -35,14 +35,15 @@ export function Header() {
           scrolled ? "bg-white/90 shadow-warm-md backdrop-blur-2xl" : "bg-[#FFF5EE]/80 backdrop-blur-xl"
         } border-b border-primary/5`}
       >
-        <Link href="/" className="flex items-center group">
-          <div className="relative h-10 w-36 md:h-12 md:w-44 transition-opacity duration-300 group-hover:opacity-80">
+        <Link href="/" className="flex items-center group py-1">
+          <div className="relative h-16 w-52 sm:h-20 sm:w-64 md:h-24 md:w-[320px] lg:w-[360px] transition-opacity duration-300 group-hover:opacity-80">
             <Image
               src="/logo.jpeg"
               alt="Logo Psicolobia"
               fill
               className="object-contain object-left"
-              sizes="(max-width: 768px) 144px, 176px"
+              sizes="(max-width: 640px) 210px, (max-width: 768px) 260px, 360px"
+              priority
             />
           </div>
         </Link>
