@@ -14,10 +14,7 @@ const Chatbot = dynamic(
   () => import("@/app/components/landing/Chatbot").then((m) => m.Chatbot),
   { loading: () => null }
 );
-const PortalShowcase = dynamic(
-  () => import("@/app/components/landing/PortalShowcase").then((m) => m.PortalShowcase),
-  { loading: () => <div className="py-20" /> }
-);
+
 const Scheduling = dynamic(
   () => import("@/app/components/landing/Scheduling").then((m) => m.Scheduling),
   { loading: () => <div className="py-20" /> }
@@ -236,8 +233,6 @@ export default function Home() {
         <SectionDivider variant="wave-down" />
         <Services />
         <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
-        <PortalShowcase />
-        <SectionDivider variant="wave-down" colorFrom="var(--teal)" colorTo="var(--primary)" />
         <Scheduling />
         <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
         <Blog />
