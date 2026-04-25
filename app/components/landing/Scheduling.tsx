@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight, UserPlus, LogIn, Video } from "lucide-react";
+import { ArrowRight, UserPlus, LogIn, Video, CalendarCheck, Sparkles, CreditCard, FileText, Leaf, ShieldCheck } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
@@ -19,10 +19,33 @@ export function Scheduling() {
             Sem secretária virtual atrapalhando e sem planilhas confusas. Todo o seu processo terapêutico é gerenciado por você, de forma autônoma e segura, dentro do nosso Portal do Paciente.
           </p>
           <div className="bg-[#FFFBF5] border border-gold/40 rounded-xl p-8 text-left shadow-sm">
-            <h3 className="font-heading text-xl font-semibold text-txt mb-3">Como funciona a mecânica?</h3>
-            <p className="text-[0.95rem] text-txt-light leading-relaxed mb-4">
-              Pelo portal você consegue <strong>agendar novas sessões, reagendar horários, baixar recibos para reembolso de plano de saúde</strong> e acessar anotações exclusivas após os nossos encontros.
-            </p>
+            <h3 className="font-heading text-xl font-semibold text-txt mb-4">O que você encontra do outro lado da porta?</h3>
+            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4 mb-5">
+              <div className="flex gap-3">
+                <CalendarCheck className="w-4 h-4 text-teal shrink-0 mt-0.5" />
+                <p className="text-[0.88rem] text-txt-light leading-snug"><strong className="text-txt font-semibold block mb-0.5 text-[0.8rem]">Autonomia de agenda</strong>Marque ou transfira sessões com um clique, sem depender de "horário comercial".</p>
+              </div>
+              <div className="flex gap-3">
+                <Sparkles className="w-4 h-4 text-teal shrink-0 mt-0.5" />
+                <p className="text-[0.88rem] text-txt-light leading-snug"><strong className="text-txt font-semibold block mb-0.5 text-[0.8rem]">Sala de espera virtual</strong>Um ambiente focado para você desacelerar a cabeça antes de abrirmos a chamada.</p>
+              </div>
+              <div className="flex gap-3">
+                <CreditCard className="w-4 h-4 text-teal shrink-0 mt-0.5" />
+                <p className="text-[0.88rem] text-txt-light leading-snug"><strong className="text-txt font-semibold block mb-0.5 text-[0.8rem]">Pagamentos sem atrito</strong>Assinaturas automáticas no cartão ou PIX. Fim das tabelas ou carnês extras.</p>
+              </div>
+              <div className="flex gap-3">
+                <FileText className="w-4 h-4 text-teal shrink-0 mt-0.5" />
+                <p className="text-[0.88rem] text-txt-light leading-snug"><strong className="text-txt font-semibold block mb-0.5 text-[0.8rem]">Documentos organizados</strong>Seus recibos para pedir reembolso do seu plano de saúde num só lugar.</p>
+              </div>
+              <div className="flex gap-3">
+                <Leaf className="w-4 h-4 text-teal shrink-0 mt-0.5" />
+                <p className="text-[0.88rem] text-txt-light leading-snug"><strong className="text-txt font-semibold block mb-0.5 text-[0.8rem]">Evolução terapêutica</strong>Acompanhe o histórico do que construímos e consulte anotações quando quiser.</p>
+              </div>
+              <div className="flex gap-3">
+                <ShieldCheck className="w-4 h-4 text-teal shrink-0 mt-0.5" />
+                <p className="text-[0.88rem] text-txt-light leading-snug"><strong className="text-txt font-semibold block mb-0.5 text-[0.8rem]">Triagem rápida</strong>Responda a uma checagem simples antes de nos vermos, pra já direcionarmos o papo.</p>
+              </div>
+            </div>
             <div className="h-px bg-gold/30 w-full my-6" />
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
               <div>
