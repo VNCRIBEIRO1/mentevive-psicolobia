@@ -105,7 +105,7 @@ export function Blog() {
           const isOpen = open === article.id;
           return (
             <AnimatedItem key={article.id} direction="up">
-              <div className="rounded-2xl border border-gold/15 hover:border-gold/30 bg-white overflow-hidden transition-colors duration-300 hover:shadow-gold-glow">
+              <div className="rounded-2xl border border-gold/15 hover:border-accent/80 bg-white overflow-hidden transition-all duration-300 hover:shadow-[0_4px_24px_-4px_rgba(178,152,220,0.2)]">
                 <button
                   className="w-full px-5 py-4 flex items-start justify-between gap-3 text-left"
                   onClick={() => setOpen(isOpen ? null : article.id)}

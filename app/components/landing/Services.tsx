@@ -90,21 +90,21 @@ export function Services() {
           return (
             <AnimatedSection direction="up" delay={0.05 * i} key={s.id}>
               <div 
-                className={`bg-white border rounded-lg overflow-hidden transition-all duration-300 ${isExpanded ? 'border-teal shadow-warm-md' : 'border-gold/30 hover:border-gold/60 cursor-pointer'}`}
+                className={`bg-white border rounded-lg overflow-hidden transition-all duration-300 ${isExpanded ? 'border-accent shadow-[0_4px_20px_-2px_rgba(178,152,220,0.25)]' : 'border-gold/30 hover:border-accent hover:shadow-[0_4px_12px_-2px_rgba(178,152,220,0.15)] cursor-pointer'}`}
               >
                 <button 
                   onClick={() => toggleExpand(s.id)}
                   className="w-full flex items-center justify-between p-5 md:p-6 text-left outline-none"
                 >
                   <div className="flex items-center gap-4 md:gap-5">
-                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors duration-300 ${isExpanded ? 'bg-teal text-white' : 'bg-bg-warm text-teal-dark'}`}>
+                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors duration-300 ${isExpanded ? 'bg-accent/80 text-white' : 'bg-bg-warm text-teal-dark'}`}>
                       <Icon className="w-5 h-5 md:w-6 md:h-6" />
                     </div>
                     <div>
                       <p className="text-[0.65rem] tracking-[0.18em] uppercase text-txt-muted font-semibold mb-1">
                         {s.eyebrow}
                       </p>
-                      <h3 className={`font-heading text-lg md:text-xl font-semibold transition-colors ${isExpanded ? 'text-teal-dark' : 'text-txt'}`}>
+                      <h3 className={`font-heading text-lg md:text-xl font-semibold transition-colors ${isExpanded ? 'text-[#7D5CAD]' : 'text-txt'}`}>
                         {s.title}
                       </h3>
                     </div>
@@ -112,7 +112,7 @@ export function Services() {
                   <motion.div 
                     animate={{ rotate: isExpanded ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className={`w-8 h-8 rounded-full flex items-center justify-center ${isExpanded ? 'bg-teal/10 text-teal-dark' : 'bg-transparent text-txt-muted'}`}
+                    className={`w-8 h-8 rounded-full flex items-center justify-center ${isExpanded ? 'bg-accent/20 text-[#7D5CAD]' : 'bg-transparent text-txt-muted'}`}
                   >
                     <ChevronDown className="w-5 h-5" />
                   </motion.div>

@@ -32,8 +32,7 @@ export function HeroBio() {
             
             <div className="absolute -bottom-6 -right-2 lg:-right-6 bg-white border border-gold/30 px-5 py-4 shadow-warm-md z-20">
               <p className="text-[0.65rem] tracking-[0.2em] uppercase text-teal font-semibold">Trajetória clínica</p>
-              <p className="font-heading text-xl font-bold text-txt leading-tight mt-1">+3.500 sessões</p>
-              <p className="text-[0.7rem] text-txt-muted mt-0.5">conduzidas psiquicamente</p>
+              <p className="text-[0.7rem] text-txt-muted mt-0.5">conduzidas clinicamente</p>
             </div>
           </div>
         </AnimatedSection>

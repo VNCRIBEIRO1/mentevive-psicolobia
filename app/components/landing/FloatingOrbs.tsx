@@ -25,9 +25,9 @@ const orbs = [
     offset: { top: "30%", right: "5%" },
   },
   {
-    color: "bg-accent/8",
-    size: "w-64 h-64",
-    blur: "blur-[100px]",
+    color: "bg-accent/20",
+    size: "w-80 h-80",
+    blur: "blur-[90px]",
     radius: "rounded-[48%_52%_60%_40%]",
     speed: "animate-liquid-float",
     offset: { bottom: "10%", left: "25%" },

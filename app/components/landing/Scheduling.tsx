@@ -18,7 +18,7 @@ export function Scheduling() {
           <p className="text-[1.05rem] text-txt-light leading-relaxed mb-6">
             Sem secretária virtual atrapalhando e sem planilhas confusas. Todo o seu processo terapêutico é gerenciado por você, de forma autônoma e segura, dentro do nosso Portal do Paciente.
           </p>
-          <div className="bg-[#FFFBF5] border border-gold/40 rounded-xl p-8 text-left shadow-sm">
+          <div className="bg-[#FFFBF5] border border-accent/30 rounded-xl p-8 text-left shadow-[0_4px_24px_-4px_rgba(178,152,220,0.15)]">
             <h3 className="font-heading text-xl font-semibold text-txt mb-4">O que você encontra do outro lado da porta?</h3>
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4 mb-5">
               <div className="flex gap-3">

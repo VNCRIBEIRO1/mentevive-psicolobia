@@ -7,8 +7,8 @@
     --primary: #D4A574;
     --primary-dark: #B8895C;
     --primary-light: #E8C9A8;
-    --accent: #E8A0BF;
-    --accent-light: #F5C8DE;
+    --accent: #B298DC;
+    --accent-light: #EBE5F7;
     --teal: #0f766e;
     --teal-dark: #0a6158;
     --sage: #e6f0eb;
@@ -104,7 +104,7 @@
     -webkit-backdrop-filter: blur(40px) saturate(1.4);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow:
-      0 0 30px -10px rgba(232, 160, 191, 0.25),
+      0 0 30px -10px rgba(178, 152, 220, 0.4),
       inset 0 0 20px -5px rgba(212, 165, 116, 0.08);
   }
 
@@ -133,7 +133,7 @@
       -45deg,
       var(--bg),
       var(--bg-soft),
-      var(--sage),
+      var(--accent-light),
       var(--bg-warm)
     );
     background-size: 400% 400%;
