@@ -11,38 +11,29 @@ export function Contact() {
   const [toast, setToast] = useState("");
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    
+    // Honeypot check
+    if (formData.get("website")) return;
+
     setSending(true);
+    
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const subject = formData.get("subject") as string;
+    const message = formData.get("message") as string;
 
-    try {
-      const res = await fetch(`${PLATFORM_URL}/api/contact?tenant=${TENANT_SLUG}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          subject: formData.get("subject"),
-          message: formData.get("message"),
-          turnstileToken: formData.get("turnstileToken"),
-          website: formData.get("website"),
-        }),
-      });
+    const text = encodeURIComponent(`Olá, Beatriz!\n\nMe chamo ${name}\nE-mail: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`);
 
-      if (res.ok) {
-        setToast("Mensagem enviada. Retorno em até 24h úteis.");
-        form.reset();
-      } else {
-        setToast("Não consegui enviar agora. Tente novamente ou me chame no WhatsApp.");
-      }
-    } catch {
-      setToast("Erro de conexão. Tente novamente.");
-    } finally {
-      setSending(false);
-      setTimeout(() => setToast(""), 4000);
-    }
+    window.open(`${WHATSAPP_LINK}?text=${text}`, "_blank");
+
+    setSending(false);
+    setToast("Redirecionando para o WhatsApp...");
+    form.reset();
+    setTimeout(() => setToast(""), 4000);
   };
 
   const contacts: { icon: ReactNode; title: string; content: string; href?: string }[] = [
@@ -57,7 +48,7 @@ export function Contact() {
       <div className="max-w-[1100px] mx-auto">
         <AnimatedSection direction="up">
           <div className="section-label">Contato</div>
-          <h2 className="section-title">Fale com a Bea</h2>
+          <h2 className="section-title">Fale com a Beatriz</h2>
           <p className="text-sm text-txt-light max-w-xl mt-3">
             Tire dúvidas sobre o atendimento, peça orientações sobre agendamento ou converse antes de decidir. Respondo pessoalmente cada mensagem.
           </p>

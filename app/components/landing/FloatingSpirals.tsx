@@ -12,17 +12,6 @@ export function FloatingSpirals() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-      {/* Abstract Logo Watermark */}
-      <div className={`absolute top-0 right-[-10%] w-[120%] lg:w-[80%] opacity-[0.03] ${!shouldReduceMotion ? "animate-[spin_120s_linear_infinite]" : ""}`}>
-        <Image 
-          src="/logo.png" 
-          alt="" 
-          width={1000} 
-          height={1000} 
-          className="w-full object-contain"
-        />
-      </div>
-
       {/* Abstract Background Spiral SVG (inspired by the logo / psychological flow) */}
       <svg
         className={`absolute -top-[10%] left-[-15%] w-[120%] lg:w-[80%] h-auto max-w-none text-accent mix-blend-multiply opacity-[0.25] drop-shadow-[0_0_15px_rgba(178,152,220,0.5)] ${

@@ -14,7 +14,7 @@ export function HeroBio() {
       <div className="relative z-10 max-w-[1100px] mx-auto hero-fade-in mb-10 md:mb-16">
         <AnimatedSection direction="up" className="text-center w-full px-4 md:px-0">
           <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-txt leading-[1.05] drop-shadow-sm">
-            Prazer, Bea<br className="sm:hidden" /> sua nova <span className="text-accent italic font-semibold">psicanalista</span>
+            Prazer, Beatriz<br className="sm:hidden" /> sua nova <span className="text-accent italic font-semibold">psicóloga</span>
           </h2>
         </AnimatedSection>
       </div>
@@ -68,9 +68,17 @@ export function HeroBio() {
             <p className="text-[0.95rem] md:text-[1.05rem] text-txt-light leading-relaxed mb-4">
               Meu papel é ajudar você a construir <strong className="text-txt font-bold">flexibilidade emocional</strong> para viver com mais acolhimento, sem os julgamentos do antigo formato de terapia.
             </p>
-            <p className="text-[0.95rem] md:text-[1.05rem] text-txt-light leading-relaxed mb-8">
-              Psicóloga <strong className="text-txt font-bold">CRP 06/173961</strong> com formação em Ansiedade e Depressão pelo <strong className="text-txt font-extrabold underline decoration-accent decoration-2 underline-offset-2">Albert Einstein</strong>.
-            </p>
+            <div className="bg-white/40 backdrop-blur-md border border-gold/40 rounded-xl p-4 shadow-sm mb-8 flex items-center gap-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center shrink-0 shadow-warm-sm">
+                <ShieldCheck className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <p className="font-heading font-bold text-txt text-[0.95rem]">Formação Complementar</p>
+                <p className="text-[0.8rem] text-txt-light leading-snug mt-0.5">
+                  Transtorno Ansioso e Depressivo pela Faculdade <strong className="text-[#7D5CAD] font-bold">Albert Einstein</strong>.
+                </p>
+              </div>
+            </div>
           </AnimatedItem>
 
           {/* Action Area */}

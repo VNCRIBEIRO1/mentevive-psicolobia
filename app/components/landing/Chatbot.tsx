@@ -36,7 +36,7 @@ export function Chatbot() {
   };
 
   const handleWhatsappRedirect = (tema: string) => {
-    const text = encodeURIComponent(`Olá, Bea! Estive no seu site e gostaria de saber mais sobre a terapia. Acho que preciso lidar com ${tema}. Podemos conversar rápidos para eu entender como funciona?`);
+    const text = encodeURIComponent(`Olá, Beatriz! Estive no seu site e gostaria de saber mais sobre a terapia. Acho que preciso lidar com ${tema}. Podemos conversar rápido para eu entender como funciona?`);
     window.open(`${WHATSAPP_LINK}?text=${text}`, "_blank");
   };
 
@@ -78,7 +78,7 @@ export function Chatbot() {
 
   const handleTerapiaMotivo = (bot: (msg: string, opts?: BotFlowOption[]) => void, tema: string) => {
     bot(
-      `Entendi. É muito comum as pessoas chegarem com dificuldades relacionadas a ${tema}, especialmente quando se vive de tela e internet.\n\nA Bea tem muita prática ajudando nisso sem aquele papo engessado. Quer chamar no WhatsApp pra ver se rola aquele match e tirar o resto das dúvidas?`,
+      `Entendi. É muito comum as pessoas chegarem com dificuldades relacionadas a ${tema}, especialmente quando se vive de tela e internet.\n\nA Beatriz tem muita prática ajudando nisso sem aquele papo engessado. Quer chamar no WhatsApp pra ver se rola aquele match e tirar o resto das dúvidas?`,
       [
         {
           label: "📲 Chamar no WhatsApp",
@@ -106,7 +106,7 @@ export function Chatbot() {
     const next = !open;
     setOpen(next);
     if (next && !inited) {
-      setMessages([{ text: "Oie! A Bea tá em atendimento agora, mas sou a assistente dela. O que você tá buscando hoje?", from: "bot" }]);
+      setMessages([{ text: "Oie! A Beatriz está em atendimento agora, mas sou a assistente online dela. O que você tá buscando hoje? \n\n(Aviso LGPD: Não guardamos nenhuma informação digitada aqui. Essa janela é apenas para um direcionamento rápido.)", from: "bot" }]);
       setOptions(initialOptions);
       setInited(true);
     }

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Sparkles } from "lucide-react";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Article = {
   id: string;
@@ -101,32 +102,66 @@ export function Blog() {
       </AnimatedSection>
 
       <div className="max-w-[900px] mx-auto space-y-3">
-        {articles.map((article) => {
-          const isOpen = open === article.id;
-          return (
-            <AnimatedItem key={article.id} direction="up">
-              <div className="rounded-2xl border border-gold/15 hover:border-accent/80 bg-white overflow-hidden transition-all duration-300 hover:shadow-[0_4px_24px_-4px_rgba(178,152,220,0.2)]">
-                <button
-                  className="w-full px-5 py-4 flex items-start justify-between gap-3 text-left"
-                  onClick={() => setOpen(isOpen ? null : article.id)}
+        <AnimatePresence>
+          {articles.map((article, i) => {
+            const isOpen = open === article.id;
+            return (
+              <AnimatedItem key={article.id} direction="up">
+                <div 
+                  className={`bg-white/70 backdrop-blur-md border rounded-xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-accent shadow-[0_4px_20px_-2px_rgba(178,152,220,0.25)]' : 'border-gold/30 hover:border-accent hover:shadow-[0_4px_12px_-2px_rgba(178,152,220,0.15)] cursor-pointer'}`}
                 >
-                  <div>
-                    <h3 className="font-heading text-base font-semibold text-txt">{article.title}</h3>
-                    <p className="text-xs text-txt-light mt-1">{article.excerpt}</p>
-                  </div>
-                  {isOpen ? <ChevronUp className="w-4 h-4 text-teal mt-1" /> : <ChevronDown className="w-4 h-4 text-teal mt-1" />}
-                </button>
-                {isOpen && (
-                  <div className="px-5 pb-5 text-sm text-txt-light space-y-3 border-t border-gold/10">
-                    {article.content.map((p, i) => (
-                      <p key={i} className="pt-3">{p}</p>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </AnimatedItem>
-          );
-        })}
+                  <button
+                    className="w-full px-5 py-5 md:px-7 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-left outline-none"
+                    onClick={() => setOpen(isOpen ? null : article.id)}
+                  >
+                    <div className="flex items-start gap-4 md:gap-5">
+                      <div className={`shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-accent/80 text-white' : 'bg-bg-warm text-teal-dark'}`}>
+                        <Sparkles className="w-5 h-5 md:w-6 md:h-6" />
+                      </div>
+                      <div className="pt-1 md:pt-0">
+                        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-txt-muted font-semibold mb-1">
+                          Artigo · Leitura Rápida
+                        </p>
+                        <h3 className={`font-heading text-lg md:text-xl font-bold transition-colors ${isOpen ? 'text-[#7D5CAD]' : 'text-txt'}`}>
+                          {article.title}
+                        </h3>
+                        <p className="text-[0.8rem] text-txt-light mt-1 max-w-2xl">{article.excerpt}</p>
+                      </div>
+                    </div>
+                    
+                    <motion.div 
+                      animate={{ rotate: isOpen ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={`shrink-0 self-end md:self-auto w-8 h-8 rounded-full flex items-center justify-center ${isOpen ? 'bg-accent/20 text-[#7D5CAD]' : 'bg-transparent text-txt-muted'}`}
+                    >
+                      <ChevronDown className="w-5 h-5" />
+                    </motion.div>
+                  </button>
+
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        <div className="px-5 md:px-[5.2rem] pb-7 md:pb-8 text-txt-light text-[0.95rem] leading-relaxed">
+                          <div className="w-12 h-px bg-gold/50 mb-5" />
+                          <div className="space-y-4">
+                            {article.content.map((p, pIdx) => (
+                              <p key={pIdx}><strong className="font-semibold text-txt/90">{p.split(':')[0]}</strong>{p.includes(':') ? ':' + p.split(':').slice(1).join(':') : ''}</p>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </AnimatedItem>
+            );
+          })}
+        </AnimatePresence>
       </div>
     </section>
   );
