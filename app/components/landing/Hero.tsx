@@ -109,17 +109,17 @@ export function Hero() {
           className="font-heading text-[2rem] sm:text-4xl md:text-[3.25rem] font-semibold leading-[1.08] mb-5 hero-fade-in text-txt"
           style={{ animationDelay: "0.55s" }}
         >
-          Terapia online para quem
+          Um espaço seguro para você
           <br className="hidden sm:block" />
-          <span className="italic text-teal-dark font-medium">vive no ritmo da internet</span>
-          <span className="text-txt"> — e precisa de um lugar onde o mundo desacelera.</span>
+          <span className="italic text-teal-dark font-medium">desacelerar</span>
+          <span className="text-txt"> e cuidar da mente.</span>
         </h1>
 
         <p
           className="text-[0.95rem] md:text-base text-txt-light max-w-[560px] mx-auto mb-7 leading-relaxed hero-fade-in"
           style={{ animationDelay: "0.65s" }}
         >
-          Escuta clínica ética, <strong className="text-txt font-semibold">+3.500 sessões</strong> conduzidas pessoalmente e base em Terapia de Aceitação e Compromisso (ACT). Sem pressa, sem moldes, sem máscaras.
+          Atendimento psicológico online e acolhedor para ajudar você a lidar com a ansiedade, a exaustão e os desafios de viver uma vida hiperconectada. Sem julgamentos e no seu tempo.
         </p>
 
         <div
@@ -127,9 +127,9 @@ export function Hero() {
           style={{ animationDelay: "0.72s" }}
         >
           <a href="#agendamento" className="btn-brand-primary">
-            <Calendar className="w-4 h-4" /> Agendar primeira sessão
+            <Calendar className="w-4 h-4" /> Quero começar
           </a>
-          <a href="#sobre" className="btn-brand-outline">Conhecer a Bea</a>
+          <a href="#sobre" className="btn-brand-outline">Sobre mim</a>
         </div>
 
         {/* Trust bar — three pillars */}

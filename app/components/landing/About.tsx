@@ -64,8 +64,8 @@ export function About() {
           <AnimatedItem direction="up">
             <div className="section-label">Sobre a Bea</div>
             <h2 className="font-heading text-3xl md:text-[2.5rem] leading-[1.05] font-semibold text-txt mb-3">
-              Uma escuta honesta,<br className="hidden sm:block" />
-              <span className="text-teal-dark italic font-medium">construída sessão a sessão.</span>
+              Menos cobrança,<br className="hidden sm:block" />
+              <span className="text-teal-dark italic font-medium">mais acolhimento.</span>
             </h2>
             <p className="text-[0.72rem] text-txt-muted tracking-wide mb-5">
               Beatriz Ribeiro ·{" "}
@@ -82,13 +82,13 @@ export function About() {
 
           <AnimatedItem direction="up">
             <p className="text-[0.95rem] text-txt-light leading-relaxed mb-5">
-              Atendo pessoas que vivem da internet — criadoras, colunistas, profissionais digitais — e também quem simplesmente quer entender o que sente. São histórias marcadas por ansiedade, exaustão, comparação constante e pela sensação de ter que estar sempre disponível.
+              Costumo receber pessoas que se sentem constantemente esgotadas e cobradas — profissionais digitais, criadores de conteúdo, ou qualquer pessoa que sinta o peso da ansiedade e da comparação que o mundo de hoje nos impõe.
             </p>
             <p className="text-[0.95rem] text-txt-light leading-relaxed mb-5">
-              Minha base teórica é a <strong className="text-txt font-semibold">Terapia de Aceitação e Compromisso (ACT)</strong>. Trabalho flexibilidade psicológica, regulação emocional e a construção de uma vida orientada por valores — mesmo no meio do ruído, da cobrança por performance e da pressão de estar sempre visível.
+              Meu papel não é ditar regras, mas sim ajudar você a construir <strong className="text-txt font-semibold">flexibilidade emocional</strong>. Trabalhamos juntos para que você possa viver uma vida mais conectada com seus próprios valores, mesmo no meio do ruído e da pressão.
             </p>
             <p className="text-[0.95rem] text-txt-light leading-relaxed mb-8">
-              Atendo exclusivamente online, mas a presença é real. Sem pressa, sem moldes, sem máscaras — e sem prometer o que a psicologia, pelo Código de Ética, não pode prometer.
+              Os atendimentos são 100% online, focados em escuta autêntica e sem julgamentos. Tudo no seu tempo.
             </p>
           </AnimatedItem>
 

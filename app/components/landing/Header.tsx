@@ -8,9 +8,6 @@ import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
   { href: "#servicos", label: "Atuação" },
-  { href: "#portal", label: "Portal" },
-  { href: "#blog", label: "Blog" },
-  { href: "#agendamento", label: "Cadastro" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -53,11 +50,8 @@ export function Header() {
               {l.label}
             </a>
           ))}
-          <a href={loginUrl} className="text-sm font-semibold text-teal-dark hover:text-primary transition-colors">
-            Entrar
-          </a>
-          <a href={registerUrl} className="btn-brand-primary text-xs !py-2 !px-4">
-            <Leaf className="w-3.5 h-3.5" /> Criar conta
+          <a href="#agendamento" className="btn-brand-primary text-sm !py-2 !px-5">
+            Agendar Consulta
           </a>
         </nav>
 
@@ -91,9 +85,8 @@ export function Header() {
                 {l.label}
               </motion.a>
             ))}
-            <div className="flex gap-4">
-              <a href={loginUrl} onClick={() => setMobileOpen(false)} className="font-heading text-xl text-teal-dark">Entrar</a>
-              <a href={registerUrl} onClick={() => setMobileOpen(false)} className="font-heading text-xl text-primary">Criar conta</a>
+            <div className="flex gap-4 mt-4">
+              <a href="#agendamento" onClick={() => setMobileOpen(false)} className="btn-brand-primary text-lg !py-3 !px-6">Agendar Consulta</a>
             </div>
           </motion.div>
         )}

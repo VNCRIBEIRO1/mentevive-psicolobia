@@ -38,11 +38,11 @@ export function Scheduling() {
 
         {/* Pricing — tabela editorial sem glass */}
         <AnimatedSection direction="up" delay={0.2} className="mt-16">
-          <p className="text-[0.65rem] tracking-[0.3em] uppercase text-teal font-semibold text-center mb-6">Investimento transparente</p>
+          <p className="text-[0.65rem] tracking-[0.3em] uppercase text-teal font-semibold text-center mb-6">Investimento</p>
           <div className="grid sm:grid-cols-2 gap-5 max-w-[720px] mx-auto">
             <div className="relative bg-white border-2 border-gold/40 p-8">
               <span className="absolute -top-3 left-6 bg-teal text-white text-[0.6rem] tracking-[0.25em] uppercase font-semibold px-3 py-1">
-                Plano recomendado
+                Frequência ideal
               </span>
               <p className="text-[0.7rem] tracking-[0.18em] uppercase text-teal-dark font-semibold mb-4">Sessão semanal</p>
               <p className="font-heading text-4xl font-semibold text-txt">
@@ -50,17 +50,17 @@ export function Scheduling() {
               </p>
               <div className="w-10 h-px bg-gold mt-5 mb-4" />
               <p className="text-[0.82rem] text-txt-light leading-relaxed">
-                Frequência semanal com valor reduzido. É o formato com maior evidência de efetividade para a maioria dos processos terapêuticos.
+                Acompanhamento profundo e com valor reduzido. O respiro semanal que sua cabeça precisa para não pirar na rotina.
               </p>
             </div>
             <div className="bg-white border border-gold/25 p-8">
-              <p className="text-[0.7rem] tracking-[0.18em] uppercase text-teal-dark font-semibold mb-4">Avulsa · quinzenal · mensal</p>
+              <p className="text-[0.7rem] tracking-[0.18em] uppercase text-teal-dark font-semibold mb-4">Avulsa ou quinzenal</p>
               <p className="font-heading text-4xl font-semibold text-txt">
                 R$ 150<span className="text-base font-normal text-txt-muted">/sessão</span>
               </p>
               <div className="w-10 h-px bg-gold mt-5 mb-4" />
               <p className="text-[0.82rem] text-txt-light leading-relaxed">
-                Para sessões pontuais ou frequência menor. Mesma qualidade de acompanhamento, com flexibilidade para sua rotina.
+                Para quem prefere espaçar os encontros ou precisa apenas de uma sessão pontual de alinhamento.
               </p>
             </div>
           </div>
@@ -96,34 +96,34 @@ export function Scheduling() {
         <AnimatedSection direction="up" delay={0.4} className="mt-16 grid md:grid-cols-2 gap-4 max-w-[780px] mx-auto">
           <a
             href={registerPatientUrl}
-            className="group relative bg-white border border-gold/25 p-7 hover:border-gold transition-colors"
+            className="group relative bg-white border border-gold/25 p-7 hover:border-gold hover:shadow-warm-md transition-all rounded-lg"
           >
             <div className="flex items-center gap-3 mb-3">
               <UserPlus className="w-5 h-5 text-teal" strokeWidth={1.5} />
-              <p className="text-[0.65rem] tracking-[0.2em] uppercase text-gold-dark font-semibold">Primeira vez aqui</p>
+              <p className="text-[0.65rem] tracking-[0.2em] uppercase text-gold-dark font-semibold">Nova por aqui</p>
             </div>
-            <h3 className="font-heading text-lg font-semibold text-txt mb-2">Criar minha conta</h3>
+            <h3 className="font-heading text-lg font-semibold text-txt mb-2">Dar o primeiro passo</h3>
             <p className="text-[0.82rem] text-txt-light leading-relaxed mb-5">
-              Cadastro vinculado ao consultório. Você ganha acesso ao portal seguro para agendar, acompanhar e conversar.
+              Crie seu acesso rápido para agendar o melhor horário, conversar comigo e começar seu processo.
             </p>
             <span className="inline-flex items-center gap-2 text-[0.82rem] font-semibold text-teal-dark group-hover:gap-3 transition-all">
-              Começar agora <ArrowRight className="w-3.5 h-3.5" />
+              Agendar agora <ArrowRight className="w-3.5 h-3.5" />
             </span>
           </a>
           <a
             href={loginUrl}
-            className="group relative bg-white border border-gold/25 p-7 hover:border-gold transition-colors"
+            className="group relative bg-white border border-gold/25 p-7 hover:border-gold hover:shadow-warm-md transition-all rounded-lg"
           >
             <div className="flex items-center gap-3 mb-3">
               <LogIn className="w-5 h-5 text-teal" strokeWidth={1.5} />
-              <p className="text-[0.65rem] tracking-[0.2em] uppercase text-gold-dark font-semibold">Já sou paciente</p>
+              <p className="text-[0.65rem] tracking-[0.2em] uppercase text-gold-dark font-semibold">Já é da casa</p>
             </div>
-            <h3 className="font-heading text-lg font-semibold text-txt mb-2">Entrar no portal</h3>
+            <h3 className="font-heading text-lg font-semibold text-txt mb-2">Acessar seu portal</h3>
             <p className="text-[0.82rem] text-txt-light leading-relaxed mb-5">
-              Acesse sua agenda, reagende sessões, baixe recibos e converse por mensagem segura entre atendimentos.
+              Reagende as próximas sessões, baixe suas notas, recibos e tenha controle total do seu próprio tempo.
             </p>
             <span className="inline-flex items-center gap-2 text-[0.82rem] font-semibold text-teal-dark group-hover:gap-3 transition-all">
-              Acessar portal <ArrowRight className="w-3.5 h-3.5" />
+              Entrar <ArrowRight className="w-3.5 h-3.5" />
             </span>
           </a>
         </AnimatedSection>
