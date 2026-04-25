@@ -35,19 +35,15 @@ export function Header() {
           scrolled ? "bg-white/90 shadow-warm-md backdrop-blur-2xl" : "bg-[#FFF5EE]/80 backdrop-blur-xl"
         } border-b border-primary/5`}
       >
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden shadow-warm-sm group-hover:shadow-[0_0_15px_-3px_rgba(178,152,220,0.5)] transition-shadow duration-300">
+        <Link href="/" className="flex items-center group">
+          <div className="relative h-10 w-36 md:h-12 md:w-44 transition-opacity duration-300 group-hover:opacity-80">
             <Image
               src="/logo.jpeg"
               alt="Logo Psicolobia"
               fill
-              className="object-cover"
-              sizes="56px"
+              className="object-contain object-left"
+              sizes="(max-width: 768px) 144px, 176px"
             />
-          </div>
-          <div className="hidden sm:block">
-            <span className="font-heading text-lg font-semibold text-txt block leading-tight">Psicolobia</span>
-            <span className="text-[0.6rem] text-txt-muted block">Psicóloga Clínica · CRP 06/173961</span>
           </div>
         </Link>
 
