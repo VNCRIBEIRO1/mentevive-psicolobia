@@ -79,10 +79,11 @@ export function Services() {
         </AnimatedSection>
       </div>
 
-      <div className="max-w-[700px] mx-auto mt-14 flex flex-col gap-3 relative">
-        {/* Subtle decorative elements behind the accordion */}
-        <div className="absolute -left-10 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/30 to-transparent hidden md:block" />
-        
+      <div className="max-w-[800px] mx-auto mt-14 relative bg-[url('/planofundo.jpeg')] bg-cover bg-center rounded-3xl p-4 md:p-10 shadow-[0_10px_40px_-10px_rgba(178,152,220,0.2)] border border-primary/10 overflow-hidden">
+        {/* Camada extra de brilho sobrejeto ao card para o texto não sumir caso a imagem seja forte demais */}
+        <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px] pointer-events-none" />
+
+        <div className="flex flex-col gap-3 relative z-10">
         {services.map((s, i) => {
           const Icon = s.icon;
           const isExpanded = expandedId === s.id;
@@ -137,6 +138,7 @@ export function Services() {
             </AnimatedSection>
           );
         })}
+        </div>
       </div>
 
       <AnimatedSection direction="up" className="mt-10 text-center">
