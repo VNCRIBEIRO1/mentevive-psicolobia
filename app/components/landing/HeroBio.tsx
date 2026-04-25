@@ -3,11 +3,13 @@ import Image from "next/image";
 import { Calendar, ShieldCheck, Leaf, Video } from "lucide-react";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import { FloatingOrbs } from "./FloatingOrbs";
+import { FloatingSpirals } from "./FloatingSpirals";
 
 export function HeroBio() {
   return (
     <section className="relative overflow-hidden pt-28 md:pt-36 pb-24 px-4 md:px-8 bg-[#FBF6EF]" id="sobre">
       <FloatingOrbs className="z-[1]" />
+      <FloatingSpirals />
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center max-w-[1100px] mx-auto hero-fade-in">
         
