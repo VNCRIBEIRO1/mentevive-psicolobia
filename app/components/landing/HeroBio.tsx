@@ -32,7 +32,7 @@ export function HeroBio() {
             
             <Image
               src="/perfilsobre.jpeg"
-              alt="Beatriz Ribeiro — Psicóloga Clínica, atendimento online"
+              alt="Beatriz Matos — Psicóloga Clínica, atendimento online"
               width={520}
               height={680}
               className="w-full aspect-[3/4] sm:aspect-[4/5] object-cover object-center shadow-warm-lg"

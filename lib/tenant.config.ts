@@ -23,11 +23,11 @@ export const tenantConfig = {
   description:
     "Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com ACT, ansiedade, depressão e autoconhecimento.",
   longDescription:
-    "Beatriz Ribeiro (Bea) — Psicóloga Clínica CRP 06/173961. Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com Terapia de Aceitação e Compromisso (ACT), ansiedade, depressão, autoestima e autoconhecimento. Agende sua sessão.",
+    "Beatriz Matos (Bea) — Psicóloga Clínica CRP 06/173961. Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com Terapia de Aceitação e Compromisso (ACT), ansiedade, depressão, autoestima e autoconhecimento. Agende sua sessão.",
 
   // ── Profissional ───────────────────────────────────────────
   professional: {
-    name: "Beatriz Ribeiro",
+    name: "Beatriz Matos",
     nickname: "Bea",
     title: "Psicóloga Clínica",
     crp: "CRP 06/173961",
@@ -87,7 +87,7 @@ export const tenantConfig = {
       "criadores de conteúdo",
       "burnout digital",
       "autoconhecimento",
-      "Beatriz Ribeiro psicóloga",
+      "Beatriz Matos psicóloga",
       "Psicolobia",
       "CRP 06/173961",
     ],

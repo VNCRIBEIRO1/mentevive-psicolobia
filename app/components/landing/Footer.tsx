@@ -19,7 +19,7 @@ export function Footer() {
           <h4 className="text-white font-heading text-base mb-3">Psicolobia</h4>
           <p className="text-sm leading-relaxed">Psicologia clínica online com escuta sensível e acolhimento.</p>
           <p className="mt-3 text-[0.7rem] opacity-50">
-            Beatriz Ribeiro · CRP 06/173961
+            Beatriz Matos · CRP 06/173961
           </p>
           <p className="mt-1 text-[0.7rem] opacity-40">
             Atendimento individual por videochamada criptografada.
@@ -68,7 +68,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/5 mt-8 pt-4 text-center max-w-[1100px] mx-auto">
         <p className="text-[0.7rem] text-white/60">
-          Psicolobia © {new Date().getFullYear()} · Beatriz Ribeiro — Psicóloga Clínica · CRP 06/173961 · São Paulo/SP
+          Psicolobia © {new Date().getFullYear()} · Beatriz Matos — Psicóloga Clínica · CRP 06/173961 · São Paulo/SP
         </p>
         <p className="text-[0.65rem] text-white/40 mt-1">
           A psicologia, segundo o Código de Ética Profissional, não garante resultados específicos nem anuncia por meio de depoimentos.

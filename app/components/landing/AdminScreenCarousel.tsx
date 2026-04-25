@@ -8,9 +8,9 @@ import {
 } from "lucide-react";
 
 /* ─────────────────────────────────────────────────
-   Fake data — Admin "Beatriz Ribeiro" (Bea)
+   Fake data — Admin "Beatriz Matos" (Bea)
    ───────────────────────────────────────────────── */
-const ADMIN = { name: "Bea", initials: "BR" };
+const ADMIN = { name: "Bea", initials: "BM" };
 
 const PATIENTS = [
   { name: "Caio Martins", initials: "CM", sessions: 8, next: "14 abr", status: "Ativo" },
