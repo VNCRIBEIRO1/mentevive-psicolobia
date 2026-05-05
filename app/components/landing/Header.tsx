@@ -8,6 +8,7 @@ import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
+  { href: "/act-para-criadores", label: "ACT" },
   { href: "#servicos", label: "Atuação" },
   { href: "#contato", label: "Contato" },
 ];

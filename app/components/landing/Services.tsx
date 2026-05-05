@@ -69,9 +69,9 @@ export function Services() {
     <section className="py-24 px-4 md:px-8 bg-transparent" id="servicos">
       <div className="max-w-[1000px] mx-auto text-center">
         <AnimatedSection direction="up">
-          <div className="section-label justify-center">Áreas de atuação</div>
+          <div className="section-label justify-center">Identificação</div>
           <h2 className="font-heading text-3xl md:text-[2.5rem] leading-[1.1] font-semibold text-txt max-w-2xl mx-auto">
-            Recupere o controle da sua saúde mental no mundo digital.
+            Você se identifica com alguma dessas situações?
           </h2>
           <p className="text-[0.95rem] text-txt-light max-w-xl mx-auto mt-4 leading-relaxed">
             Se você se sente esgotado pela pressão do engajamento e da comparação constante, saiba que existe um caminho para voltar a ter prazer no que faz. Trabalhamos as seis realidades mais comuns de quem vive na internet.
