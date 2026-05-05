@@ -71,10 +71,10 @@ export function Services() {
         <AnimatedSection direction="up">
           <div className="section-label justify-center">Áreas de atuação</div>
           <h2 className="font-heading text-3xl md:text-[2.5rem] leading-[1.1] font-semibold text-txt max-w-2xl mx-auto">
-            O que trabalhamos no consultório.
+            Recupere o controle da sua saúde mental no mundo digital.
           </h2>
           <p className="text-[0.95rem] text-txt-light max-w-xl mx-auto mt-4 leading-relaxed">
-            Seis realidades super comuns de quem vive (e sofre um pouquinho) com a internet, e como o processo terapêutico ajuda a organizar essas pontas soltas.
+            Se você se sente esgotado pela pressão do engajamento e da comparação constante, saiba que existe um caminho para voltar a ter prazer no que faz. Trabalhamos as seis realidades mais comuns de quem vive na internet.
           </p>
         </AnimatedSection>
       </div>

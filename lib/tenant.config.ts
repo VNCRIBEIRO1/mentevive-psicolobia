@@ -19,11 +19,11 @@ export const tenantConfig = {
   // ── Identidade do Consultório ──────────────────────────────
   slug: "psicolobia", // Mesmo slug cadastrado na plataforma MenteVive
   name: "Psicolobia",
-  tagline: "Psicóloga Clínica Online",
+  tagline: "Psicóloga para Profissionais Digitais e Criadores",
   description:
-    "Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com ACT, ansiedade, depressão e autoconhecimento.",
+    "Especialista no emocional de quem vive da internet. +3500 atendimentos realizados. Terapia online para ansiedade, burnout digital e autoconhecimento através da abordagem ACT.",
   longDescription:
-    "Beatriz Matos (Bea) — Psicóloga Clínica CRP 06/173961. Especialista no emocional de quem vive da internet. +3500 atendimentos. Terapia online com Terapia de Aceitação e Compromisso (ACT), ansiedade, depressão, autoestima e autoconhecimento. Agende sua sessão.",
+    "Beatriz Matos (Bea) — Psicóloga Clínica CRP 06/173961. Especialista no impacto emocional da vida digital. Com mais de 3.500 atendimentos, ofereço terapia online focada em Terapia de Aceitação e Compromisso (ACT) para tratar ansiedade, burnout, depressão e autoestima. Atendimento seguro em todo o Brasil a partir de São Paulo.",
 
   // ── Profissional ───────────────────────────────────────────
   professional: {
@@ -76,19 +76,15 @@ export const tenantConfig = {
     titleTemplate: "%s | Psicolobia",
     keywords: [
       "psicóloga online",
-      "terapia online",
+      "terapia online para criadores de conteúdo",
       "psicóloga São Paulo",
-      "psicóloga clínica",
-      "terapia ACT",
-      "ansiedade",
-      "depressão",
-      "autoestima",
-      "autoconhecimento",
-      "criadores de conteúdo",
-      "burnout digital",
-      "autoconhecimento",
+      "psicóloga especialista em burnout digital",
+      "terapia ACT online",
+      "tratamento ansiedade digital",
       "Beatriz Matos psicóloga",
-      "Psicolobia",
+      "Psicolobia Beatriz Matos",
+      "terapia para influenciadores",
+      "psicologia clínica online Brasil",
       "CRP 06/173961",
     ],
     twitterHandle: "@psicolobiaa",

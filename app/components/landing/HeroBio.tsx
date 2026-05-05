@@ -57,16 +57,16 @@ export function HeroBio() {
             </div>
             
             <h1 className="font-heading text-3xl sm:text-[2.6rem] md:text-[3.25rem] leading-[1.08] font-semibold text-txt mb-6">
-              Um espaço seguro para você <span className="italic text-teal-dark font-medium">desacelerar</span> e cuidar da mente.
+              A exaustão de estar sempre 'on' <span className="italic text-teal-dark font-medium">não precisa ser sua única realidade.</span>
             </h1>
           </AnimatedItem>
 
           <AnimatedItem direction="up">
             <p className="text-[0.95rem] md:text-[1.05rem] text-txt-light leading-relaxed mb-4">
-              Costumo receber pessoas que se sentem constantemente esgotadas e cobradas — profissionais digitais, criadores de conteúdo e quem sente o peso da ansiedade que o mundo hiperconectado impõe.
+              Você sente o peso de precisar ser produtivo e estar visível o tempo todo? A comparação constante e a pressão do engajamento podem silenciar quem você é de verdade fora das telas.
             </p>
             <p className="text-[0.95rem] md:text-[1.05rem] text-txt-light leading-relaxed mb-4">
-              Meu papel é ajudar você a construir <strong className="text-txt font-bold">flexibilidade emocional</strong> para viver com mais acolhimento, sem os julgamentos do antigo formato de terapia.
+              Com mais de 3.500 atendimentos realizados, ajudo você a construir <strong className="text-txt font-bold">flexibilidade emocional</strong> para retomar o controle da sua rotina e viver com mais leveza e presença real.
             </p>
             <div className="bg-white/40 backdrop-blur-md border border-gold/40 rounded-xl p-4 shadow-sm mb-8 flex items-center gap-4">
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center shrink-0 shadow-warm-sm">

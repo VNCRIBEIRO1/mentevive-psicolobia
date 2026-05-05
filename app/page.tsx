@@ -81,7 +81,7 @@ const jsonLd = [
     givenName: professional.name.split(" ")[0],
     familyName: professional.name.split(" ").slice(1).join(" "),
     jobTitle: professional.title,
-    description: `${professional.crp} - ${professional.formation}. ${professional.specialties.join(" e ")}. +3.500 atendimentos.`,
+    description: `${professional.crp} - Especialista no impacto emocional da vida digital. Com mais de 3.500 atendimentos, ofereço suporte para ansiedade, burnout e autoconhecimento através da abordagem ACT. Atendimento seguro e ético online.`,
     image: `${siteUrl}${professional.photo}`,
     url: siteUrl,
     sameAs: [social.instagram, social.tiktok],
