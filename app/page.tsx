@@ -226,13 +226,9 @@ export default function Home() {
       <Header />
       <main id="main">
         <HeroBio />
-        <SectionDivider variant="wave-down" />
         <Services />
-        <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
         <Scheduling />
-        <SectionDivider variant="wave-up" colorFrom="var(--primary)" colorTo="var(--teal)" />
         <Blog />
-        <SectionDivider variant="wave-down" colorFrom="var(--teal)" colorTo="var(--primary)" />
         <Contact />
       </main>
       <Footer />

@@ -21,8 +21,8 @@ export function HeroBio() {
           quality={100}
         />
         
-        {/* Overlay Content */}
-        <div className="absolute inset-0 z-10 flex items-center pt-16 md:pt-24 lg:pt-28">
+        {/* Overlay Content - Now for all sizes with mobile adjustments */}
+        <div className="absolute inset-0 z-10 flex items-center pt-24 md:pt-28 lg:pt-32">
           <div className="max-w-[1200px] mx-auto w-full px-4 md:px-8">
             <div className="max-w-2xl lg:max-w-3xl">
               <AnimatedSection direction="left" staggerType="premium" staggerChildren={0.1}>
@@ -55,7 +55,7 @@ export function HeroBio() {
                     </a>
                     <a 
                       href="/act-para-criadores"
-                      className="inline-flex items-center gap-2 px-5 md:px-8 py-2 md:py-3.5 bg-white/60 backdrop-blur-md text-txt-light border border-teal/20 rounded-full hover:bg-white transition-all text-xs md:text-base font-medium"
+                      className="hidden sm:inline-flex items-center gap-2 px-5 md:px-8 py-2 md:py-3.5 bg-white/60 backdrop-blur-md text-txt-light border border-teal/20 rounded-full hover:bg-white transition-all text-xs md:text-base font-medium"
                     >
                       O que é ACT?
                     </a>
