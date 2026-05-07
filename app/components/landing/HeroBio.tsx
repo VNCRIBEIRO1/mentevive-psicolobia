@@ -34,9 +34,28 @@ export function HeroBio() {
         />
 
         {/* Beatriz full-body cutout (transparent PNG) — anchored bottom-right,
-            composited on top of the botanical background just like the desktop */}
+            composited on top of the botanical background just like the desktop.
+            Drop-shadow in bg-warm color creates a warm halo that softens the
+            silhouette edges; mask gradient fades the left edge into the background. */}
         <div
           className="absolute bottom-0 right-0 w-[60%] sm:w-[55%] h-[62%] sm:h-[68%] pointer-events-none select-none"
+          style={{
+            filter: [
+              "drop-shadow(0px 0px 32px rgba(249,237,227,1))",
+              "drop-shadow(0px 0px 16px rgba(249,237,227,0.85))",
+              "drop-shadow(0px 0px  8px rgba(212,165,116,0.30))",
+              "sepia(0.10)",
+              "saturate(0.97)",
+            ].join(" "),
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 14%, black 100%)," +
+              "linear-gradient(to bottom, transparent 0%, black 6%, black 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 14%, black 100%)," +
+              "linear-gradient(to bottom, transparent 0%, black 6%, black 100%)",
+            maskComposite: "intersect",
+            WebkitMaskComposite: "source-in",
+          }}
           aria-hidden="true"
         >
           <Image
