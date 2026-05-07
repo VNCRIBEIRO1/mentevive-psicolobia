@@ -4,7 +4,6 @@ import { Services } from "@/app/components/landing/Services";
 import { Blog } from "@/app/components/landing/Blog";
 import { Footer } from "@/app/components/landing/Footer";
 import { WhatsAppFloat } from "@/app/components/landing/WhatsAppFloat";
-import { SectionDivider } from "@/app/components/landing/SectionDivider";
 import { tenantConfig } from "@/lib/tenant.config";
 import dynamic from "next/dynamic";
 
