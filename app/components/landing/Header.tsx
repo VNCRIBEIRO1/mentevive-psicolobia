@@ -1,20 +1,21 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X, LogIn } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
-const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "/act-para-criadores", label: "ACT" },
-  { href: "#servicos", label: "Atuação" },
-  { href: "#contato", label: "Contato" },
-];
+const portalUrl = `${PLATFORM_URL}/login?tenant=${TENANT_SLUG}`;
 
-const loginUrl = `${PLATFORM_URL}/login?tenant=${TENANT_SLUG}`;
-const registerUrl = `${PLATFORM_URL}/registro?tenant=${TENANT_SLUG}`;
+type NavLink = { href: string; label: string; external?: boolean };
+
+const navLinks: NavLink[] = [
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/o-que-e-act", label: "O que é ACT" },
+  { href: "/atuacao", label: "Atuação" },
+  { href: "/contato", label: "Contato" },
+];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -55,7 +56,16 @@ export function Header() {
               {l.label}
             </a>
           ))}
-          <a href="#agendamento" className="btn-brand-primary text-sm !py-2 !px-5">
+          <a
+            href={portalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-dark border border-teal-dark/30 hover:bg-teal-dark hover:text-white transition-colors rounded-full px-4 py-2"
+          >
+            <LogIn className="w-4 h-4" />
+            Portal
+          </a>
+          <a href="/#agendamento" className="btn-brand-primary text-sm !py-2 !px-5">
             Agendar Consulta
           </a>
         </nav>
@@ -90,8 +100,21 @@ export function Header() {
                 {l.label}
               </motion.a>
             ))}
+            <motion.a
+              href={portalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: navLinks.length * 0.06, type: "spring", stiffness: 120, damping: 20 }}
+              className="inline-flex items-center gap-2 font-heading text-xl text-teal-dark hover:text-teal transition-colors"
+            >
+              <LogIn className="w-5 h-5" />
+              Portal
+            </motion.a>
             <div className="flex gap-4 mt-4">
-              <a href="#agendamento" onClick={() => setMobileOpen(false)} className="btn-brand-primary text-lg !py-3 !px-6">Agendar Consulta</a>
+              <a href="/#agendamento" onClick={() => setMobileOpen(false)} className="btn-brand-primary text-lg !py-3 !px-6">Agendar Consulta</a>
             </div>
           </motion.div>
         )}

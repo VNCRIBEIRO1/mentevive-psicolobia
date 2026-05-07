@@ -5,6 +5,15 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: "/act-para-criadores",
+        destination: "/o-que-e-act",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

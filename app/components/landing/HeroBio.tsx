@@ -102,7 +102,7 @@ export function HeroBio() {
               Fale comigo!
             </a>
             <a
-              href="/act-para-criadores"
+              href="/o-que-e-act"
               className="text-teal-dark text-xs font-semibold self-start hover:underline underline-offset-2 transition-all"
             >
               O que é ACT?&nbsp;→
@@ -168,7 +168,7 @@ export function HeroBio() {
                       Fale comigo!
                     </a>
                     <a
-                      href="/act-para-criadores"
+                      href="/o-que-e-act"
                       className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/60 backdrop-blur-md text-txt-light border border-teal/20 rounded-full hover:bg-white transition-all font-medium"
                     >
                       O que é ACT?

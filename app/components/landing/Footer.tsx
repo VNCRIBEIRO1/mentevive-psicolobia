@@ -3,12 +3,12 @@ import { Smartphone, Camera, Music } from "lucide-react";
 import { WHATSAPP_LINK, WHATSAPP_DISPLAY, INSTAGRAM_URL, TIKTOK_URL, PLATFORM_URL, TENANT_SLUG } from "@/lib/utils";
 
 const siteLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Atuação" },
-  { href: "#portal", label: "Portal" },
-  { href: "#blog", label: "Blog" },
-  { href: "#agendamento", label: "Cadastro" },
-  { href: "#contato", label: "Contato" },
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/o-que-e-act", label: "O que é ACT" },
+  { href: "/atuacao", label: "Atuação" },
+  { href: "/contato", label: "Contato" },
+  { href: "/#blog", label: "Blog" },
+  { href: "/#agendamento", label: "Cadastro" },
 ];
 
 export function Footer() {

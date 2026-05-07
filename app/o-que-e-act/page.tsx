@@ -1,10 +1,12 @@
 import { Header } from "../components/landing/Header";
 import { Footer } from "../components/landing/Footer";
-import { Brain, Target, Shield, Zap, Info, ChevronRight } from "lucide-react";
+import { Brain, Target, Shield, Zap, ChevronRight } from "lucide-react";
+import { WHATSAPP_LINK } from "@/lib/utils";
 
 export const metadata = {
   title: "O que é ACT para Criadores de Conteúdo | Psicolobia",
   description: "Entenda como a Terapia de Aceitação e Compromisso (ACT) ajuda criadores de conteúdo a lidar com o burnout, pressão do algoritmo e ansiedade de performance.",
+  alternates: { canonical: "/o-que-e-act" },
 };
 
 export default function ACTPage() {
@@ -89,9 +91,10 @@ export default function ACTPage() {
               <p className="text-white/80 max-w-xl mx-auto mb-10">
                 A terapia não é sobre ser menos criativo; é sobre garantir que sua criatividade tenha uma base sólida para crescer.
               </p>
-              <a 
-                href="https://wa.me/5511988840525" 
+              <a
+                href={WHATSAPP_LINK}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-primary text-txt font-bold px-10 py-4 rounded-full hover:bg-primary-light transition-all shadow-xl"
               >
                 Agendar Sessão Estratégica
