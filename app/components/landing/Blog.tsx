@@ -82,86 +82,101 @@ const articles: Article[] = [
       "Na terapia, desenvolvemos juntos um vocabulário emocional mais rico, práticas de atenção ao corpo e técnicas de defusão cognitiva que ajudam a criar espaço entre o estímulo e a resposta.",
     ],
   },
+  {
+    id: "higiene-sono",
+    title: "Higiene do sono para quem não consegue desconectar",
+    excerpt: "A qualidade do seu sono dita a qualidade da sua saúde mental. Aprenda a preparar sua mente para o repouso offline.",
+    content: [
+      "Dificuldade para dormir: O uso excessivo de telas antes de deitar inibe a produção de melatonina e mantém o cérebro em estado de alerta constante, dificultando o início do sono reparador.",
+      "Ritual de desconexão: Criar um espaço de transição entre o trabalho digital e o repouso é vital para evitar a insônia causada pela ruminação de tarefas e ansiedade por notificações.",
+      "Higiene do sono na prática: Estabelecer horários fixos para desligar aparelhos, reduzir a luz e investir em atividades analógicas à noite ajuda o sistema nervoso a desacelerar e processar o dia.",
+    ],
+  },
 ];
 
 export function Blog() {
-  const [open, setOpen] = useState<string | null>(articles[0].id);
+  const [open, setOpen] = useState<string | null>(null);
+
+  const toggleExpand = (id: string) => {
+    setOpen(open === id ? null : id);
+  };
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-transparent" id="blog">
-      <AnimatedSection className="max-w-[900px] mx-auto" direction="up">
-        <div className="flex flex-col items-center text-center mb-10">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-widest mb-4">
-            <Sparkles className="w-3.5 h-3.5" /> Conteúdos
-          </span>
-          <h2 className="section-title">Artigos e Orientações</h2>
-          <p className="text-sm text-txt-light max-w-xl mt-2">
-            Informações úteis sobre terapia, saúde emocional e o processo terapêutico.
+    <section className="pt-20 md:pt-32 pb-24 md:pb-40 px-4 md:px-8 bg-transparent relative z-10" id="blog">
+      <div className="max-w-[1100px] mx-auto">
+        <AnimatedSection direction="up" className="mb-8 bg-white/40 backdrop-blur-sm p-8 md:p-12 border border-teal-dark/5 flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div>
+            <div className="section-label mb-4">Conteúdos</div>
+            <h2 className="font-heading text-[3rem] md:text-[4.5rem] leading-[0.9] font-semibold text-txt">
+              Artigos & <br/>
+              <span className="italic text-teal-dark font-normal">Orientações.</span>
+            </h2>
+          </div>
+          <p className="text-sm text-txt-light/80 max-w-xs leading-relaxed">
+            Explorações sobre saúde emocional e a intersecção entre a vida digital e a realidade palpável.
           </p>
-        </div>
-      </AnimatedSection>
+        </AnimatedSection>
 
-      <div className="max-w-[900px] mx-auto space-y-3">
-        <AnimatePresence>
-          {articles.map((article, i) => {
-            const isOpen = open === article.id;
-            return (
-              <AnimatedItem key={article.id} direction="up">
-                <div 
-                  className={`bg-white/70 backdrop-blur-md border rounded-xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-accent shadow-[0_4px_20px_-2px_rgba(178,152,220,0.25)]' : 'border-gold/30 hover:border-accent hover:shadow-[0_4px_12px_-2px_rgba(178,152,220,0.15)] cursor-pointer'}`}
-                >
-                  <button
-                    className="w-full px-5 py-5 md:px-7 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-left outline-none"
-                    onClick={() => setOpen(isOpen ? null : article.id)}
-                  >
-                    <div className="flex items-start gap-4 md:gap-5">
-                      <div className={`shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-accent/80 text-white' : 'bg-bg-warm text-teal-dark'}`}>
-                        <Sparkles className="w-5 h-5 md:w-6 md:h-6" />
-                      </div>
-                      <div className="pt-1 md:pt-0">
-                        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-txt-muted font-semibold mb-1">
-                          Artigo · Leitura Rápida
-                        </p>
-                        <h3 className={`font-heading text-lg md:text-xl font-bold transition-colors ${isOpen ? 'text-[#7D5CAD]' : 'text-txt'}`}>
+        <div className="flex flex-col md:flex-row gap-[1px] bg-teal-dark/10 border border-teal-dark/10">
+          {[0, 1].map((colIndex) => (
+            <div key={colIndex} className="flex-1 flex flex-col gap-[1px]">
+              {articles
+                .filter((_, idx) => idx % 2 === colIndex)
+                .map((article, index) => {
+                  const isOpen = open === article.id;
+                  const globalIndex = colIndex === 0 ? index * 2 : index * 2 + 1;
+                  return (
+                    <div 
+                      key={article.id}
+                      className={`group transition-colors duration-500 cursor-pointer bg-white/60 backdrop-blur-md p-8 md:p-10 flex flex-col justify-between h-fit ${isOpen ? 'bg-white/80' : 'hover:bg-white/80'}`}
+                      onClick={() => toggleExpand(article.id)}
+                    >
+                      <div>
+                        <div className="flex items-center justify-between mb-6">
+                          <span className="text-[0.65rem] tracking-[0.2em] font-bold text-teal-dark/40">{(globalIndex + 1).toString().padStart(2, '0')}</span>
+                          <Sparkles className={`w-4 h-4 transition-colors ${isOpen ? 'text-teal-dark' : 'text-teal-dark/20 group-hover:text-teal-dark/40'}`} />
+                        </div>
+                        
+                        <h3 className={`font-heading text-xl md:text-2xl font-semibold leading-tight mb-4 transition-colors duration-300 ${isOpen ? 'text-teal-dark' : 'text-txt'}`}>
                           {article.title}
                         </h3>
-                        <p className="text-[0.8rem] text-txt-light mt-1 max-w-2xl">{article.excerpt}</p>
+                        
+                        <AnimatePresence initial={false}>
+                          {isOpen ? (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                              className="overflow-hidden"
+                            >
+                              <div className="pt-6 border-t border-teal-dark/5 space-y-4 text-[0.9rem] text-txt-light/95 leading-relaxed">
+                                {article.content.map((p, pIdx) => (
+                                  <p key={pIdx}>
+                                    <strong className="font-semibold text-txt/90">{p.split(':')[0]}</strong>
+                                    {p.includes(':') ? ':' + p.split(':').slice(1).join(':') : ''}
+                                  </p>
+                                ))}
+                              </div>
+                            </motion.div>
+                          ) : (
+                            <p className="text-[0.85rem] text-txt-light/80 line-clamp-2">
+                              {article.excerpt}
+                            </p>
+                          )}
+                        </AnimatePresence>
+                      </div>
+
+                      <div className="mt-8 flex items-center gap-2 text-[0.65rem] font-bold text-teal-dark/60 uppercase tracking-widest group-hover:text-teal-dark transition-colors">
+                        {isOpen ? "Fechar leitura" : "Ler artigo"}
+                        <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                       </div>
                     </div>
-                    
-                    <motion.div 
-                      animate={{ rotate: isOpen ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className={`shrink-0 self-end md:self-auto w-8 h-8 rounded-full flex items-center justify-center ${isOpen ? 'bg-accent/20 text-[#7D5CAD]' : 'bg-transparent text-txt-muted'}`}
-                    >
-                      <ChevronDown className="w-5 h-5" />
-                    </motion.div>
-                  </button>
-
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                      >
-                        <div className="px-5 md:px-[5.2rem] pb-7 md:pb-8 text-txt-light text-[0.95rem] leading-relaxed">
-                          <div className="w-12 h-px bg-gold/50 mb-5" />
-                          <div className="space-y-4">
-                            {article.content.map((p, pIdx) => (
-                              <p key={pIdx}><strong className="font-semibold text-txt/90">{p.split(':')[0]}</strong>{p.includes(':') ? ':' + p.split(':').slice(1).join(':') : ''}</p>
-                            ))}
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </AnimatedItem>
-            );
-          })}
-        </AnimatePresence>
+                  );
+                })}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

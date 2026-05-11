@@ -1,6 +1,7 @@
 import { Header } from "@/app/components/landing/Header";
 import { HeroBio } from "@/app/components/landing/HeroBio";
 import { Services } from "@/app/components/landing/Services";
+import { MessageCarousel } from "@/app/components/landing/MessageCarousel";
 import { Blog } from "@/app/components/landing/Blog";
 import { Footer } from "@/app/components/landing/Footer";
 import { WhatsAppFloat } from "@/app/components/landing/WhatsAppFloat";
@@ -225,6 +226,7 @@ export default function Home() {
       <Header />
       <main id="main">
         <HeroBio />
+        <MessageCarousel />
         <Services />
         <Scheduling />
         <Blog />

@@ -59,93 +59,172 @@ const services: Service[] = [
 ];
 
 export function Services() {
-  const [expandedId, setExpandedId] = useState<string | null>("burnout");
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
   };
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-transparent" id="servicos">
-      <div className="max-w-[1000px] mx-auto text-center">
-        <AnimatedSection direction="up">
-          <div className="section-label justify-center">Identificação</div>
-          <h2 className="font-heading text-3xl md:text-[2.5rem] leading-[1.1] font-semibold text-txt max-w-2xl mx-auto">
-            Você se identifica com alguma dessas situações?
-          </h2>
-          <p className="text-[0.95rem] text-txt-light max-w-xl mx-auto mt-4 leading-relaxed">
-            Se você se sente esgotado pela pressão do engajamento e da comparação constante, saiba que existe um caminho para voltar a ter prazer no que faz. Trabalhamos as seis realidades mais comuns de quem vive na internet.
-          </p>
+    <section className="pt-20 md:pt-32 pb-10 md:pb-16 px-4 md:px-8 bg-transparent relative z-10" id="servicos">
+      <div className="max-w-[1280px] mx-auto">
+        <AnimatedSection direction="up" className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
+          
+          {/* Left Column: Narrative + 2 Bottom Cards */}
+          <div className="lg:w-5/12 flex flex-col gap-8 md:gap-12 shrink-0">
+            <div className="bg-white/40 backdrop-blur-sm p-8 md:p-12 border border-teal-dark/5 shadow-sm">
+              <div className="section-label mb-6">Identificação</div>
+              
+              <h2 className="font-heading text-[2.25rem] sm:text-4xl md:text-[3.25rem] leading-[1.05] font-semibold text-txt mb-8">
+                Sua saúde mental não pode <br className="hidden lg:block"/>
+                ser <span className="text-teal-dark italic font-normal relative inline-block">
+                  refém do algoritmo.
+                  <span className="absolute bottom-1 left-0 w-full h-[2px] bg-teal-dark/30"></span>
+                </span>
+              </h2>
+              
+              <div className="flex flex-col gap-6 text-[1.05rem] text-txt-light/95 leading-relaxed">
+                <p className="font-medium">
+                  Você passa o dia criando conexões para os outros, mas quando foi a última vez que se conectou consigo mesmo? 
+                </p>
+                <p className="font-medium">
+                  A pressão por métricas, o medo de 'flopar' e a vida transformada em conteúdo cobram um preço alto.
+                </p>
+                <p className="font-medium">
+                  Aqui, o espaço é <strong className="text-txt">offline</strong> para você voltar a ficar <strong className="text-txt">bem online.</strong>
+                </p>
+              </div>
+
+              <div className="mt-14 hidden lg:block">
+                <p className="text-[0.7rem] text-txt-muted flex items-center gap-4 uppercase tracking-widest font-bold">
+                  <span className="w-12 h-[1px] bg-teal-dark/40 block"></span>
+                  Clique para explorar
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom 2 Cards on the Left */}
+            <div className="flex flex-col gap-4 md:gap-6">
+              {services.slice(4, 6).map((s, index) => (
+                <motion.div 
+                  key={s.id} 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white border border-teal-dark/10 p-1 rounded-none hover:border-teal-dark/30 transition-colors duration-500 shadow-sm"
+                >
+                  <div className="bg-[#fcfbf9] w-full h-full">
+                    <ServiceCard 
+                      s={s} 
+                      isExpanded={expandedId === s.id} 
+                      toggle={() => toggleExpand(s.id)} 
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column: 4 Service Cards */}
+          <div className="lg:w-7/12 flex flex-col gap-4 md:gap-6 w-full">
+            {services.slice(0, 4).map((s, index) => (
+              <motion.div 
+                key={s.id} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white border border-teal-dark/10 p-1 rounded-none hover:border-teal-dark/30 transition-colors duration-500 shadow-sm"
+              >
+                <div className="bg-[#fcfbf9] w-full h-full">
+                  <ServiceCard 
+                    s={s} 
+                    isExpanded={expandedId === s.id} 
+                    toggle={() => toggleExpand(s.id)} 
+                  />
+                </div>
+              </motion.div>
+            ))}
+
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="mt-2 py-4 px-6 md:px-8 bg-white/40 backdrop-blur-sm border border-teal-dark/5 rounded-none"
+            >
+              <p className="text-[0.75rem] md:text-[0.8rem] text-txt-muted uppercase tracking-[0.1em] font-medium leading-relaxed text-center lg:text-left">
+                Seu problema parece um pouco de cada? <span className="text-teal-dark/70 italic">Fique em paz.</span> <br className="hidden md:block"/>
+                Ajustamos na triagem se faz sentido começar.
+              </p>
+            </motion.div>
+          </div>
+
         </AnimatedSection>
       </div>
-
-      <div className="max-w-[800px] mx-auto mt-14 relative bg-[url('/planofundo.jpeg')] bg-cover bg-center rounded-3xl p-4 md:p-10 shadow-[0_10px_40px_-10px_rgba(178,152,220,0.2)] border border-primary/10 overflow-hidden">
-        {/* Camada extra de brilho sobrejeto ao card para o texto não sumir caso a imagem seja forte demais */}
-        <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px] pointer-events-none" />
-
-        <div className="flex flex-col gap-3 relative z-10">
-        {services.map((s, i) => {
-          const Icon = s.icon;
-          const isExpanded = expandedId === s.id;
-
-          return (
-            <AnimatedSection direction="up" delay={0.05 * i} key={s.id}>
-              <div 
-                className={`bg-white/70 backdrop-blur-md border rounded-lg overflow-hidden transition-all duration-300 ${isExpanded ? 'border-accent shadow-[0_4px_20px_-2px_rgba(178,152,220,0.25)]' : 'border-gold/30 hover:border-accent hover:shadow-[0_4px_12px_-2px_rgba(178,152,220,0.15)] cursor-pointer'}`}
-              >
-                <button 
-                  onClick={() => toggleExpand(s.id)}
-                  className="w-full flex items-center justify-between p-5 md:p-6 text-left outline-none"
-                >
-                  <div className="flex items-center gap-4 md:gap-5">
-                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors duration-300 ${isExpanded ? 'bg-accent/80 text-white' : 'bg-bg-warm text-teal-dark'}`}>
-                      <Icon className="w-5 h-5 md:w-6 md:h-6" />
-                    </div>
-                    <div>
-                      <p className="text-[0.65rem] tracking-[0.18em] uppercase text-txt-muted font-semibold mb-1">
-                        {s.eyebrow}
-                      </p>
-                      <h3 className={`font-heading text-lg md:text-xl font-semibold transition-colors ${isExpanded ? 'text-[#7D5CAD]' : 'text-txt'}`}>
-                        {s.title}
-                      </h3>
-                    </div>
-                  </div>
-                  <motion.div 
-                    animate={{ rotate: isExpanded ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className={`w-8 h-8 rounded-full flex items-center justify-center ${isExpanded ? 'bg-accent/20 text-[#7D5CAD]' : 'bg-transparent text-txt-muted'}`}
-                  >
-                    <ChevronDown className="w-5 h-5" />
-                  </motion.div>
-                </button>
-
-                <AnimatePresence>
-                  {isExpanded && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                    >
-                      <div className="px-5 md:px-[5.2rem] pb-6 md:pb-7 text-txt-light text-[0.9rem] leading-relaxed">
-                        <div className="w-12 h-px bg-gold/50 mb-4" />
-                        {s.desc}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </AnimatedSection>
-          );
-        })}
-        </div>
-      </div>
-
-      <AnimatedSection direction="up" className="mt-10 text-center">
-        <p className="text-[0.78rem] text-txt-muted max-w-lg mx-auto italic">
-          O seu problema parece um pouco de cada e nada ao mesmo tempo? Fique em paz. Nenhuma sessão é igual a outra, ajustamos na triagem se faz sentido começar.
-        </p>
-      </AnimatedSection>
     </section>
+  );
+}
+
+// Separated component for cleaner and more isolated animation state
+function ServiceCard({ s, isExpanded, toggle }: { s: Service, isExpanded: boolean, toggle: () => void }) {
+  const Icon = s.icon;
+  
+  return (
+    <div className="h-full w-full outline-none text-left flex flex-col group rounded-none">
+      <button 
+        onClick={toggle}
+        className="w-full flex-1 flex flex-col p-8 sm:p-10 outline-none text-left justify-between rounded-none cursor-pointer"
+      >
+        <div className="flex items-start justify-between w-full mb-10">
+          <div className="transition-all duration-500 text-teal-dark">
+            <Icon className="w-6 h-6" strokeWidth={1.5} />
+          </div>
+          
+          <motion.div 
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="w-6 h-6 flex items-center justify-center transition-colors text-teal-dark"
+          >
+            {/* Custom Plus/Minus icon for architectural precision */}
+            <div className="relative w-4 h-4">
+              <span className="absolute top-1/2 left-0 w-full h-[1.5px] bg-current -translate-y-1/2"></span>
+              <motion.span 
+                animate={{ opacity: isExpanded ? 0 : 1 }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-1/2 top-0 h-full w-[1.5px] bg-current -translate-x-1/2"
+              ></motion.span>
+            </div>
+          </motion.div>
+        </div>
+        
+        <div>
+          <p className="text-[0.6rem] tracking-[0.2em] uppercase text-txt-muted/60 font-bold mb-3">
+            {s.eyebrow}
+          </p>
+          <h3 className={`font-heading text-xl font-semibold leading-tight transition-colors duration-300 ${
+            isExpanded ? 'text-teal-dark' : 'text-txt group-hover:text-teal-dark'
+          }`}>
+            {s.title}
+          </h3>
+        </div>
+      </button>
+
+      <AnimatePresence initial={false}>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="px-8 sm:px-10 pb-10 text-txt-light/90 text-[0.9rem] leading-relaxed border-t border-teal-dark/10 pt-6">
+              {s.desc}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

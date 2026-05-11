@@ -22,23 +22,19 @@ export function HeroBio() {
           aria-hidden="true"
         />
 
-        {/* Warm gradient — brightens the text area at top and anchors the
-            CTA area at the bottom so both layers are always legible */}
+        {/* Warm gradient — brightens the top slightly, but mainly anchors the text and CTA area at the bottom */}
         <div
-          className="absolute inset-x-0 top-0 h-[55%] bg-gradient-to-b from-bg-warm/60 via-bg-warm/20 to-transparent pointer-events-none"
+          className="absolute inset-x-0 top-0 h-[25%] bg-gradient-to-b from-bg-warm/60 to-transparent pointer-events-none z-0"
           aria-hidden="true"
         />
         <div
-          className="absolute inset-x-0 bottom-0 h-[32%] bg-gradient-to-t from-bg-warm/85 to-transparent pointer-events-none"
+          className="absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-t from-bg-warm via-bg-warm/95 to-transparent pointer-events-none z-0"
           aria-hidden="true"
         />
 
-        {/* Beatriz full-body cutout (transparent PNG) — anchored bottom-right,
-            composited on top of the botanical background just like the desktop.
-            Drop-shadow in bg-warm color creates a warm halo that softens the
-            silhouette edges; mask gradient fades the left edge into the background. */}
+        {/* Beatriz full-body cutout (transparent PNG) — centered and prominent */}
         <div
-          className="absolute bottom-0 right-0 w-[60%] sm:w-[55%] h-[62%] sm:h-[68%] pointer-events-none select-none"
+          className="absolute top-[5%] left-1/2 -translate-x-1/2 w-[115%] sm:w-[90%] h-[70%] sm:h-[75%] pointer-events-none select-none z-0"
           style={{
             filter: [
               "drop-shadow(0px 0px 32px rgba(249,237,227,1))",
@@ -47,14 +43,8 @@ export function HeroBio() {
               "sepia(0.10)",
               "saturate(0.97)",
             ].join(" "),
-            maskImage:
-              "linear-gradient(to right, transparent 0%, black 14%, black 100%)," +
-              "linear-gradient(to bottom, transparent 0%, black 6%, black 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0%, black 14%, black 100%)," +
-              "linear-gradient(to bottom, transparent 0%, black 6%, black 100%)",
-            maskComposite: "intersect",
-            WebkitMaskComposite: "source-in",
+            maskImage: "linear-gradient(to bottom, black 65%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 65%, transparent 100%)",
           }}
           aria-hidden="true"
         >
@@ -64,49 +54,48 @@ export function HeroBio() {
             fill
             className="object-contain object-bottom"
             priority
-            sizes="(max-width: 639px) 60vw, 55vw"
+            sizes="(max-width: 639px) 115vw, 90vw"
           />
         </div>
 
         {/* Content layer */}
-        <div className="relative z-10 flex flex-col min-h-[100svh] px-5 sm:px-8 pt-[7.5rem] sm:pt-36 pb-8">
+        <div className="relative z-10 flex flex-col justify-end min-h-[100svh] px-5 sm:px-8 pb-10 sm:pb-12 pt-32">
+          
+          <div className="flex flex-col gap-5 text-center relative z-20 mt-auto">
+            {/* Text block */}
+            <div className="flex flex-col items-center">
+              <p className="text-teal font-bold text-[10px] uppercase tracking-[0.2em] mb-3 leading-none drop-shadow-sm">
+                Psicóloga Clínica
+              </p>
+              <h1 className="font-heading text-[1.6rem] sm:text-[1.85rem] leading-[1.2] font-bold text-txt mb-3 drop-shadow-md">
+                A exaustão de estar sempre&nbsp;'on'{" "}
+                <em className="not-italic text-teal-dark font-medium block mt-1">
+                  não precisa ser sua única realidade.
+                </em>
+              </h1>
+              <p className="text-[0.8rem] sm:text-[0.85rem] text-txt-light/95 leading-[1.6] font-medium max-w-[90%] mx-auto drop-shadow-sm">
+                Especialista em saúde mental para criadores de conteúdo e profissionais digitais.
+              </p>
+            </div>
 
-          {/* Text block — constrained to the left clear area */}
-          <div className="max-w-[54%] sm:max-w-[48%]">
-            <p className="text-teal font-bold text-[10px] uppercase tracking-[0.2em] mb-3 leading-none">
-              Psicóloga Clínica
-            </p>
-            <h1 className="font-heading text-[1.5rem] sm:text-[1.75rem] leading-[1.2] font-bold text-txt mb-2">
-              A exaustão de estar sempre&nbsp;'on'{" "}
-              <em className="not-italic text-teal-dark font-medium">
-                não precisa ser sua única realidade.
-              </em>
-            </h1>
-            <p className="text-[0.7rem] sm:text-xs text-txt-light leading-[1.6]">
-              Especialista em saúde mental para criadores de conteúdo e profissionais digitais.
-            </p>
-          </div>
-
-          {/* Spacer — pushes CTA to the bottom of the viewport */}
-          <div className="flex-1" />
-
-          {/* CTAs */}
-          <div className="flex flex-col gap-3">
-            <a
-              href="https://wa.me/5511988840525"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-brand-primary inline-flex items-center gap-2 py-3.5 px-6 !rounded-full text-sm shadow-warm-lg self-start"
-            >
-              <MessageCircle className="w-4 h-4 fill-current" />
-              Fale comigo!
-            </a>
-            <a
-              href="/o-que-e-act"
-              className="text-teal-dark text-xs font-semibold self-start hover:underline underline-offset-2 transition-all"
-            >
-              O que é ACT?&nbsp;→
-            </a>
+            {/* CTAs */}
+            <div className="flex flex-col items-center gap-4 mt-2">
+              <a
+                href="https://wa.me/5511988840525"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-brand-primary inline-flex items-center justify-center gap-2 py-3.5 px-8 w-full sm:w-auto !rounded-full text-[0.95rem] font-semibold shadow-warm-lg"
+              >
+                <MessageCircle className="w-5 h-5 fill-current" />
+                Fale comigo!
+              </a>
+              <a
+                href="/o-que-e-act"
+                className="text-teal-dark text-[0.85rem] font-bold hover:underline underline-offset-2 transition-all"
+              >
+                O que é ACT?&nbsp;→
+              </a>
+            </div>
           </div>
         </div>
       </div>
