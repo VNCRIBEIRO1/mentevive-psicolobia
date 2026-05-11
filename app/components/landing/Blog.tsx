@@ -98,7 +98,7 @@ const articles: Article[] = [
     excerpt: "Se você se identificou com algum desses temas, o próximo passo é transformar a leitura em ação terapêutica.",
     content: [
       "Início do processo: O espaço terapêutico é o local seguro para você deixar de ser apenas um perfil e voltar a focar em você.",
-      "Agendamento: Entre em contato para consultar os horários disponíveis e dar o primeiro passo na sua jornada.",
+      "Agendamento: Entre em contato caso tenha alguma duvida e dar o primeiro passo na sua jornada.",
     ],
   },
   {
