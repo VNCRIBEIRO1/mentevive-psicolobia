@@ -92,6 +92,24 @@ const articles: Article[] = [
       "Higiene do sono na prática: Estabelecer horários fixos para desligar aparelhos, reduzir a luz e investir em atividades analógicas à noite ajuda o sistema nervoso a desacelerar e processar o dia.",
     ],
   },
+  {
+    id: "cta-final",
+    title: "Vamos conversar além das telas?",
+    excerpt: "Se você se identificou com algum desses temas, o próximo passo é transformar a leitura em ação terapêutica.",
+    content: [
+      "Agende sua triagem: Um papo breve de 15 minutos para entendermos se meu estilo de trabalho combina com o que você busca agora.",
+      "Sem compromisso: A triagem é gratuita e serve para alinhar expectativas e tirar dúvidas práticas sobre o processo.",
+    ],
+  },
+  {
+    id: "social-media",
+    title: "Para além da clínica: insights diários",
+    excerpt: "Acompanhe reflexões, bastidores e pílulas de saúde mental no Instagram @psicolobia.",
+    content: [
+      "Siga @psicolobia: Conteúdo focado em criadores, freelancers e nômades digitais que buscam equilíbrio no caos online.",
+      "Comunidade: Troque experiências e participe de lives e caixas de perguntas semanalmente no nosso perfil oficial.",
+    ],
+  },
 ];
 
 export function Blog() {
@@ -117,23 +135,27 @@ export function Blog() {
           </p>
         </AnimatedSection>
 
-        <div className="flex flex-col md:flex-row gap-[1px] bg-teal-dark/10 border border-teal-dark/10">
+        <div className="flex flex-col md:flex-row gap-[1px] bg-transparent border border-teal-dark/10">
           {[0, 1].map((colIndex) => (
-            <div key={colIndex} className="flex-1 flex flex-col gap-[1px]">
+            <div key={colIndex} className="flex flex-col flex-1 gap-[1px] bg-teal-dark/10">
               {articles
                 .filter((_, idx) => idx % 2 === colIndex)
                 .map((article, index) => {
                   const isOpen = open === article.id;
+                  const isCTA = article.id === 'cta-final' || article.id === 'social-media';
                   const globalIndex = colIndex === 0 ? index * 2 : index * 2 + 1;
+                  
                   return (
                     <div 
                       key={article.id}
-                      className={`group transition-colors duration-500 cursor-pointer bg-white/60 backdrop-blur-md p-8 md:p-10 flex flex-col justify-between h-fit ${isOpen ? 'bg-white/80' : 'hover:bg-white/80'}`}
+                      className={`group transition-colors duration-500 cursor-pointer p-8 md:p-10 flex flex-col justify-between h-fit ${isCTA ? 'bg-teal-dark/5' : 'bg-white/60 backdrop-blur-md'} ${isOpen ? 'bg-white/80' : 'hover:bg-white/80'}`}
                       onClick={() => toggleExpand(article.id)}
                     >
                       <div>
                         <div className="flex items-center justify-between mb-6">
-                          <span className="text-[0.65rem] tracking-[0.2em] font-bold text-teal-dark/40">{(globalIndex + 1).toString().padStart(2, '0')}</span>
+                          <span className="text-[0.65rem] tracking-[0.2em] font-bold text-teal-dark/40">
+                            {article.id === 'cta-final' ? "PRÓXIMO PASSO" : article.id === 'social-media' ? "CONECTE-SE" : (globalIndex + 1).toString().padStart(2, '0')}
+                          </span>
                           <Sparkles className={`w-4 h-4 transition-colors ${isOpen ? 'text-teal-dark' : 'text-teal-dark/20 group-hover:text-teal-dark/40'}`} />
                         </div>
                         
