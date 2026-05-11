@@ -91,11 +91,13 @@ export function AnimatedItem({
   className = "",
   direction = "up",
   staggerType = "gentle",
+  delay = 0,
 }: {
   children: ReactNode;
   className?: string;
   direction?: Direction;
   staggerType?: StaggerType;
+  delay?: number;
 }) {
   const { hidden, visible } = directionVariants[direction];
   const transition = transitionPresets[staggerType];
@@ -105,7 +107,10 @@ export function AnimatedItem({
       className={className}
       variants={{
         hidden,
-        visible: { ...(visible as Record<string, unknown>), transition },
+        visible: { 
+          ...(visible as Record<string, unknown>), 
+          transition: { ...transition, delay } 
+        },
       }}
     >
       {children}
