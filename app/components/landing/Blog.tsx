@@ -97,8 +97,8 @@ const articles: Article[] = [
     title: "Vamos conversar além das telas?",
     excerpt: "Se você se identificou com algum desses temas, o próximo passo é transformar a leitura em ação terapêutica.",
     content: [
-      "Agende sua triagem: Um papo breve de 15 minutos para entendermos se meu estilo de trabalho combina com o que você busca agora.",
-      "Sem compromisso: A triagem é gratuita e serve para alinhar expectativas e tirar dúvidas práticas sobre o processo.",
+      "Início do processo: O espaço terapêutico é o local seguro para você deixar de ser apenas um perfil e voltar a focar em você.",
+      "Agendamento: Entre em contato para consultar os horários disponíveis e dar o primeiro passo na sua jornada.",
     ],
   },
   {
@@ -135,20 +135,19 @@ export function Blog() {
           </p>
         </AnimatedSection>
 
-        <div className="flex flex-col md:flex-row gap-[1px] bg-transparent border border-teal-dark/10">
+        <div className="flex flex-col md:flex-row items-start border-t border-l border-teal-dark/10">
           {[0, 1].map((colIndex) => (
-            <div key={colIndex} className="flex flex-col flex-1 gap-[1px] bg-teal-dark/10">
+            <div key={colIndex} className="flex-1 flex flex-col w-full">
               {articles
                 .filter((_, idx) => idx % 2 === colIndex)
                 .map((article, index) => {
                   const isOpen = open === article.id;
-                  const isCTA = article.id === 'cta-final' || article.id === 'social-media';
                   const globalIndex = colIndex === 0 ? index * 2 : index * 2 + 1;
                   
                   return (
                     <div 
                       key={article.id}
-                      className={`group transition-colors duration-500 cursor-pointer p-8 md:p-10 flex flex-col justify-between h-fit ${isCTA ? 'bg-teal-dark/5' : 'bg-white/60 backdrop-blur-md'} ${isOpen ? 'bg-white/80' : 'hover:bg-white/80'}`}
+                      className={`group transition-colors duration-500 cursor-pointer p-8 md:p-10 flex flex-col justify-between h-fit bg-white/60 backdrop-blur-md border-r border-b border-teal-dark/10 ${isOpen ? 'bg-white/80' : 'hover:bg-white/80'}`}
                       onClick={() => toggleExpand(article.id)}
                     >
                       <div>
